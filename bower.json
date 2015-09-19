@@ -14,5 +14,9 @@
   "directory": "./assets/built/",
   "dependencies": {
     "wow": "wowjs#~1.1.2"
+  },
+  "devDependencies": {
+
   }
+
 }

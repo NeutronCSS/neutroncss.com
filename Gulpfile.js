@@ -2,9 +2,11 @@ var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
 var concat = require('gulp-concat');
 var bower = require('gulp-bower');
-
+var browserSync = require('browser-sync').create()
+	  
 var config = {
 	path: {
+		root: "./",
 		bower: "./assets/built/",
 		sass: "./assets/css/**/*.scss",
 		built: "./assets/built",
@@ -32,6 +34,19 @@ gulp.task('bower', function() {
     .pipe(gulp.dest(config.path.built))
 });
 
+// Run browsersync server
+gulp.task('serve', ['sass', 'scripts'], function () {
+
+    browserSync.init({
+        server: config.path.root
+    });
+
+    gulp.watch(config.scss, ['sass']).on('change', browserSync.reload);
+    gulp.watch(config.appJavaScript, ['scripts']).on('change', browserSync.reload);
+    gulp.watch(config.source + '/**/*.html').on('change', browserSync.reload);
+
+});
+
 //Default task
 gulp.task('setup', ['sass', 'bower', 'scripts']);
 
@@ -42,4 +57,4 @@ gulp.task('watch',function() {
 });
 
 //Default task
-gulp.task('default', ['sass', 'scripts', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'serve', 'watch']);
