@@ -50,4 +50,4 @@ bower_components
 
 # Neutron
 # =========================
-built/*
+assets/built/*
