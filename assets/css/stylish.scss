@@ -362,6 +362,14 @@ dl {
 	}
 }
 
+.infoBlock.flexible {
+	@media #{$from-tablet} {
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+	}
+}
+
 #flexibility {
 	@include columns(12, $margin: 2px, $target: span);
 	background: rgba(black, 0.02);
