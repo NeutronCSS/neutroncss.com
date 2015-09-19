@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1612px" height="968px" viewBox="0 0 1612 968" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#FFCF55" offset="0%"></stop>
+            <stop stop-color="#4CF2FF" offset="100%"></stop>
+        </linearGradient>
+        <path id="path-2" d="M0.560393144,16.6068271 L1615.43973,16.6068271 L1615.43967,996.054545 L0.560332871,942.050239 L0.560393144,16.6068271 Z"></path>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Docs-Copy-3" sketch:type="MSArtboardGroup" opacity="0.2">
+            <g id="Intro" sketch:type="MSLayerGroup" transform="translate(-4.000000, -238.000000)">
+                <g id="Background">
+                    <g id="Panels" transform="translate(0.494770, 209.018182)">
+                        <g id="Rectangle-11">
+                            <use fill="#1C2C2F" sketch:type="MSShapeGroup" xlink:href="#path-2"></use>
+                            <use fill-opacity="0.3" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

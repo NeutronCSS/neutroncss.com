@@ -1,0 +1,35 @@
+// Utilities
+//---------------------------------------------
+
+//hides the element when the 
+//provided media query is supplied.
+@mixin hide($media-query...) {
+	@if length($media-query) > 0 {
+
+		@media #{$media-query} {
+			& {
+				display:none;
+			}
+		}
+	} @else {
+		display:none;
+	}
+}
+
+//shows the element when the 
+//provided media query is supplied.
+@mixin show($media-query...) {
+	@if length($media-query) > 0 {
+
+		@media #{$media-query} {
+			& {
+				display: block;
+				display: initial;
+			}
+		}
+	} @else {
+		display: block;
+		display: initial;
+	}
+
+}
