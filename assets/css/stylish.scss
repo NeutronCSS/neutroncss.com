@@ -216,54 +216,6 @@ hr {
 	
 }
 
-
-
-// .indent0 {
-// 	font: {
-// 		family: "fira mono", monaco;
-// 		size: 0.8em;
-// 	}
-	
-// 	i {
-// 		color: $accent1;
-// 		font: {
-// 			style: normal;
-// 		}
-// 	} 
-// }
-
-// @mixin indent {
-// 	font: {
-// 		family: "fira mono", monaco;
-// 		size: 0.8em;
-// 	}
-	
-// 	i {
-// 		color: $accent1;
-// 		font: {
-// 			style: normal;
-// 		}
-// 	}
-// }
-
-// .indent1 {
-// 	@include indent;
-// 	margin-left: 30px;
-
-// }
-
-// .indent2 {
-// 	@include indent;
-// 	margin-left: 60px;
-
-// }
-
-// .indent3 {
-// 	@include indent;
-// 	margin-left: 90px;
-
-// }
-
 .infoBlock {
 	padding: 40px 20px;
 	
@@ -351,6 +303,19 @@ dl {
 			margin: {
 				bottom: 0px;
 			}
+		}
+	}
+}
+
+.definition dl {
+	dt, dd {
+		&:after {
+			content: ",";
+		}
+	}
+	dt, dd {
+		&:last-of-type:after {
+			content: none;
 		}
 	}
 }
