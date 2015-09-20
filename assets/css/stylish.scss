@@ -71,15 +71,30 @@ body {
 	}
 }
 
-h2 {
+h1, h2, h3, h4, h5, h6 {
 	font: {
-		size: 1.9em;
 		family: "Dosis", helvetica, arial, sans-serif;
 		weight: 300;
 	}
 	line-height: 1.3em;
 	letter-spacing: -0.59px;
 	color: $primary;
+}
+
+h1 {
+	font-size: 1.9em;
+}
+
+h2 {
+	font-size: 1.9em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+h4 {
+	font-size: 1.2em;
 }
 
 p {
@@ -556,52 +571,59 @@ footer {
 	}
 }
 
-#ratios {
-	section {
-		@include columns((1,2), $margin: 0.5px, $target: div) {
-			@include exampleBox;
-		};
-	}
+
+
+// DOCS PAGE
+// ----------------------------------
+
+.definitionBlock section {
+	margin-top: 40px;
+}
+
+#ratios > div {
+	@include columns((1,2), $margin: 0.5px, $target: div) {
+		@include exampleBox;
+	};
 }
 
 #bootstrap {
-	section:nth-child(3) {
+	& > div:nth-child(3) {
 		@include columns((1,11), $margin: 0.5px, $target: div) {
 			@include exampleBox;
 		};
 	}
 	
-	section:nth-child(4) {
+	& > div:nth-child(4) {
 		@include columns((2,10), $margin: 0.5px, $target: div) {
 			@include exampleBox;
 		};
 	}
 	
-	section:nth-child(5) {
+	& > div:nth-child(5) {
 		@include columns((3,9), $margin: 0.5px, $target: div) {
 			@include exampleBox;
 		};
 	}
 	
-	section:nth-child(6) {
+	& > div:nth-child(6) {
 		@include columns((4,8), $margin: 0.5px, $target: div) {
 			@include exampleBox;
 		};
 	}
 	
-	section:nth-child(7) {
+	& > div:nth-child(7) {
 		@include columns((5,7), $margin: 0.5px, $target: div) {
 			@include exampleBox;
 		};
 	}
 	
-	section:nth-child(8) {
+	& > div:nth-child(8) {
 		@include columns((6,6), $margin: 0.5px, $target: div) {
 			@include exampleBox;
 		};
 	}
 	
-	section:nth-child(9) {
+	& > div:nth-child(9) {
 		@include columns((1), $margin: 0.5px, $target: div) {
 			@include exampleBox;
 		};
