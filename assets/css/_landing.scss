@@ -1,0 +1,294 @@
+// LANDING PAGE
+
+
+#introLogo {
+	margin: {
+		top: -10px;
+		bottom: 20px;
+	}
+	width: 100px;
+	height: 100px;
+	background: url(../img/logo.svg) no-repeat;
+	background-size: contain;
+	display: inline-block;
+	
+	@media #{$from-phablet} {
+		width: 150px;
+		height: 150px;
+	}
+	
+	@media #{$from-tablet} {
+		margin: {
+			top: 0px;
+			bottom: 20px;
+		}
+		width: 250px;
+		height: 250px;
+	}
+}
+
+
+.copyIntro {
+	font: {
+		size: 1.1em;
+		family: "Open Sans", helvetica, arial, sans-serif;
+		weight: 300;
+	}
+	text: {
+		align: center;
+	}
+	line-height: 1.5em;
+	letter-spacing: -0.46px;
+	padding: {
+		bottom: 30px;
+	}
+	
+	@media #{$from-phablet} {
+		font: {
+			size: 1em;
+		}
+	}
+	
+	@media #{$from-tablet} {
+		font: {
+			size: 1.55em;
+		}
+	}
+}
+
+.docsLink {
+	display: inline-block;
+	margin: {
+		bottom: 30px;
+		top: -10px;
+	}
+	
+	@media #{$from-tablet} {
+		margin: {
+			top: 30px;
+		}
+	}
+	
+}
+
+.landing header {
+	background: #1D2C2F;
+	background-image: linear-gradient(-30deg, rgba(#4DF1FF,0.1) 0%, rgba(#FFCE55,0.1) 100%);
+	z-index: 1;
+	position: relative;
+	
+	section {
+		z-index: 2;
+		position: relative;
+		
+		@media #{$from-tablet} {
+			padding: 40px 100px;
+		}
+	}
+}
+
+.pattern {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/pattern.svg);
+	position: absolute;
+	top: 0px;
+	animation: slide 70s linear infinite;
+	opacity: 0.2;
+	z-index: 1;
+	pointer-events: none;
+	background-size: 50px;
+	
+	@media #{$from-tablet} {
+		background-size: 200px;
+		opacity: 0.05;
+		animation: slide 50s linear infinite;
+	}
+	
+}
+
+
+.infoBlock {
+	@include columns(1);
+	padding: 40px 20px;
+	
+	@media #{$from-tablet} {
+		padding: 100px;
+	}
+}
+
+
+
+#intro {
+	@include columns($container-width: 1000px, $target: span);
+	text: {
+		align: center;
+	}
+}
+
+#flexibility {
+	@include columns(12, $margin: 2px, $target: span);
+	background: rgba(black, 0.02);
+	overflow: hidden;
+	min-height: 140px;
+	
+	& > span {
+		background: rgba($accent1,0.1);
+		height: 60px;
+		border: 1px solid rgba($accent1,0.5);
+		color: $accent1;
+		-moz-animation: fadeInRight;
+		animation: fadeInRight;
+	}
+	
+	.indent0 {
+		animation: fadeIn;
+		position: relative;
+		top: 10px;
+	}
+	
+	@media #{$from-tablet} {
+		@include columns(12, $margin: 10px, $target: span);
+		
+		& > span {
+			height: 120px;
+			border-radius: 5px;
+		}
+	}
+}
+
+#column-input {
+	width: 30px;
+	background: none;
+	border: none;
+	-webkit-appearance: none;
+	appearance: none;
+	text-align: center;
+	padding: 0;
+}
+
+#compare {
+	@include columns(1, $target: ".codeblock");
+	background: #1D2D2F;
+	position: relative;
+	
+	.topRight {
+		width: 50%;
+		height: 30px;
+		position: absolute;
+		right: 0px;
+		top: -30px;
+		
+		img {
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+		}
+	}
+	
+	.topLeft {
+		width: 50%;
+		height: 30px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		
+		img {
+			position: absolute;
+			top: 0px;
+			width: 100%;
+		}
+	}
+	
+	.bottomLeft {
+		width: 50%;
+		height: 30px;
+		position: absolute;
+		left: 0px;
+		bottom: -30px;
+		
+		img {
+			position: absolute;
+			top: 0px;
+			width: 100%;
+		}
+	}
+	
+	.bottomRight {
+		width: 50%;
+		height: 30px;
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		
+		img {
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+		}
+	}
+		
+	hr {
+		margin: {
+			top: 50px;
+			bottom: 35px;
+		}
+		clear: left;
+	}
+	
+	.codeblock div {
+		animation: fadeInUp
+	}
+		
+	@media #{$from-tablet} {
+		@include columns(2, $margin: 40px 10px, $target: ".codeblock");
+		
+		span:last-child {
+			@include columns(1, $target: div);
+			
+			@media #{$from-tablet} {
+				@include columns(2, $target: div, $margin: 0px -5px);
+			}
+		}
+	}
+}
+
+#powerful {
+	@include columns(5, $order:(5,4,1,3,2), $margin: 2px, $target: span);
+	background: rgba(black, 0.02);
+	overflow: hidden;
+	
+	& > span {
+		background: rgba($accent1,0.1);
+		line-height: 60px;
+		border: 1px solid rgba($accent1,0.5);
+		color: $accent1;
+		text: {
+			align: center;
+		}
+		font: {
+			size: 2em;
+			family: "Dosis", helvetica, arial, sans-serif;
+			weight: 400;
+		}
+		animation: fadeInRight;
+	}
+	
+	.indent0 {
+		animation: fadeIn;
+		position: relative;
+		top: 10px;
+	}
+	
+	@media #{$from-tablet} {
+		@include columns(5, $order:(5,4,1,3,2), $margin: 10px, $target: span);
+		
+		& > span {
+			line-height: 120px;
+			border-radius: 5px;
+			font: {
+				size: 4.05em;
+			}
+		}
+	}
+}

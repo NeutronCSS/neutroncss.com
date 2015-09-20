@@ -10,10 +10,10 @@
 		<link rel="mask-icon" href="/assets/img/pinned.svg" color="#29383A">
 		<meta name="theme-color" content="#29383A">
 	</head>
-	<body>
+	<body class="docs-page">
 		<section class="columns definitionBlock">
 			<h2>Columns</h2>
-			<p>Lorem ipsum.</p>
+			<p>Lorem ipsum. Intro to function of columns mixin.</p>
 		
 			<section class="definition">
 				<h4>Arguments</h4>
@@ -59,33 +59,16 @@
 					<div></div>
 					<div><p>columns((1,2))</p></div>
 				</div>
-				<section class="definition">
-					<h3>Arguments</h3>
-					<dl>
-						<dt>$columns: ""</dt>
-						<dd>integer|list</dd>
-						
-						<dt>$container-width: 960px</dt>
-						<dd>[CSS width]</dd>
-						
-						<dt>$container-align: ""</dt>
-						<dd>left|right|center</dd>
-						
-						<dt>$margin: ""</dt>
-						<dd>[CSS margin]</dd>
-						
-						<dt>$flush-margin: true</dt>
-						<dd>true|false</dd>
-						
-						<dt>$flush-padding: false</dt>
-						<dd>false|true</dd>
-	
-						<dt>$target: "*"</dt>
-						<dd>[CSS selector]</dd>
-						
-						<dt>$order: ""</dt>
-						<dd>integer|list</dd>
-					</dl>
+				<section class="example-code">
+					<h4>Example</h4>
+<pre><code>section {
+  //These all result in identical styling.
+  
+  @include columns((30,60));
+  @include columns((4,8));
+  @include columns((1,2));
+  
+}</code></pre>
 				</section>
 			</section>
 			
@@ -177,16 +160,7 @@
 		</footer>
 
 		<script src="/assets/built/wow/dist/wow.min.js"></script>
+		<script src="/assets/built/app.js"></script>
 		<script>new WOW().init(); </script>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		
-		  ga('create', 'UA-9531677-15', 'auto');
-		  ga('send', 'pageview');
-		
-		</script>		
 	</body>
 </html>

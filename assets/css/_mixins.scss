@@ -1,0 +1,59 @@
+// MIXINS
+@mixin exampleBox {
+	background: rgba($accent1,0.2);
+	height: 60px;
+	color: $accent1;
+	text-align: right;
+	vertical-align: middle;
+	padding: {
+		right: 20px;
+	}
+	line-height: 60px;
+	
+	p {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		transform-style: preserve-3d;		
+		font: {
+			family: "fira mono", monaco;
+			size: 0.7em;
+		}
+  	}
+}
+
+//ANIMATIONS
+@keyframes slide {
+	from { background-position: left 100%; }
+	to { background-position: left 0%; }
+}
+
+//GENERATED STYLES
+
+// Base indent class
+%indent-base {
+	font: {
+		family: "fira mono", monaco;
+		size: 0.8em;
+	}
+	
+	i {
+		color: $accent1;
+		font: {
+			style: normal;
+		}
+	}
+}
+
+// Create indent classes
+$max-indent: 3;
+
+@for $i from 0 through $max-indent {
+	.indent#{$i} {
+		@extend %indent-base; 
+		
+		@if $i > 0 {
+			margin-left: $i * 30px;
+		}
+	}
+}
