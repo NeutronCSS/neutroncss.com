@@ -3,6 +3,9 @@ var sass = require('gulp-ruby-sass');
 var concat = require('gulp-concat');
 var bower = require('gulp-bower');
 var browserSync = require('browser-sync').create()
+var autoprefixer = require('gulp-autoprefixer');
+var del = require('del');
+
 var err = null; //Used for callback error tracking	 
 	  
 var config = {
@@ -15,17 +18,30 @@ var config = {
 	}
 }
 
+// Clear built folder
+gulp.task('clean', function (cb) {
+	del([
+		'assets/built/**/*',
+		'!assets/built/.gitkeep'
+	], cb(err));
+});
+
 // SASS Compilation
-gulp.task('sass', function(cb) {
+gulp.task('sass', ['clean'], function(cb) {
     return sass(config.path.sass, {style: 'expanded'})
-	.on('error', sass.logError)
-    .pipe(gulp.dest(config.path.built));
+	.pipe(autoprefixer({
+		browsers: ['last 2 versions'],
+		cascade: false,
+		remove: false
+	}))
+    .pipe(gulp.dest(config.path.built))
+	.on('error', sass.logError);
 	
 	cb(err);
 });
 
 // Scripts Concatenation
-gulp.task('scripts', function(cb) {
+gulp.task('scripts', ['clean'], function(cb) {
   return gulp.src(config.path.js)
     .pipe(concat('app.js'))
     .pipe(gulp.dest(config.path.built));
@@ -40,6 +56,15 @@ gulp.task('bower', function(cb) {
 	
 	cb(err);
 });
+
+// Build assets
+gulp.task('build', function(cb) {
+  return bower(config.path.built)
+    .pipe(gulp.dest(config.path.built));
+	
+	cb(err);
+});
+
 
 // Run browsersync server
 gulp.task('browsersync', ['sass', 'scripts', 'bower'], function (cb) {
