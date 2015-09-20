@@ -20,10 +20,11 @@ var config = {
 
 // Clear built folder
 gulp.task('clean', function (cb) {
-	del([
-		'assets/built/**/*',
-		'!assets/built/.gitkeep'
-	], cb(err));
+	// del([
+	// 	'assets/built/**/*',
+	// 	'!assets/built/.gitkeep'
+	// ], cb(err));
+	cb(err);
 });
 
 // SASS Compilation
