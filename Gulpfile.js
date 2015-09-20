@@ -41,9 +41,9 @@ gulp.task('serve', ['sass', 'scripts'], function () {
         server: config.path.root
     });
 
-    gulp.watch(config.scss, ['sass']).on('change', browserSync.reload);
-    gulp.watch(config.appJavaScript, ['scripts']).on('change', browserSync.reload);
-    gulp.watch(config.source + '/**/*.html').on('change', browserSync.reload);
+    gulp.watch(config.path.sass, ['sass']).on('change', browserSync.reload);
+    gulp.watch(config.path.js, ['scripts']).on('change', browserSync.reload);
+    gulp.watch(config.path.root + '/**/*.html').on('change', browserSync.reload);
 
 });
 
