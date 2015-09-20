@@ -32,28 +32,12 @@ h2 {
 	font-size: 1.9em;
 }
 
+h3, h4, h5, h6 {
+	opacity: 0.5; 
+}
+
 h3 {
 	font-size: 1.4em;
-	opacity: 0.5;
-	margin: {
-		right: 40px;
-	}
-	
-	&[data-tabs*=".tab."] {
-		cursor: pointer;
-		float: left;
-		display: block;
-	}
-	
-	&[data-tabs$=".active"],
-	&.active {
-		opacity: 1;
-		font: {
-			weight: 500;
-		}
-	}
-	
-	
 }
 
 h4 {

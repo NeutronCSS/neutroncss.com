@@ -253,6 +253,27 @@
 	}
 }
 
+.landing-page h3 {
+	margin: {
+		right: 40px;
+	}
+	
+	&[data-tabs*=".tab."] {
+		cursor: pointer;
+		float: left;
+		display: block;
+	}
+	
+	&[data-tabs$=".active"],
+	&.active {
+		opacity: 1;
+		font: {
+			weight: 500;
+		}
+	}
+}
+
+
 #powerful {
 	@include columns(5, $order:(5,4,1,3,2), $margin: 2px, $target: span);
 	background: rgba(black, 0.02);
