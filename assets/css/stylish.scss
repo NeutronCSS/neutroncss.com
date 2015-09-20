@@ -101,26 +101,10 @@ h2 {
 
 h3 {
 	font-size: 1.4em;
-	float: left;
-	display: block;
-	opacity: 0.5;
-	margin: {
-		right: 40px;
-	}
 	
 	&[data-tabs*=".tab."] {
 		cursor: pointer;
 	}
-	
-	&[data-tabs$=".active"],
-	&.active {
-		opacity: 1;
-		font: {
-			weight: 500;
-		}
-	}
-	
-	
 }
 
 h4 {
@@ -477,6 +461,22 @@ dl {
 			bottom: 35px;
 		}
 		clear: left;
+	}
+	
+	h3 {
+		float: left;
+		opacity: 0.5;
+		margin: {
+			right: 40px;
+		}
+		
+		&[data-tabs$=".active"],
+		&.active {
+			opacity: 1;
+			font: {
+				weight: 500;
+			}
+		}
 	}
 	
 	.codeblock div {
