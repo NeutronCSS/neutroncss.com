@@ -258,6 +258,10 @@
 		right: 40px;
 	}
 	
+	&:last-of-type {
+		margin-right: 0px;
+	}
+	
 	&[data-tabs*=".tab."] {
 		cursor: pointer;
 		float: left;
@@ -312,4 +316,24 @@
 			}
 		}
 	}
+}
+
+.infoBlock#compare, 
+.infoBlock.flexible,
+#powerful.infoBlock {
+	background-size: 50% auto;
+	background-origin: border-box;
+	background-repeat: no-repeat;
+}
+.infoBlock.flexible {
+    background-image: url("/assets/img/triangleTopRight.svg");
+    background-position: right bottom;
+}
+.infoBlock#compare {
+    background-image: url("/assets/img/traingleTopLeft.svg"), url("/assets/img/triangleBottomRight.svg");
+    background-position: left top, right bottom;
+}
+#powerful.infoBlock {
+    background-image: url("/assets/img/triangleBottomLeft.svg");
+    background-position: top left;
 }
