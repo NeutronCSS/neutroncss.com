@@ -59,17 +59,6 @@
 					<div></div>
 					<div><p>columns((1,2))</p></div>
 				</div>
-				<section class="example-code">
-					<h4>Example</h4>
-<pre><code>section {
-  //These all result in identical styling.
-  
-  @include columns((30,60));
-  @include columns((4,8));
-  @include columns((1,2));
-  
-}</code></pre>
-				</section>
 			</section>
 			
 			<section id="bootstrap" class="">
@@ -102,12 +91,6 @@
 				<div>
 					<div><p>columns(1)</p></div>
 				</div>
-				<section class="definition">
-					<h3>Definition</h3>
-					<dl>
-						<dt>term</dt>
-						<dd>definition</dd>
-				</section>
 			</section>
 			
 			<section id="uneven-columns" class="">
@@ -123,31 +106,99 @@
 					<div></div>
 					<div></div>
 				</section>
-				<section class="definition">
-					<h3>Definition</h3>
-					<dl>
-						<dt>term</dt>
-						<dd>definition</dd>
+			</section>
+			
+			<section class="aliases">
+				<h3><code>column()</code> aliases</h3>
+				<p>Lorem ipsum. Description of helper aliases.</p>
+				<section class="example-code">
+					<h4>Example</h4>
+<pre><code>section {
+  //These all result in identical styling.
+  @include columns(1);
+  @include column(1);
+  @include col(1);
+}</code></pre>
 				</section>
 			</section>
 			
+			<section class="target">
+				<h3>Target</h3>
+				<p>Lorem ipsum. Description of what target is, and how you can use it in your layouts.</p>
+				<section class="example-code">
+					<h4>Example</h4>
+<pre><code>section {
+  //These all result in identical styling.
+  @include columns(1);
+  @include column(1);
+  @include col(1);
+}</code></pre>
+				</section>
+			</section>
+			
+		</section>
 		
+		<section class="container-align definitionBlock">
+			<h2>Container alignment</h2>
+			<p>Lorem ipsum. Short description of aligning containers. Mention of difference between using column() argument and helper function.</p>
+
+			<section class="definition">
+				<h4>Arguments</h4>
+				<dl>
+					<dt>$align: ""</dt>
+					<dd>left|right|center</dd>
+				</dl>
+			</section>
 		
+			<section class="example-code">
+				<h4>Example</h4>
+<pre><code>section {
+  @include columns((1,2), $container-align: "center");
+  
+  @media #{$from-desktop} {
+    @include container-align("right");
+  }
+}</code></pre>
+			</section>	
 		</section>
 		
 		
 		
+		<section class="order definitionBlock">
+			<h2>Order</h2>
+			<p>Lorem ipsum. Explanation of use-case for order(). Detail on superiority over using push/pull classes.</p>
+
+			<section class="definition">
+				<h4>Arguments</h4>
+				<dl>
+					<dt>$order</dt>
+					<dd>list</dd>
+					<dt>$columns: ""</dt>
+					<dd>integer|list</dd>
+					<dt>$margin: ""</dt>
+					<dd>[CSS margin]</dd>
+					<dt>$flush-margin: true</dt>
+					<dd>true|false</dd>
+					<dt>$target: "*"</dt>
+					<dd>[CSS selector]</dd>
+				</dl>
+			</section>
 		
+			<section class="example-code">
+				<h4>Example</h4>
+<pre><code>section {
+  @include columns((1,2,1), $order: (2,1,3));
+  
+  @media #{$from-desktop} {
+    @include order($order: (3,2,1), $columns: (1,2,1));
+  }
+}</code></pre>
+
+			
+
+			</section>
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		</section>		
 		
 		<footer>
 			<ul>
