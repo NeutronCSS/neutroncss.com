@@ -4,38 +4,104 @@ neutron.column = (function () {
 	'use strict';
 	
 	var column = {};
-	column.elements = document.querySelectorAll("#flexibility span");
-	column.container = document.querySelector("#flexibility");
+	column.target = "span";
+	column.container = "#flexibility";
 	column.input = document.querySelector("#column-input");
-	column.number = column.elements.length || 0;
+	column.value = 12;
 	
 	column.init = function() {
-		
-		setInputListener();
-		
+		console.log("Columns initialised");
+		column.input.addEventListener('keyup', changeColumn, false);
 	}
 	
-	var changeColumnCount = function() {
-		var currentColCount = column.elements.length;
-		var newColCount = column.input.value || 0;
-		console.log('newColCount', newColCount);
+	var changeColumn = function() {
+		console.log("Column changed...");
+		column.value = column.input.value || column.value;
 		
-		removeAllColumns();
-
-		addColumns(newColCount);
-		
-		column.number = newColCount;
-		
+		applyWidths();
 
 	}
 	
-	var setInputListener = function() {
-		console.log('Setting listener...');
+	var applyWidths = function() {
+		console.log("Applying widths...");
+		var columns = getColumns();
 		
-		column.input.addEventListener('keyup', changeColumnCount, false);
+		console.log("Columns to apply widths: ", columns);
+				
+		for (var i = 0; i < columns.length; ++i) {
 
+			var col = columns[i];
+			
+			col.removeAttribute("style");
+									
+			var widthPercentage = (100 / column.value) + "%";
+			// var style = col.style;
+			var style = window.getComputedStyle(col);
+			
+			// console.log("Col's styles: ", style);
+			var marginLeft = parseFloat(style.getPropertyValue("margin-left"));
+			var marginRight = parseFloat(style.getPropertyValue("margin-right"));
+			
+			// If margin is 0, use other side's margin (hacky fix)
+			marginLeft = marginLeft || marginRight;
+			marginRight = marginRight || marginLeft;
+						
+			var flushLeft = marginLeft / column.value;
+			var flushRight = marginRight / column.value;
+			
+			var calcedWidth = widthPercentage + " - " + marginLeft + "px - " + marginRight + "px + " + flushLeft + "px + " + flushRight + "px";
+			
+			// console.log("Width to apply for col " + i + ": ", calcedWidth);
+			
+			col.style.width = "calc(" + calcedWidth + ")";
+			
+			// //First column
+			// if (i % column.value === 0) {
+			// 	col.style.marginLeft = 0;
+
+			// }
+			
+			// //Last column
+			// else if(i % column.value - 1 === 0) {
+			// 	col.style.marginRight = 0;
+			// }
+			
+		}
+		
+		var leftMarginCols = document.querySelectorAll(column.container + " > " + column.target + ":nth-of-type(" + column.value + "n+1)");
+		var rightMarginCols = document.querySelectorAll(column.container + " > " + column.target + ":nth-of-type(" + column.value + "n+" + column.value + ")");
+		
+		for (var i = 0; i < leftMarginCols.length; ++i) {
+			var col = leftMarginCols[i];
+			
+			col.style.marginLeft = 0;
+		
+		}
+		
+		for (var i = 0; i < rightMarginCols.length; ++i) {
+			var col = rightMarginCols[i];
+			
+			col.style.marginRight = 0;
+		
+		}		
+				
 	}
 	
+	var getColumns = function() {
+		var columns = document.querySelectorAll(column.container + " > " + column.target);
+
+		return columns;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
+
 	var addColumns = function(columnsToAdd) {
 
 
@@ -60,6 +126,8 @@ neutron.column = (function () {
 	var removeAllColumns = function() {
 		column.container.innerHTML = '';		
 	}
+	
+	*/
 	
 	return column;
 	
