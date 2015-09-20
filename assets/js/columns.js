@@ -10,23 +10,26 @@ neutron.column = (function () {
 	column.value = 12;
 	
 	column.init = function() {
-		console.log("Columns initialised");
 		column.input.addEventListener('keyup', changeColumn, false);
 	}
 	
 	var changeColumn = function() {
-		console.log("Column changed...");
-		column.value = column.input.value || column.value;
 		
-		applyWidths();
+		setTimeout(function () {
+			var val = column.input.value.trim();
+			if(val === 0 || val === "") {
+				column.value = 12;
+			} else {
+				column.value = column.input.value
+			}
+			
+			applyWidths();
+		}, 500);
 
 	}
 	
 	var applyWidths = function() {
-		console.log("Applying widths...");
 		var columns = getColumns();
-		
-		console.log("Columns to apply widths: ", columns);
 				
 		for (var i = 0; i < columns.length; ++i) {
 
@@ -51,20 +54,7 @@ neutron.column = (function () {
 			
 			var calcedWidth = widthPercentage + " - " + marginLeft + "px - " + marginRight + "px + " + flushLeft + "px + " + flushRight + "px";
 			
-			// console.log("Width to apply for col " + i + ": ", calcedWidth);
-			
 			col.style.width = "calc(" + calcedWidth + ")";
-			
-			// //First column
-			// if (i % column.value === 0) {
-			// 	col.style.marginLeft = 0;
-
-			// }
-			
-			// //Last column
-			// else if(i % column.value - 1 === 0) {
-			// 	col.style.marginRight = 0;
-			// }
 			
 		}
 		
@@ -80,11 +70,8 @@ neutron.column = (function () {
 		
 		for (var i = 0; i < rightMarginCols.length; ++i) {
 			var col = rightMarginCols[i];
-			
 			col.style.marginRight = 0;
-		
 		}		
-				
 	}
 	
 	var getColumns = function() {
@@ -92,43 +79,7 @@ neutron.column = (function () {
 
 		return columns;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	/*
 
-	var addColumns = function(columnsToAdd) {
-
-
-		
-		var span = "<span></span>";
-		var spanRepeat = "";
-		
-		for(var i = 0; i < columnsToAdd; i++){
-			spanRepeat += span;
-		}
-
-		
-		//var spanRepeat = new Array( columnsToAdd ).join( span );
-		// var spanRepeat = (new Array(columnsToAdd + 1)).join(span);
-		
-		console.log('spanRepeat', spanRepeat);		
-		
-		column.container.innerHTML = spanRepeat;		
-		
-	}
-
-	var removeAllColumns = function() {
-		column.container.innerHTML = '';		
-	}
-	
-	*/
-	
 	return column;
 	
 })();
