@@ -25,24 +25,24 @@
 			<h2>Flexible layouts, done your way</h2>
 			<p>Neutron does more than just let you build your layout quickly, it lets you maintain your work or change direction entirely with much less effort than other frameworks require. This flexibility lets you iterate faster and easier, your code can now keep up with the design changes that happen through the life of a project.</p>
 			
-			<p class="indent0 wow" data-wow-delay="0.6s">
+			<p class="indent0">
 				@include columns(<input type="text" pattern="\d{1,2}" id="column-input" value="12">);
 				<span class="comment">// Try changing the column layout yourself!</span>
 			</p>
 			
 			<div id="flexibility">
-				<span class="wow" data-wow-delay="0s"></span>
-				<span class="wow" data-wow-delay="0.1s"></span>
-				<span class="wow" data-wow-delay="0.2s"></span>
-				<span class="wow" data-wow-delay="0.3s"></span>
-				<span class="wow" data-wow-delay="0.4s"></span>
-				<span class="wow" data-wow-delay="0.5s"></span>
-				<span class="wow" data-wow-delay="0s"></span>
-				<span class="wow" data-wow-delay="0.1s"></span>
-				<span class="wow" data-wow-delay="0.2s"></span>
-				<span class="wow" data-wow-delay="0.3s"></span>
-				<span class="wow" data-wow-delay="0.4s"></span>
-				<span class="wow" data-wow-delay="0.5s"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
 		</section>
 		
@@ -55,7 +55,7 @@
 				<h3 data-tabs="frameworks.tab.skeleton">Skeleton</h3>
 				<h3 data-tabs="frameworks.tab.foundation">Foundation</h3>
 				<hr />
-				<div data-tabs="frameworks.page.bootstrap" class="wow">
+				<div data-tabs="frameworks.page.bootstrap">
 					<p class="indent0">&lt;div <i>class="container"</i>></p>
 						<p class="indent1">&lt;div <i>class="row"</i>></p>
 							<p class="indent2">&lt;div <i>class="col-xs-12 col-md-6"</i>></p>
@@ -94,7 +94,7 @@
 			<span class="codeblock">
 				<h3 class="active">Neutron</h3>
 				<hr />
-				<div class="wow" data-wow-delay="0.3s">
+				<div>
 					<p class="indent0">&lt;section></p>
 						<p class="indent1">&lt;div></p>
 							<p class="indent2">&lt;h1>Hello&lt;/h1></p>
@@ -104,7 +104,7 @@
 						<p class="indent1">&lt;/div></p>
 					<p class="indent0">&lt;/section></p>
 				</div>
-				<div class="wow" data-wow-delay="0.3s">
+				<div>
 					<p class="indent0">section {</p>
 						<p class="indent1">columns(<i>1</i>)</p>
 						<p class="indent1">@media {#<i>$from-tablet</i>} {</p>
@@ -113,17 +113,17 @@
 					<p class="indent0">}</p>
 				</div>
 			</span>
-		
 		</section>
+
 		<section id="powerful" class="infoBlock">
 			<h2>Powerful features, simple syntax</h2>
 			<p>Rethinking Neutron to work the way you think helped us make Neutron more powerful, not just easier to use. Instead of pushing or pulling elements to fit into your design, you can simply use <code>order()</code> and make your design match the way you imagined it. Because Neutron makes no unnecessary assumptions about how you work, we were able to add essential features like real flush margins that other frameworks have to fake or simulate or not support at all.</p>
-			<span class="wow" data-wow-delay="0.2s">1</span>
-			<span class="wow" data-wow-delay="0.4s">2</span>
-			<span class="wow" data-wow-delay="0.3s">3</span>
-			<span class="wow" data-wow-delay="0.1s">4</span>
-			<span class="wow" data-wow-delay="0s">5</span>
-			<p class="indent0 wow" data-wow-delay="0.5s">@include columns(<i>5</i>, $order:(<i>5,4,1,3,2</i>));</p>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<p class="indent0">@include columns(<i>5</i>, $order:(<i>5,4,1,3,2</i>));</p>
 		</section>
 		
 		<footer>
@@ -137,10 +137,8 @@
 			</ul>
 		</footer>
 
-		<script src="/assets/built/wow/dist/wow.min.js"></script>
 		<script src="/assets/built/app.js"></script>
 		<script>
-			new WOW().init();
 			neutron.tab.init("frameworks");
 			neutron.column.init();
 		</script>

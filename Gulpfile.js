@@ -50,25 +50,8 @@ gulp.task('scripts', ['clean'], function(cb) {
 	cb(err);
 });
 
-// Bower Setup
-gulp.task('bower', function(cb) {
-  return bower(config.path.built)
-    .pipe(gulp.dest(config.path.built));
-	
-	cb(err);
-});
-
-// Build assets
-gulp.task('build', function(cb) {
-  return bower(config.path.built)
-    .pipe(gulp.dest(config.path.built));
-	
-	cb(err);
-});
-
-
 // Run browsersync server
-gulp.task('browsersync', ['sass', 'scripts', 'bower'], function (cb) {
+gulp.task('browsersync', ['sass', 'scripts'], function (cb) {
     browserSync.init({
         server: config.path.root
     });
