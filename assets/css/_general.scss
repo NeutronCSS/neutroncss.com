@@ -44,6 +44,13 @@ h4 {
 	font-size: 1.2em;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	& a,
+	& a:hover { 
+		text-decoration: none;
+	}
+}
+
 p {
 	font: {
 		size: 1em;
@@ -141,7 +148,14 @@ hr {
 	
 }
 
-
+%default-page-layout {
+	@include columns(1);
+	padding: 40px 20px;
+	
+	@media #{$from-tablet} {
+		padding: 30px 100px;
+	}
+}
 
 footer {
 	@include columns(1);

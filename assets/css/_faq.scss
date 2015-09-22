@@ -1,0 +1,21 @@
+// FAQ PAGE
+// ----------------------------------
+.faq-page {
+	& > section,
+	& > nav,
+	& > header {
+		@extend %default-page-layout;
+	}
+}
+
+// h1, h2, h3, h4, h5, h6 {
+// 	& a:hover:after { 
+// 		content: "link";
+// 		position: relative;
+// 		left: 1em;
+// 		font-size: 0.5em;
+// 		line-height: 1em;
+// 		vertical-align: middle;
+// 		opacity: 0.5;
+// 	}
+// }

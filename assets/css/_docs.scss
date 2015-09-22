@@ -54,13 +54,7 @@
 }
 
 .definitionBlock {
-	@include columns(1);
-	padding: 40px 20px;
-	
-	@media #{$from-tablet} {
-		padding: 30px 100px;
-	}
-	
+	@extend %default-page-layout;
 }
 
 
