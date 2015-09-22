@@ -1,6 +1,12 @@
 // DOCS PAGE
 // ----------------------------------
 
+.docs-page {
+	& > header {
+		@extend %default-page-layout;
+	}
+}
+
 .definitionBlock section {
 	margin-top: 40px;
 }

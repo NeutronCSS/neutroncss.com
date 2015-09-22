@@ -3428,18 +3428,18 @@ hr {
   }
 }
 
-.definitionBlock, .faq-page > section, .faq-page > nav, .faq-page > header {
+.docs-page > header, .definitionBlock, .faq-page > section, .faq-page > nav, .faq-page > header {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px 20px;
 }
-.definitionBlock:after, .faq-page > section:after, .faq-page > nav:after, .faq-page > header:after {
+.docs-page > header:after, .definitionBlock:after, .faq-page > section:after, .faq-page > nav:after, .faq-page > header:after {
   content: "";
   display: table;
   clear: both;
 }
-.definitionBlock > *:nth-child(1n+1), .faq-page > section > *:nth-child(1n+1), .faq-page > nav > *:nth-child(1n+1), .faq-page > header > *:nth-child(1n+1) {
+.docs-page > header > *:nth-child(1n+1), .definitionBlock > *:nth-child(1n+1), .faq-page > section > *:nth-child(1n+1), .faq-page > nav > *:nth-child(1n+1), .faq-page > header > *:nth-child(1n+1) {
   width: calc(100%);
   float: left;
   clear: left;
@@ -3447,7 +3447,7 @@ hr {
   margin-right: 0;
 }
 @media (min-width: 768px) {
-  .definitionBlock, .faq-page > section, .faq-page > nav, .faq-page > header {
+  .docs-page > header, .definitionBlock, .faq-page > section, .faq-page > nav, .faq-page > header {
     padding: 30px 100px;
   }
 }
