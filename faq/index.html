@@ -28,22 +28,22 @@
 		
 		<section>
 			<h2><a id="nav-browser" href="#nav-browser">What browsers does Neutron support?</a></h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ut vitae eum aut possimus asperiores amet quibusdam iusto quaerat, eius reprehenderit ipsum consequatur consectetur obcaecati modi optio fugit beatae ipsam.</p>
+			<p>Neutron works with all modern browsers. This includes Internet Explorer 9 and later. Generally, if the browser supports the <code>:nth-child</code> and <code>:nth-of-type</code> pseudo-selectors, and the <code>calc()</code> property, Neutron should work fine on that browser.</p>
 		</section>
 		
 		<section>
 			<h2><a id="nav-max-cols" href="#nav-max-cols">What is the maximum number of columns I can have?</a></h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ut vitae eum aut possimus asperiores amet quibusdam iusto quaerat, eius reprehenderit ipsum consequatur consectetur obcaecati modi optio fugit beatae ipsam.</p>
+			<p>Neutron has no hard-coded limits to the number of columns you can have, however in some extreme situations, your layout might not display correctly. When trying to fit many columns in a small container, you can begin to encounter subpixel rounding errors. This can lead to columns not filling their container if a browser decided to round down to the nearest pixel for all the columns. This issue usually only occurs when dealing with a large number of columns only a few pixels wide.</p>
 		</section>
 		
 		<section>
 			<h2><a id="nav-target" href="#nav-target">Can I use <code>$target</code> to target any kind of element?</a></h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ut vitae eum aut possimus asperiores amet quibusdam iusto quaerat, eius reprehenderit ipsum consequatur consectetur obcaecati modi optio fugit beatae ipsam.</p>
+			<p>The <code>$target</code> feature for the <code>columns()</code> mixin uses the CSS pseudo selectors <code>:nth-child</code> and <code>:nth-of-type</code>. Due to limitations with these selectors, generally you should only target element types, classes, or element and class combinations that target only one type of element (eg. <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;span&gt;</code>). If you target a class that is applied to different types of elements, unexpected behavior and layout can occur.</p>
 		</section>
 		
 		<section>
 			<h2><a id="nav-contribute" href="#nav-contribute">How can I contribute to Neutron?</a></h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ut vitae eum aut possimus asperiores amet quibusdam iusto quaerat, eius reprehenderit ipsum consequatur consectetur obcaecati modi optio fugit beatae ipsam.</p>
+			<p>Neutron is open source and we'd gladly accept pull requests for bug fixes or minor improvements to Neutron. For larger feature additions, acceptance will be decided on a case by case basis for their suitability for Neutron and the direction we want to take it.</p>
 		</section>
 		
 		<footer>
