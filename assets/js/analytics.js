@@ -14,6 +14,7 @@ ga('send', 'pageview');
 var downloadLinks = document.querySelectorAll('download-link');
 
 function download() {
+  console.log('Download button event triggered.');
   ga('send', 'event', 'button', 'click', 'download-link');
 }
 
