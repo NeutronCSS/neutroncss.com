@@ -11,8 +11,9 @@ ga('send', 'pageview');
 // Custom event tracking
 
 // Download button
-var downloadLinks = document.querySelectorAll('download-link');
-
+var downloadLinks = document.querySelectorAll('.download-link');
+  console.log('Download links: ', downloadLinks);
+  
 function download() {
   console.log('Download button event triggered.');
   ga('send', 'event', 'button', 'click', 'download-link');
@@ -21,7 +22,7 @@ function download() {
 for (var i = 0; i < downloadLinks.length; ++i) {
   var link = downloadLinks[i];
   
-  link.addListener('click', download, false);
+  link.addEventListener('click', download, false);
 }	
 
 var neutron = neutron || {};
