@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
 var concat = require('gulp-concat');
-var bower = require('gulp-bower');
 var browserSync = require('browser-sync').create()
 var autoprefixer = require('gulp-autoprefixer');
 var del = require('del');
