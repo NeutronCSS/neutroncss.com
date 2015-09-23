@@ -127,7 +127,7 @@
 }
 
 #flexibility {
-	@include columns(12, $margin: 2px, $target: span);
+	@include columns(5, $margin: 2px, $target: span);
 	background: rgba(black, 0.02);
 	overflow: hidden;
 	min-height: 140px;
@@ -148,11 +148,14 @@
 	}
 	
 	@media #{$from-tablet} {
-		@include columns(12, $margin: 10px, $target: span);
-		
-		& > span {
+		@include columns(5, $margin: 10px, $target: span) {
 			height: 120px;
 			border-radius: 5px;
+		};
+				
+		& > span {
+
+
 		}
 	}
 }
