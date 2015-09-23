@@ -59,6 +59,18 @@
 	}
 }
 
+#container-align .example {
+	@include columns((3), $margin: 0.5px, $container-width: 75%, $container-align:right, $target: div) {
+		@include exampleBox;
+	};
+}
+
+#order {
+	@include columns(5, $order:(5,4,1,3,2), $margin: 1px, $target: div) {
+		@include exampleBox;
+	}
+}
+
 .definitionBlock {
 	@extend %default-page-layout;
 }
@@ -70,14 +82,18 @@
 	margin: {
 		top: 40px;
 	}
-	padding: 30px;
+	padding: 20px;
 	border-radius: 5px;
+	
 }
 
 dl {
 	@include columns(1) {
 		@extend .indent0;
 	};
+	margin: {
+		bottom: 0px;
+	}
 	
 	dd {
 		margin: {
@@ -86,7 +102,7 @@ dl {
 	}
 	
 	@media #{$from-tablet} {
-		@include columns((1.5,1));
+		@include columns((2));
 		
 		dd {
 			margin: {

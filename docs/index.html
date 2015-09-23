@@ -54,6 +54,34 @@
 				</dl>
 			</section>
 			
+			<section class="aliases">
+				<h3><code>column()</code> aliases</h3>
+				<p>Lorem ipsum. Description of helper aliases.</p>
+				<section class="definition">
+					<h4>Example</h4>
+<pre><code>section {
+  //These all result in identical styling.
+  @include columns(1);
+  @include column(1);
+  @include col(1);
+}</code></pre>
+				</section>
+			</section>
+			
+			<section class="target">
+				<h3>Target</h3>
+				<p>Lorem ipsum. Description of what target is, and how you can use it in your layouts.</p>
+				<section class="definition">
+					<h4>Example</h4>
+<pre><code>section {
+  //These all result in identical styling.
+  @include columns(1);
+  @include column(1);
+  @include col(1);
+}</code></pre>
+				</section>
+			</section>
+			
 			<section id="ratios" class="">
 				<h3>Ratios</h3>
 				<p>Lorem ipsum. Intro to ratio concept.</p>
@@ -117,40 +145,17 @@
 					<div></div>
 				</section>
 			</section>
-			
-			<section class="aliases">
-				<h3><code>column()</code> aliases</h3>
-				<p>Lorem ipsum. Description of helper aliases.</p>
-				<section class="example-code">
-					<h4>Example</h4>
-<pre><code>section {
-  //These all result in identical styling.
-  @include columns(1);
-  @include column(1);
-  @include col(1);
-}</code></pre>
-				</section>
-			</section>
-			
-			<section class="target">
-				<h3>Target</h3>
-				<p>Lorem ipsum. Description of what target is, and how you can use it in your layouts.</p>
-				<section class="example-code">
-					<h4>Example</h4>
-<pre><code>section {
-  //These all result in identical styling.
-  @include columns(1);
-  @include column(1);
-  @include col(1);
-}</code></pre>
-				</section>
-			</section>
-			
 		</section>
 		
-		<section class="container-align definitionBlock">
+		<section id="container-align" class="definitionBlock">
 			<h2>Container alignment</h2>
 			<p>Lorem ipsum. Short description of aligning containers. Mention of difference between using column() argument and helper function.</p>
+			
+			<div class="example">
+				<div></div>
+				<div></div>
+				<div><p>$container-align:right</p></div>
+			</div>
 
 			<section class="definition">
 				<h4>Arguments</h4>
@@ -160,7 +165,7 @@
 				</dl>
 			</section>
 		
-			<section class="example-code">
+			<section class="definition">
 				<h4>Example</h4>
 <pre><code>section {
   @include columns((1,2), $container-align: "center");
@@ -174,9 +179,15 @@
 		
 		
 		
-		<section class="order definitionBlock">
+		<section id="order" class="definitionBlock">
 			<h2>Order</h2>
 			<p>Lorem ipsum. Explanation of use-case for order(). Detail on superiority over using push/pull classes.</p>
+			
+			<div><p>1</p></div>
+			<div><p>2</p></div>
+			<div><p>3</p></div>
+			<div><p>4</p></div>
+			<div><p>5</p></div>
 
 			<section class="definition">
 				<h4>Arguments</h4>
@@ -194,7 +205,7 @@
 				</dl>
 			</section>
 		
-			<section class="example-code">
+			<section class="definition">
 				<h4>Example</h4>
 <pre><code>section {
   @include columns((1,2,1), $order: (2,1,3));
@@ -228,7 +239,7 @@
 				</dl>
 			</section>
 		
-			<section class="example-code">
+			<section class="definition">
 				<h4>Example</h4>
 <pre><code>section {
   @include columns((1,2,1), $order: (2,1,3));
@@ -262,7 +273,7 @@
 				</dl>
 			</section>
 		
-			<section class="example-code">
+			<section class="definition">
 				<h4>Example</h4>
 <pre><code>section {
   @include columns((1,2,1), $order: (2,1,3));
@@ -295,7 +306,7 @@
 				</dl>
 			</section>
 		
-			<section class="example-code">
+			<section class="definition">
 				<h4>Example</h4>
 <pre><code>section {
   @include columns((1,2,1), $order: (2,1,3));
@@ -320,5 +331,7 @@
 		</footer>
 
 		<script src="/assets/built/app.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 	</body>
 </html>

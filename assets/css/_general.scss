@@ -32,16 +32,18 @@ h2 {
 	font-size: 1.9em;
 }
 
-h3, h4, h5, h6 {
-	opacity: 0.5; 
-}
-
 h3 {
 	font-size: 1.4em;
 }
 
 h4 {
 	font-size: 1.2em;
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid rgba($secondary, 0.05);
+	padding: {
+		bottom: 5px;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,20 +64,14 @@ p {
 }
 
 code {
-	background: none;
+	background: none !important;
 	border: none;
 	font: {
-		size: 1em;
+		size: 0.7em;
 		family: "fira mono", monaco;
 	}
-	color: $accent1;
+	color: $secondary !important;
 	padding: 0px;
-}
-
-pre > code {
-	background: rgba(#1D2C2F,0.2);
-	padding: 30px;
-	border-radius: 5px;
 }
 
 a {
