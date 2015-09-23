@@ -91,9 +91,6 @@ dl {
 	@include columns(1) {
 		@extend .indent0;
 	};
-	margin: {
-		bottom: 0px;
-	}
 	
 	dd {
 		margin: {
