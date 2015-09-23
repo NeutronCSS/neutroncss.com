@@ -70,6 +70,8 @@ neutron.column = (function () {
 		for (var i = 0; i < columns.length; ++i) {
 			var col = columns[i];
 			
+			col.removeAttribute("style");
+			
 			var marginLeft = parseFloat(window.getComputedStyle(col).getPropertyValue("margin-left"));
 			var marginRight = parseFloat(window.getComputedStyle(col).getPropertyValue("margin-right"));
 
