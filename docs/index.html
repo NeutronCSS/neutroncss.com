@@ -186,8 +186,6 @@
 			<div><p>1</p></div>
 			<div><p>2</p></div>
 			<div><p>3</p></div>
-			<div><p>4</p></div>
-			<div><p>5</p></div>
 
 			<section class="definition">
 				<h4>Arguments</h4>
@@ -208,7 +206,7 @@
 			<section class="definition">
 				<h4>Example</h4>
 <pre><code>section {
-  @include columns((1,2,1), $order: (2,1,3));
+  @include columns((1,4,1), $order: (2,1,3));
   
   @media #{$from-desktop} {
     @include order($order: (3,2,1), $columns: (1,2,1));

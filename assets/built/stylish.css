@@ -4709,8 +4709,8 @@ footer li {
   display: table;
   clear: both;
 }
-#order > div:nth-of-type(5n+1) {
-  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+#order > div:nth-of-type(3n+1) {
+  width: calc(16.66667% - 1px - 1px + 0.33333px + 0.33333px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4723,7 +4723,7 @@ footer li {
   clear: left;
   margin-left: 0;
 }
-#order > div:nth-of-type(5n+1) p {
+#order > div:nth-of-type(3n+1) p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -4733,8 +4733,8 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
-#order > div:nth-of-type(5n+2) {
-  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+#order > div:nth-of-type(3n+2) {
+  width: calc(66.66667% - 1px - 1px + 0.33333px + 0.33333px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4746,7 +4746,7 @@ footer li {
   margin: 1px;
   clear: none;
 }
-#order > div:nth-of-type(5n+2) p {
+#order > div:nth-of-type(3n+2) p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -4756,54 +4756,8 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
-#order > div:nth-of-type(5n+3) {
-  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
-  float: left;
-  background: rgba(117, 236, 225, 0.1);
-  height: 60px;
-  color: #75ECE1;
-  text-align: right;
-  vertical-align: middle;
-  padding-right: 20px;
-  line-height: 60px;
-  margin: 1px;
-  clear: none;
-}
-#order > div:nth-of-type(5n+3) p {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  font-family: "fira mono", monaco;
-  font-size: 0.7em;
-}
-#order > div:nth-of-type(5n+4) {
-  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
-  float: left;
-  background: rgba(117, 236, 225, 0.1);
-  height: 60px;
-  color: #75ECE1;
-  text-align: right;
-  vertical-align: middle;
-  padding-right: 20px;
-  line-height: 60px;
-  margin: 1px;
-  clear: none;
-}
-#order > div:nth-of-type(5n+4) p {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  font-family: "fira mono", monaco;
-  font-size: 0.7em;
-}
-#order > div:nth-of-type(5n+5) {
-  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+#order > div:nth-of-type(3n+3) {
+  width: calc(16.66667% - 1px - 1px + 0.33333px + 0.33333px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4816,7 +4770,7 @@ footer li {
   clear: none;
   margin-right: 0;
 }
-#order > div:nth-of-type(5n+5) p {
+#order > div:nth-of-type(3n+3) p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -4826,24 +4780,16 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
-#order > div:nth-of-type(5n+5) {
-  left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px)));
+#order > div:nth-of-type(3n+2) {
+  left: calc(0px - ((0px + (16.66667% + 0.66667px) + (66.66667% + 0.66667px))) + (0px + (66.66667% + 0.66667px)));
   position: relative;
 }
-#order > div:nth-of-type(5n+4) {
-  left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px)));
+#order > div:nth-of-type(3n+1) {
+  left: calc(0px - ((0px + (16.66667% + 0.66667px))) + (0px + (66.66667% + 0.66667px) + (16.66667% + 0.66667px)));
   position: relative;
 }
-#order > div:nth-of-type(5n+1) {
-  left: calc(0px - ((0px + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px)));
-  position: relative;
-}
-#order > div:nth-of-type(5n+3) {
-  left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px)));
-  position: relative;
-}
-#order > div:nth-of-type(5n+2) {
-  left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px)));
+#order > div:nth-of-type(3n+3) {
+  left: calc(0px - ((0px + (16.66667% + 0.66667px) + (66.66667% + 0.66667px) + (16.66667% + 0.66667px))) + (0px + (66.66667% + 0.66667px) + (16.66667% + 0.66667px) + (16.66667% + 0.66667px)));
   position: relative;
 }
 
