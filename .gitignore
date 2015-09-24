@@ -51,3 +51,5 @@ bower_components
 # Neutron
 # =========================
 !.gitkeep
+config.codekit
+
