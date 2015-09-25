@@ -22,6 +22,10 @@
   	}
 }
 
+@mixin docsBox {
+	background: rgba($primary, 0.4);
+}
+
 //ANIMATIONS
 @keyframes slide {
 	from { background-position: left 100%; }

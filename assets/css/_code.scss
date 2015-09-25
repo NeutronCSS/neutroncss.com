@@ -20,7 +20,7 @@
   display: block;
   overflow-x: auto;
   padding: .5em;
-  color: white;
+  color: #364D54;
   -webkit-text-size-adjust: none;
 }
 
@@ -50,7 +50,7 @@
 
 .hljs-string,
 .hljs-bullet {
-  color: $primary;
+  color: rgba(#364D54,0.4);
 }
 
 .hljs-type,
@@ -63,14 +63,14 @@
 .hljs-change,
 .hljs-blockquote,
 .hljs-built_in {
-  color: #DFD574;
+  color: #73BE68;
 }
 
 .hljs-number,
 .hljs-hexcolor,
 .hljs-link_label,
 .hljs-link_reference {
-  color: $accent1;
+  color: #2BBFB1;
 }
 
 .hljs-keyword,
@@ -95,7 +95,7 @@
 .hljs-header,
 .hljs-horizontal_rule,
 .hljs-code {
-  color: $secondary;
+  color: #364D54;
 }
 
 .hljs-regexp,

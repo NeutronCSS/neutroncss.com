@@ -3346,7 +3346,7 @@ h4 {
   font-size: 1.2em;
   display: block;
   width: 100%;
-  border-bottom: 1px solid rgba(232, 229, 200, 0.05);
+  border-bottom: 1px solid rgba(54, 77, 84, 0.16);
   padding-bottom: 5px;
 }
 
@@ -3365,9 +3365,9 @@ p {
 code {
   background: none !important;
   border: none;
-  font-size: 0.7em;
+  font-size: inherit;
   font-family: "fira mono", monaco;
-  color: #E8E5C8 !important;
+  color: inherit;
   padding: 0px;
 }
 
@@ -4242,6 +4242,22 @@ footer li {
   background-color: rgba(0, 0, 0, 0.02);
 }
 
+.docs-page {
+  background: #FFFFFE;
+}
+.docs-page p, .docs-page h2, .docs-page h3, .docs-page h4, .docs-page h5 {
+  color: #364D54;
+}
+.docs-page h2, .docs-page h3 {
+  font-weight: 500;
+}
+.docs-page h3 code {
+  font-size: 0.7em;
+}
+.docs-page p {
+  font-size: 0.8em;
+}
+
 .definitionBlock section {
   margin-top: 40px;
 }
@@ -4257,7 +4273,7 @@ footer li {
   clear: both;
 }
 #ratios > div > div:nth-of-type(2n+1) {
-  width: calc(33.33333% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(33.33333% - 1px - 1px + 0.5px + 0.5px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4266,7 +4282,8 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
-  margin: 0.5px;
+  background: rgba(172, 223, 164, 0.4);
+  margin: 1px;
   clear: left;
   margin-left: 0;
 }
@@ -4281,7 +4298,7 @@ footer li {
   font-size: 0.7em;
 }
 #ratios > div > div:nth-of-type(2n+2) {
-  width: calc(66.66667% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(66.66667% - 1px - 1px + 0.5px + 0.5px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4290,7 +4307,8 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
-  margin: 0.5px;
+  background: rgba(172, 223, 164, 0.4);
+  margin: 1px;
   clear: none;
   margin-right: 0;
 }
@@ -4316,16 +4334,16 @@ footer li {
   clear: both;
 }
 #bootstrap > div:nth-child(3) > div:nth-of-type(2n+1) {
-  width: calc(8.33333% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(8.33333% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: left;
   margin-left: 0;
 }
 #bootstrap > div:nth-child(3) > div:nth-of-type(2n+2) {
-  width: calc(91.66667% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(91.66667% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: none;
   margin-right: 0;
 }
@@ -4340,16 +4358,16 @@ footer li {
   clear: both;
 }
 #bootstrap > div:nth-child(4) > div:nth-of-type(2n+1) {
-  width: calc(16.66667% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(16.66667% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: left;
   margin-left: 0;
 }
 #bootstrap > div:nth-child(4) > div:nth-of-type(2n+2) {
-  width: calc(83.33333% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(83.33333% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: none;
   margin-right: 0;
 }
@@ -4364,16 +4382,16 @@ footer li {
   clear: both;
 }
 #bootstrap > div:nth-child(5) > div:nth-of-type(2n+1) {
-  width: calc(25% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(25% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: left;
   margin-left: 0;
 }
 #bootstrap > div:nth-child(5) > div:nth-of-type(2n+2) {
-  width: calc(75% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(75% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: none;
   margin-right: 0;
 }
@@ -4388,16 +4406,16 @@ footer li {
   clear: both;
 }
 #bootstrap > div:nth-child(6) > div:nth-of-type(2n+1) {
-  width: calc(33.33333% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(33.33333% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: left;
   margin-left: 0;
 }
 #bootstrap > div:nth-child(6) > div:nth-of-type(2n+2) {
-  width: calc(66.66667% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(66.66667% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: none;
   margin-right: 0;
 }
@@ -4412,16 +4430,16 @@ footer li {
   clear: both;
 }
 #bootstrap > div:nth-child(7) > div:nth-of-type(2n+1) {
-  width: calc(41.66667% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(41.66667% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: left;
   margin-left: 0;
 }
 #bootstrap > div:nth-child(7) > div:nth-of-type(2n+2) {
-  width: calc(58.33333% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(58.33333% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: none;
   margin-right: 0;
 }
@@ -4436,16 +4454,16 @@ footer li {
   clear: both;
 }
 #bootstrap > div:nth-child(8) > div:nth-of-type(2n+1) {
-  width: calc(50% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(50% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: left;
   margin-left: 0;
 }
 #bootstrap > div:nth-child(8) > div:nth-of-type(2n+2) {
-  width: calc(50% - 0.5px - 0.5px + 0.25px + 0.25px);
+  width: calc(50% - 1px - 1px + 0.5px + 0.5px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: none;
   margin-right: 0;
 }
@@ -4460,9 +4478,9 @@ footer li {
   clear: both;
 }
 #bootstrap > div:nth-child(9) > div:nth-of-type(1n+1) {
-  width: calc(100% - 0.5px - 0.5px + 0.5px + 0.5px);
+  width: calc(100% - 1px - 1px + 1px + 1px);
   float: left;
-  margin: 0.5px;
+  margin: 1px;
   clear: left;
   margin-left: 0;
   margin-right: 0;
@@ -4475,6 +4493,7 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
+  background: rgba(172, 223, 164, 0.4);
 }
 #bootstrap > div > div p {
   position: relative;
@@ -4498,7 +4517,7 @@ footer li {
   clear: both;
 }
 #uneven-columns section > div:nth-of-type(5n+1) {
-  width: calc(20% - 0.5px - 0.5px + 0.1px + 0.1px);
+  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4507,7 +4526,8 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
-  margin: 0.5px;
+  background: rgba(172, 223, 164, 0.4);
+  margin: 1px;
   clear: left;
   margin-left: 0;
 }
@@ -4522,7 +4542,7 @@ footer li {
   font-size: 0.7em;
 }
 #uneven-columns section > div:nth-of-type(5n+2) {
-  width: calc(20% - 0.5px - 0.5px + 0.1px + 0.1px);
+  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4531,7 +4551,8 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
-  margin: 0.5px;
+  background: rgba(172, 223, 164, 0.4);
+  margin: 1px;
   clear: none;
 }
 #uneven-columns section > div:nth-of-type(5n+2) p {
@@ -4545,7 +4566,7 @@ footer li {
   font-size: 0.7em;
 }
 #uneven-columns section > div:nth-of-type(5n+3) {
-  width: calc(20% - 0.5px - 0.5px + 0.1px + 0.1px);
+  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4554,7 +4575,8 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
-  margin: 0.5px;
+  background: rgba(172, 223, 164, 0.4);
+  margin: 1px;
   clear: none;
 }
 #uneven-columns section > div:nth-of-type(5n+3) p {
@@ -4568,7 +4590,7 @@ footer li {
   font-size: 0.7em;
 }
 #uneven-columns section > div:nth-of-type(5n+4) {
-  width: calc(20% - 0.5px - 0.5px + 0.1px + 0.1px);
+  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4577,7 +4599,8 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
-  margin: 0.5px;
+  background: rgba(172, 223, 164, 0.4);
+  margin: 1px;
   clear: none;
 }
 #uneven-columns section > div:nth-of-type(5n+4) p {
@@ -4591,7 +4614,7 @@ footer li {
   font-size: 0.7em;
 }
 #uneven-columns section > div:nth-of-type(5n+5) {
-  width: calc(20% - 0.5px - 0.5px + 0.1px + 0.1px);
+  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4600,7 +4623,8 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
-  margin: 0.5px;
+  background: rgba(172, 223, 164, 0.4);
+  margin: 1px;
   clear: none;
   margin-right: 0;
 }
@@ -4628,7 +4652,7 @@ footer li {
   clear: both;
 }
 #container-align .example > div:nth-of-type(3n+1) {
-  width: calc(33.33333% - 0.5px - 0.5px + 0.16667px + 0.16667px);
+  width: calc(33.33333% - 1px - 1px + 0.33333px + 0.33333px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4637,7 +4661,8 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
-  margin: 0.5px;
+  background: rgba(172, 223, 164, 0.4);
+  margin: 1px;
   clear: left;
   margin-left: 0;
 }
@@ -4652,7 +4677,7 @@ footer li {
   font-size: 0.7em;
 }
 #container-align .example > div:nth-of-type(3n+2) {
-  width: calc(33.33333% - 0.5px - 0.5px + 0.16667px + 0.16667px);
+  width: calc(33.33333% - 1px - 1px + 0.33333px + 0.33333px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4661,7 +4686,8 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
-  margin: 0.5px;
+  background: rgba(172, 223, 164, 0.4);
+  margin: 1px;
   clear: none;
 }
 #container-align .example > div:nth-of-type(3n+2) p {
@@ -4675,7 +4701,7 @@ footer li {
   font-size: 0.7em;
 }
 #container-align .example > div:nth-of-type(3n+3) {
-  width: calc(33.33333% - 0.5px - 0.5px + 0.16667px + 0.16667px);
+  width: calc(33.33333% - 1px - 1px + 0.33333px + 0.33333px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4684,7 +4710,8 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
-  margin: 0.5px;
+  background: rgba(172, 223, 164, 0.4);
+  margin: 1px;
   clear: none;
   margin-right: 0;
 }
@@ -4719,6 +4746,7 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
+  background: rgba(172, 223, 164, 0.4);
   margin: 1px;
   clear: left;
   margin-left: 0;
@@ -4743,6 +4771,7 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
+  background: rgba(172, 223, 164, 0.4);
   margin: 1px;
   clear: none;
 }
@@ -4766,6 +4795,7 @@ footer li {
   vertical-align: middle;
   padding-right: 20px;
   line-height: 60px;
+  background: rgba(172, 223, 164, 0.4);
   margin: 1px;
   clear: none;
   margin-right: 0;
@@ -4793,12 +4823,17 @@ footer li {
   position: relative;
 }
 
+.definitionBlock {
+  background: rgba(0, 0, 0, 0.02);
+}
+
 .definition {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background: rgba(29, 44, 47, 0.2);
-  margin-top: 40px;
+  background: white;
+  border: 1px solid rgba(54, 77, 84, 0.16);
+  margin-bottom: 40px;
   padding: 20px;
   border-radius: 5px;
 }
@@ -4814,6 +4849,9 @@ footer li {
   margin-left: 0;
   margin-right: 0;
 }
+.definition code {
+  font-size: 0.7em;
+}
 
 dl {
   max-width: 1200px;
@@ -4828,6 +4866,7 @@ dl:after {
 dl > *:nth-child(1n+1) {
   width: calc(100%);
   float: left;
+  color: #364D54;
   clear: left;
   margin-left: 0;
   margin-right: 0;
@@ -4863,6 +4902,10 @@ dl dd {
   }
 }
 
+dl + h4 {
+  margin-top: 40px;
+}
+
 .definition dl dt:after, .definition dl dd:after {
   content: ",";
 }
@@ -4891,7 +4934,7 @@ dl dd {
   display: block;
   overflow-x: auto;
   padding: .5em;
-  color: white;
+  color: #364D54;
   -webkit-text-size-adjust: none;
 }
 
@@ -4921,7 +4964,7 @@ dl dd {
 
 .hljs-string,
 .hljs-bullet {
-  color: #ACDFA4;
+  color: rgba(54, 77, 84, 0.4);
 }
 
 .hljs-type,
@@ -4934,14 +4977,14 @@ dl dd {
 .hljs-change,
 .hljs-blockquote,
 .hljs-built_in {
-  color: #DFD574;
+  color: #73BE68;
 }
 
 .hljs-number,
 .hljs-hexcolor,
 .hljs-link_label,
 .hljs-link_reference {
-  color: #75ECE1;
+  color: #2BBFB1;
 }
 
 .hljs-keyword,
@@ -4966,7 +5009,7 @@ dl dd {
 .hljs-header,
 .hljs-horizontal_rule,
 .hljs-code {
-  color: #E8E5C8;
+  color: #364D54;
 }
 
 .hljs-regexp,
