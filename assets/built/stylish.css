@@ -4651,8 +4651,8 @@ footer li {
   display: table;
   clear: both;
 }
-#container-align .example > div:nth-of-type(3n+1) {
-  width: calc(33.33333% - 1px - 1px + 0.33333px + 0.33333px);
+#container-align .example > div:nth-of-type(2n+1) {
+  width: calc(33.33333% - 1px - 1px + 0.5px + 0.5px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4666,7 +4666,7 @@ footer li {
   clear: left;
   margin-left: 0;
 }
-#container-align .example > div:nth-of-type(3n+1) p {
+#container-align .example > div:nth-of-type(2n+1) p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -4676,32 +4676,8 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
-#container-align .example > div:nth-of-type(3n+2) {
-  width: calc(33.33333% - 1px - 1px + 0.33333px + 0.33333px);
-  float: left;
-  background: rgba(117, 236, 225, 0.1);
-  height: 60px;
-  color: #75ECE1;
-  text-align: right;
-  vertical-align: middle;
-  padding-right: 20px;
-  line-height: 60px;
-  background: rgba(172, 223, 164, 0.4);
-  margin: 1px;
-  clear: none;
-}
-#container-align .example > div:nth-of-type(3n+2) p {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  font-family: "fira mono", monaco;
-  font-size: 0.7em;
-}
-#container-align .example > div:nth-of-type(3n+3) {
-  width: calc(33.33333% - 1px - 1px + 0.33333px + 0.33333px);
+#container-align .example > div:nth-of-type(2n+2) {
+  width: calc(66.66667% - 1px - 1px + 0.5px + 0.5px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4715,7 +4691,7 @@ footer li {
   clear: none;
   margin-right: 0;
 }
-#container-align .example > div:nth-of-type(3n+3) p {
+#container-align .example > div:nth-of-type(2n+2) p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);

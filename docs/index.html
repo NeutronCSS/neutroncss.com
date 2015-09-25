@@ -164,7 +164,6 @@
 			
 			<div class="example">
 				<div></div>
-				<div></div>
 				<div><p>$container-align:right</p></div>
 			</div>
 
@@ -177,7 +176,7 @@
 				
 				<h4>Example</h4>
 <pre><code>section {
-  @include columns((1,2), $container-align: "center");
+  @include columns((1,2), $container-align: "right");
   
   @media #{$from-desktop} {
     @include container-align("right");
