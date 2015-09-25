@@ -20,11 +20,17 @@
 		font-size: 0.8em;
 	}
 	
-	& > header {
+	& > header section {
+		text-align: left !important;
 		
+		@media #{$from-tablet} {
+			padding: 20px 0px 40px 0px;
+		}
 	}
 	
-	
+	footer a {
+		color: #364D54;
+	}
 }
 
 .definitionBlock section {
