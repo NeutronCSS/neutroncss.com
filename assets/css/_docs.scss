@@ -71,12 +71,10 @@
 }
 
 #uneven-columns {
-	section {
-		@include columns((5), $margin: 1px, $target: div) {
-			@include exampleBox;
-			@include docsBox;
-		};
-	}
+	@include columns((5), $margin: 1px, $target: div) {
+		@include exampleBox;
+		@include docsBox;
+	};
 }
 
 #container-align .example {
@@ -107,6 +105,31 @@
 		@include docsBox;
 	}
 }
+
+#flush-padding {
+	@include columns((3), $margin: 5px, $target: div, $flush-padding: true) {
+		@include exampleBox;
+		@include docsBox;
+		height: auto;
+		padding: 20px;
+		text-align: center;
+		
+		p {
+			top: 0px;
+			transform: translateY(0%);
+			margin: 0px;
+		}
+	}
+	
+	& > div:nth-child(3) {
+		text-align: left;
+	}
+	
+	& > div:nth-child(5) {
+		text-align: right;
+	}
+}
+
 
 #media-query {
 	@include columns((2), $margin: 2px, $target: div) {
