@@ -108,7 +108,7 @@
 				</div>
 			</section>
 			
-			<section id="uneven-columns" class="">
+			<section id="uneven-columns">
 				<h3>Uneven columns with equal width</h3>
 				<p>Neutron was built to help, not hinder. We discarded many outmoded design choices when making neutron. Doing this allowed us to help you make almost any layout you can imagine. Meanwhile, 12-column frameworks like bootstrap won't even let you make an equal width five column layout. In Neutron it's as simple as <code>columns(5)</code>.</p>
 					<div></div>
@@ -121,7 +121,27 @@
 					<div></div>
 			</section>
 			
-			<section class="target">
+			<section id="nested-containers">
+				<h3>Nested containers</h3>
+				<p>Lorem ipsum</p>
+
+				<section class="example">
+					<div class="sidebar"></div>
+					<div class="content">
+						<div class="article">
+							<div></div>
+							<div></div>
+						</div>
+						<aside>
+							<div></div>
+							<div></div>
+						</aside>
+					</div>
+				</section>
+				
+			</section>
+			
+			<section id="target">
 				<h3>Targeting specific elements</h3>
 				<p>When declaring columns, sometimes it can be useful to target only some of the child elements in your container. This is where <code>$target</code> comes in, you can pass the name of the specific element you want targeted and then only those will become columns. Neutron will ignore the other elements in the container.</p>
 				<section class="definition">
@@ -345,13 +365,13 @@
 		<section id="media-query" class="definitionBlock">
 			<h2>Media Query Helpers</h2>
 			<p>Lorem ipsum</p>
+			<p><b>CHRIS: I think this is where we should mention about <code>hide()</code></b></p>
 			
 			<div><p>Phone</p></div>
 			<div><p>Phablet</p></div>
 			<div><p>Tablet</p></div>
 			<div><p>Desktop Small</p></div>
 			<div><p>Desktop Medium</p></div>
-			<div><p>Desktop Large</p></div>
 			<p>Resize your window to see the different breakpoints. These are only the default breakpoints, feel free to add your own as required.</p>
 
 			<section class="definition">
