@@ -23,7 +23,7 @@
 		</header>
 		<section class="columns definitionBlock">
 			<h2>Columns</h2>
-			<p>Lorem ipsum. Intro to function of columns mixin.</p>
+			<p>Lorem ipsum</p>
 		
 			<section class="definition">
 				<h4>Arguments</h4>
@@ -69,10 +69,15 @@
 					<div></div>
 					<div><p>columns((1,2))</p></div>
 				</div>
+				<div>
+					<div></div>
+					<div></div>
+					<div><p>columns((10,1,10))</p></div>
+				</div>
 			</section>
 			
 			<section id="bootstrap" class="">
-				<h3>What your grid looks like in Neutron</h3>
+				<h3>Bootstrap style grid</h3>
 				<p>Neutron doesn't force you to think about your layout in a particular way. If your comfortable using a bootstrap-style grid, you can continue thinking that way. Neutron's ratio declarations are flexible enough to accommodate many ways of thinking about layouts, from percentages to 12 column grids.</p>
 				<div>
 					<div></div>
@@ -134,7 +139,7 @@
 						
 			<section class="custom-styles">
 				<h3>Applying custom styles to your columns</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum odio natus molestiae mollitia numquam similique laudantium dolores quod. Vel, minima. Reprehenderit harum qui, odit, sed quas incidunt corrupti magni voluptate.</p>
+				<p>Lorem ipsum</p>
 				<section class="definition">
 					<h4>Example</h4>
 <pre><code>section {
@@ -191,6 +196,34 @@
 		</section>
 		
 		
+		<section id="container-width" class="definitionBlock">
+			<h2>Container width</h2>
+			<p>Lorem ipsum</p>
+			
+			<div class="example">
+				<div></div>
+				<div><p>$container-width:80%</p></div>
+			</div>
+
+			<section class="definition">
+				<h4>Arguments</h4>
+				<dl>
+					<dt>$width: ""</dt>
+					<dd>left|right|center</dd>
+				</dl>
+				
+				<h4>Example</h4>
+<pre><code>section {
+  @include columns((1,2), $container-align: "right");
+  
+  @media #{$from-desktop} {
+    @include container-align("right");
+  }
+}</code></pre>
+				
+			</section>
+		</section>
+		
 		
 		<section id="order" class="definitionBlock">
 			<h2>Order</h2>
@@ -227,13 +260,63 @@
 				
 			</section>
 		
+		</section>
+		
+		
+		
+		<section id="gutters" class="definitionBlock">
+			<h2>Gutters</h2>
+			<p>Lorem ipsum</p>
+			
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+
+			<section class="definition">
+				<h4>Arguments</h4>
+				<dl>
+					<dt>$order: ""</dt>
+					<dd>list</dd>
+					<dt>$columns: ""</dt>
+					<dd>integer|list</dd>
+					<dt>$margin: ""</dt>
+					<dd>[CSS margin]</dd>
+					<dt>$flush-margin: true</dt>
+					<dd>true|false</dd>
+					<dt>$target: "*"</dt>
+					<dd>[CSS selector]</dd>
+				</dl>
+				
+				<h4>Example</h4>
+<pre><code>section {
+  @include columns((1,4,1), $order: (2,1,3));
+  
+  @media #{$from-desktop} {
+    @include order($order: (3,2,1), $columns: (1,2,1));
+  }
+}</code></pre>
+				
+			</section>
+		
 		</section>		
 		
 		
 		
 		<section id="media-query" class="definitionBlock">
 			<h2>Media Query Helpers</h2>
-			<p>Lorem ipsum. Explanation of use-case for order(). Detail on superiority over using push/pull classes.</p>
+			<p>Lorem ipsum</p>
+			
+			<div><p>Phone</p></div>
+			<div><p>Phablet</p></div>
+			<div><p>Tablet</p></div>
+			<div><p>Desktop Small</p></div>
+			<div><p>Desktop Medium</p></div>
+			<div><p>Desktop Large</p></div>
+			<p>Resize your window to see the different breakpoints.</p>
 
 			<section class="definition">
 				<h4>Arguments</h4>
@@ -265,7 +348,7 @@
 		
 		<section id="utility" class="definitionBlock">
 			<h2>Utility Mixins</h2>
-			<p>Lorem ipsum. Explanation of use-case for order(). Detail on superiority over using push/pull classes.</p>
+			<p>Lorem ipsum</p>
 
 			<section class="definition">
 				<h4>Arguments</h4>
