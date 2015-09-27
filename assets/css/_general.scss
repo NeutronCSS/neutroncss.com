@@ -25,11 +25,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 1.9em;
+	font-size: 2em;
+	
+	@media #{$from-tablet} {
+		font-size: 4em;
+	}
+	
 }
 
 h2 {
 	font-size: 1.9em;
+	
+	a {
+		color: inherit;
+	}
 }
 
 h3 {
@@ -40,7 +49,7 @@ h4 {
 	font-size: 1.2em;
 	display: block;
 	width: 100%;
-	border-bottom: 1px solid rgba($secondary, 0.05);
+	border-bottom: 1px solid rgba(#364D54, 0.16);
 	padding: {
 		bottom: 5px;
 	}
@@ -67,10 +76,10 @@ code {
 	background: none !important;
 	border: none;
 	font: {
-		size: 0.7em;
+		size: inherit;
 		family: "fira mono", monaco;
 	}
-	color: $secondary !important;
+	color: inherit;
 	padding: 0px;
 }
 
@@ -151,6 +160,39 @@ header {
 	background-image: linear-gradient(-30deg, rgba(#4DF1FF,0.1) 0%, rgba(#FFCE55,0.1) 100%);
 	z-index: 1;
 	position: relative;
+	min-height: 140px;
+	
+	ul {
+		float: right;
+		list-style: none;
+			position: relative;
+			top: 10px;
+			left: -20px;
+		
+	}
+	
+	li {
+		float: left;
+		margin: {
+			left: 40px;
+		}
+		font: {
+			size: 0.8em;
+		}
+	}
+	
+	h1 {
+		top: 40px;
+		left: 20px;
+		position: relative;
+		
+		@media #{$from-tablet} {
+			left: 0px;
+			top: 0px;
+			margin-top: 40px;
+		}
+		
+	}
 	
 	section {
 		z-index: 2;

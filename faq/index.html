@@ -4,7 +4,7 @@
 		<title>Neutron - FAQ</title>
 		<link rel="stylesheet" href="/assets/built/stylish.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Dosis:300,400,600|Fira+Mono' rel='stylesheet' type='text/css'>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="/apple-touch-icon.png" rel="apple-touch-icon">
 		<link rel="shortcut icon" href="/assets/img/pinned.svg" type="image/x-icon" />
 		<link rel="mask-icon" href="/assets/img/pinned.svg" color="#29383A">
@@ -17,6 +17,7 @@
 			<h1>Frequently Asked Questions</h1>
 		</header>
 		
+<!--
 		<nav>
 			<ul>
 				<li><a href="#nav-browser">What browsers does Neutron support?</a></li>
@@ -25,24 +26,25 @@
 				<li><a href="#nav-contribute">How can I contribute to Neutron?</a></li>
 			</ul>
 		</nav>
+-->
 		
 		<section>
-			<h2><a id="nav-browser" href="#nav-browser">What browsers does Neutron support?</a></h2>
+			<h2 id="nav-browser">What browsers does Neutron support?</h2>
 			<p>Neutron works with all modern browsers. This includes Internet Explorer 9 and later. Generally, if the browser supports the <code>:nth-child</code> and <code>:nth-of-type</code> pseudo-selectors, and the <code>calc()</code> property, Neutron should work fine on that browser.</p>
 		</section>
 		
 		<section>
-			<h2><a id="nav-max-cols" href="#nav-max-cols">What is the maximum number of columns I can have?</a></h2>
+			<h2 id="nav-max-cols">What is the maximum number of columns I can have?</h2>
 			<p>Neutron has no hard-coded limits to the number of columns you can have, however in some extreme situations, your layout might not display correctly. When trying to fit many columns in a small container, you can begin to encounter subpixel rounding errors. This can lead to columns not filling their container if a browser decided to round down to the nearest pixel for all the columns. This issue usually only occurs when dealing with a large number of columns only a few pixels wide.</p>
 		</section>
 		
 		<section>
-			<h2><a id="nav-target" href="#nav-target">Can I use <code>$target</code> to target any kind of element?</a></h2>
+			<h2 id="nav-target">Can I use <code>$target</code> to target any kind of element?</h2>
 			<p>The <code>$target</code> feature for the <code>columns()</code> mixin uses the CSS pseudo selectors <code>:nth-child</code> and <code>:nth-of-type</code>. Due to limitations with these selectors, generally you should only target element types, classes, or element and class combinations that target only one type of element (eg. <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;span&gt;</code>). If you target a class that is applied to different types of elements, unexpected behavior and layout can occur.</p>
 		</section>
 		
 		<section>
-			<h2><a id="nav-contribute" href="#nav-contribute">How can I contribute to Neutron?</a></h2>
+			<h2 id="nav-contribute">How can I contribute to Neutron?</h2>
 			<p><a href="https://github.com/NeutronCSS/neutroncss">Neutron is open source</a> and we'd gladly accept pull requests for bug fixes or minor improvements to Neutron. For larger feature additions, acceptance will be decided on a case by case basis for their suitability for Neutron and the direction we want to take it.</p>
 		</section>
 		
@@ -51,7 +53,6 @@
 				<li><a href="https://github.com/NeutronCSS/neutroncss/archive/master.zip">Download</a>
 				<li><a href="https://github.com/NeutronCSS/neutroncss">Github</a>
 				<li><a href="/docs/">Docs</a>
-				<li><a href="/about/">About</a>
 				<li><a href="/faq/">FAQ</a>
 				<li><a href="https://twitter.com/NeutronCSS">Twitter</a>
 			</ul>
