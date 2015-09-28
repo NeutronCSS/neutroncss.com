@@ -158,14 +158,14 @@
 						
 			<section class="custom-styles">
 				<h3>Applying custom styles to your columns</h3>
-				<p>Lorem ipsum</p>
+				<p>Often you'll want to apply additional styles to your columns. Neutron allows you to do this without needing to add an extra selector. Add your styles inside the <code>columns()</code> block and they will be applied to each of the columns for that declaration. This way you can be sure that your styles are only being applied to the columns you want them to.</p>
 				<section class="definition">
 					<h4>Example</h4>
 <pre><code>section {
-  //These all result in identical styling.
-  @include columns(1);
-  @include column(1);
-  @include col(1);
+  @include columns((1,3,1)) {
+    background: #EEE;
+	padding: 0 16px;
+  }
 }</code></pre>
 				</section>
 			</section>
