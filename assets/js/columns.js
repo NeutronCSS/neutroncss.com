@@ -6,11 +6,14 @@ neutron.column = (function () {
 	var column = {};
 	column.target = "span";
 	column.container = "#flexibility";
-	column.input = document.querySelector("#column-input");
-	column.valueDefault = column.input.getAttribute("data-default");;
-	column.value = column.valueDefault;
+	column.input = {};
+	column.valueDefault = "";
+	column.value = "";
 	
 	column.init = function() {
+		column.input = document.querySelector("#column-input");
+		column.valueDefault = column.input.getAttribute("data-default");
+		column.value = column.valueDefault;
 		
 		column.input.addEventListener('keyup', changeColumn, false);
 	}
