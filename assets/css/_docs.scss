@@ -117,7 +117,7 @@
 		@include container-align("right");
 		
 		.example-right {
-			@include show();
+			@include show-on();
 		}
 		.example-center {
 			@include hide-on();
@@ -243,27 +243,27 @@
 	}
 	
 	& > p:nth-child(1) {
-		@include show(is-mobile);
+		@include show-on(is-mobile);
 	}
 
 	& > p:nth-child(2) {
-		@include show(is-phablet);
+		@include show-on(is-phablet);
 	}
 	
 	& > p:nth-child(3) {
-		@include show(is-tablet);
+		@include show-on(is-tablet);
 	}
 	
 	& > p:nth-child(4) {
-		@include show(is-desktop-sml);
+		@include show-on(is-desktop-sml);
 	}
 	
 	& > p:nth-child(5) {
-		@include show(is-desktop-mid);
+		@include show-on(is-desktop-mid);
 	}
 	
 	& > p:nth-child(6) {
-		@include show(is-desktop-lrg);
+		@include show-on(is-desktop-lrg);
 	}	
 }
 
