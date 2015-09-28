@@ -111,7 +111,7 @@
 			
 			<section id="uneven-columns">
 				<h3>Uneven columns with equal width</h3>
-				<p>Neutron was built to help, not hinder. We discarded many outmoded design choices when making neutron. Doing this allowed us to help you make almost any layout you can imagine. Meanwhile, 12-column frameworks like bootstrap won't even let you make an equal width five column layout. In Neutron it's as simple as <code>columns(5)</code>.</p>
+				<p>Neutron was built to help, not hinder. We discarded many outmoded design choices when making neutron. Doing this allowed us to help you make almost any layout you can imagine. When using other frameworks restricted to 12 columns you are unable to create an equal width five column layout. In Neutron it's as simple as <code>columns(5)</code>.</p>
 					<div></div>
 					<div></div>
 					<div></div>
@@ -147,8 +147,7 @@
 				<p>When declaring columns, sometimes it can be useful to target only some of the child elements in your container. This is where <code>$target</code> comes in, you can pass the name of the specific element you want targeted and then only those will become columns. Neutron will ignore the other elements in the container.</p>
 				<section class="definition">
 					<h4>Example</h4>
-<pre><code>section {
-  //These all result in identical styling.
+<pre class="language-scss"><code>section {
   @include columns((1,3,1), $target: "div");
 }</code></pre>
 				</section>
@@ -159,7 +158,7 @@
 				<p>Often you'll want to apply additional styles to your columns. Neutron allows you to do this without needing to add an extra selector. Add your styles inside the <code>columns()</code> block and they will be applied to each of the columns for that declaration. This way you can be sure that your styles are only being applied to the columns you want them to.</p>
 				<section class="definition">
 					<h4>Example</h4>
-<pre><code>section {
+<pre class="language-scss"><code>section {
   @include columns((1,3,1)) {
     background: #EEE;
 	padding: 0 16px;
@@ -173,7 +172,7 @@
 				<p>You might not be used to thinking in <code>columns()</code>, or maybe you just don't want to have to type all seven characters each time you use columns. We've added a number of aliases for the <code>columns()</code> mixin so you can choose what suits you best and get back to making your layout. All these aliases behave identically to <code>columns()</code>, they're even calling the same mixin. No matter which one you use, your columns will be declared just how you want them.</p>
 				<section class="definition">
 					<h4>Example</h4>
-<pre><code>section {
+<pre class="language-scss"><code>section {
   @include columns(1);
   @include column(1);
   @include col(1);
@@ -204,7 +203,7 @@
 				</dl>
 				
 				<h4>Example</h4>
-<pre><code>section {
+<pre class="language-scss"><code>section {
   @include columns((1,2), $container-align: "center");
   
   @media #{$from-desktop-sml} {
@@ -233,7 +232,7 @@
 				</dl>
 				
 				<h4>Example</h4>
-<pre><code>section {
+<pre class="language-scss"><code>section {
   @include columns((1,2), $container-width: 100%);
   
   @media #{$from-desktop-sml} {
@@ -269,7 +268,7 @@
 				</dl>
 				
 				<h4>Example</h4>
-<pre><code>section {
+<pre class="language-scss"><code>section {
   @include columns((1,4,1), $order: (2,1,3));
   
   @media #{$from-desktop} {
@@ -311,7 +310,7 @@
 				</dl>
 				
 				<h4>Example</h4>
-<pre><code>section {
+<pre class="language-scss"><code>section {
   @include columns((1,4,1), $order: (2,1,3));
   
   @media #{$from-desktop} {
@@ -349,7 +348,7 @@
 				</dl>
 				
 				<h4>Example</h4>
-<pre><code>section {
+<pre class="language-scss"><code>section {
   @include columns((1,4,1), $order: (2,1,3));
   
   @media #{$from-desktop} {
@@ -391,7 +390,7 @@
 				</dl>
 				
 				<h4>Example</h4>
-<pre><code>section {
+<pre class="language-scss"><code>section {
   @include columns((1,2,1), $order: (2,1,3));
   
   @media #{$from-desktop} {
@@ -423,7 +422,7 @@
 				</dl>
 				
 				<h4>Example</h4>
-<pre><code>section {
+<pre class="language-scss"><code>section {
   @include columns((1,2,1), $order: (2,1,3));
   
   @media #{$from-desktop} {
@@ -445,7 +444,6 @@
 		</footer>
 
 		<script src="/assets/built/app.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
+		<!--<script src="/node_modules/prismjs/prism.js"></script>-->
 	</body>
 </html>
