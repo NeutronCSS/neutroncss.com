@@ -228,22 +228,21 @@
 			<section class="definition">
 				<h4>Arguments</h4>
 				<dl>
-					<dt>$width: ""</dt>
-					<dd>left|right|center</dd>
+					<dt>$container-width: ""</dt>
+					<dd>[CSS Width]</dd>
 				</dl>
 				
 				<h4>Example</h4>
 <pre><code>section {
-  @include columns((1,2), $container-align: "center");
+  @include columns((1,2), $container-width: 100%);
   
   @media #{$from-desktop-sml} {
-    @include container-align("right");
+    @include conatiner-width(80%);
   }
 }</code></pre>
 				
 			</section>
 		</section>
-		
 		
 		<section id="order" class="definitionBlock">
 			<h2>Order</h2>
