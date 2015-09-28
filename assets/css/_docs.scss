@@ -113,7 +113,7 @@
 		@include hide();
 	}
 	
-	@include breakpoint(from-desktop-sml) {
+	@include breakpoint(from-desktop) {
 		@include container-align("right");
 		
 		.example-right {
@@ -131,7 +131,7 @@
 		@include docsBox;
 	};
 	
-	@include breakpoint(from-desktop-sml) {
+	@include breakpoint(from-desktop) {
 		@include container-width(80%);
 	}
 }
@@ -176,8 +176,8 @@
 }
 
 
-#media-query {
-	@include columns((2), $margin: 2px, $target: div) {
+#media-query .doc-example {
+	@include columns((2), $margin: 2px) {
 		@include exampleBox;
 		@include docsBox;
 		text-align: center;
@@ -185,43 +185,46 @@
 	}
 	
 	
-	& > div:nth-child(3) {
+	& > p:nth-child(1) {
 		@include breakpoint(is-mobile) {
 			background: $primary;
 		}
 	}
 
-	& > div:nth-child(4) {
+	& > p:nth-child(2) {
 		@include breakpoint(is-phablet) {
 			background: $primary;
 		}
 	}
 	
-	& > div:nth-child(5) {
+	& > p:nth-child(3) {
 		@include breakpoint(is-tablet) {
 			background: $primary;
 		}
 	}
 	
-	& > div:nth-child(6) {
+	& > p:nth-child(4) {
 		@include breakpoint(is-desktop-sml) {
 			background: $primary;
 		}
 	}
 	
-	& > div:nth-child(7) {
+	& > p:nth-child(5) {
 		@include breakpoint(is-desktop-mid) {
 			background: $primary;
 		}
 	}
 	
-	& > div:nth-child(8) {
+	& > p:nth-child(6) {
 		@include breakpoint(is-desktop-lrg) {
 			background: $primary;
 		}
-	}
+	}	
 }
 
+.doc-example + p {
+	margin-top: 1em;
+}
 
 
 .definitionBlock {
