@@ -217,7 +217,7 @@
 		
 		<section id="container-width" class="definitionBlock">
 			<h2>Container width</h2>
-			<p>Lorem ipsum</p>
+			<p>Sometimes you'll need to change the width of your column containers, especially with responsive layouts. When you do, you don't want to have to re-declare your <code>columns()</code> mixin all over again. <code>container-width()</code> lets you change just the width of your container without affecting the other settings you've already declared in <code>columns()</code>.</p>
 			
 			<div class="example">
 				<div></div>
@@ -235,7 +235,7 @@
 <pre class="language-scss"><code>section {
   @include columns((1,2), $container-width: 100%);
   
-  @media #{$from-desktop-sml} {
+  @media #{$from-desktop} {
     @include conatiner-width(80%);
   }
 }</code></pre>
