@@ -11,24 +11,16 @@ var config = {
 	path: {
 		root: "./",
 		bower: "./assets/built/",
+		css: "./assets/css/**/*.css",
 		sass: "./assets/css/**/*.scss",
 		built: "./assets/built",
 		js: "./assets/js/*.js"
 	}
 }
 
-// Clear built folder
-gulp.task('clean', function (cb) {
-	// del([
-	// 	'assets/built/**/*',
-	// 	'!assets/built/.gitkeep'
-	// ], cb(err));
-	cb(err);
-});
-
 // SASS Compilation
-gulp.task('sass', ['clean'], function(cb) {
-    return sass(config.path.sass, {style: 'expanded'})
+gulp.task('css', function(cb) {
+    sass(config.path.sass, {style: 'expanded'})
 	.pipe(autoprefixer({
 		browsers: ['last 2 versions'],
 		cascade: false,
@@ -37,11 +29,14 @@ gulp.task('sass', ['clean'], function(cb) {
     .pipe(gulp.dest(config.path.built))
 	.on('error', sass.logError);
 	
+	gulp.src(config.path.css)
+    .pipe(gulp.dest(config.path.built));
+	
 	cb(err);
 });
 
 // Scripts Concatenation
-gulp.task('scripts', ['clean'], function(cb) {
+gulp.task('scripts', function(cb) {
   return gulp.src(config.path.js)
     .pipe(concat('app.js'))
     .pipe(gulp.dest(config.path.built));
@@ -50,7 +45,7 @@ gulp.task('scripts', ['clean'], function(cb) {
 });
 
 // Run browsersync server
-gulp.task('browsersync', ['sass', 'scripts'], function (cb) {
+gulp.task('browsersync', ['css', 'scripts'], function (cb) {
     browserSync.init({
         server: config.path.root
     });
@@ -60,7 +55,7 @@ gulp.task('browsersync', ['sass', 'scripts'], function (cb) {
 
 // Watch tasks
 gulp.task('watch', ['browsersync'], function() {
-    gulp.watch(config.path.sass, ['sass']).on('change', browserSync.reload);
+    gulp.watch(config.path.sass, ['css']).on('change', browserSync.reload);
     gulp.watch(config.path.js, ['scripts']).on('change', browserSync.reload);
     gulp.watch(config.path.root + '/**/*.html').on('change', browserSync.reload);
 });

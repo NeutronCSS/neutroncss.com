@@ -16,8 +16,5 @@
     "gulp-concat": "^2.6.0",
     "gulp-file-include": "^0.13.7",
     "gulp-ruby-sass": "^2.0.3"
-  },
-  "dependencies": {
-    "prismjs": "0.0.1"
   }
 }
