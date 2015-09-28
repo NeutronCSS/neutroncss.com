@@ -190,7 +190,10 @@
 			
 			<div class="example">
 				<div></div>
-				<div><p>$container-align:right</p></div>
+				<div>
+					<p class="example-right">$container-align:right</p>
+					<p class="example-center">$container-align:center</p>
+				</div>
 			</div>
 
 			<section class="definition">
@@ -202,9 +205,9 @@
 				
 				<h4>Example</h4>
 <pre><code>section {
-  @include columns((1,2), $container-align: "right");
+  @include columns((1,2), $container-align: "center");
   
-  @media #{$from-desktop} {
+  @media #{$from-desktop-sml} {
     @include container-align("right");
   }
 }</code></pre>
@@ -231,9 +234,9 @@
 				
 				<h4>Example</h4>
 <pre><code>section {
-  @include columns((1,2), $container-align: "right");
+  @include columns((1,2), $container-align: "center");
   
-  @media #{$from-desktop} {
+  @media #{$from-desktop-sml} {
     @include container-align("right");
   }
 }</code></pre>

@@ -4928,7 +4928,8 @@ footer li {
   margin-left: auto;
   margin-right: auto;
   float: none;
-  margin-right: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 #container-align .example:after {
   content: "";
@@ -4984,6 +4985,22 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+#container-align .example .example-right {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #container-align .example {
+    float: none;
+    margin-right: 0;
+  }
+  #container-align .example .example-right {
+    display: block;
+    display: initial;
+  }
+  #container-align .example .example-center {
+    display: none;
+  }
 }
 
 #container-width .example {

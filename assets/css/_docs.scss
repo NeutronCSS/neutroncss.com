@@ -104,10 +104,25 @@
 
 
 #container-align .example {
-	@include columns((1,2), $margin: 1px, $container-width: 75%, $container-align:right, $target: div) {
+	@include columns((1,2), $margin: 1px, $container-width: 75%, $container-align:center, $target: div) {
 		@include exampleBox;
 		@include docsBox;
 	};
+	
+	.example-right {
+		@include hide();
+	}
+	
+	@media #{$from-desktop-sml} {
+		@include container-align("right");
+		
+		.example-right {
+			@include show();
+		}
+		.example-center {
+			@include hide();
+		}
+	}
 }
 
 #container-width .example {
