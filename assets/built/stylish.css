@@ -3551,6 +3551,10 @@ footer li {
   font-size: 0.8em;
 }
 
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: none;
+}
+
 #introLogo {
   margin-bottom: 20px;
   width: 100px;
@@ -4959,12 +4963,6 @@ footer li {
   margin-left: 0;
 }
 #container-align .example > div:nth-of-type(2n+1) p {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
@@ -4984,12 +4982,6 @@ footer li {
   margin-right: 0;
 }
 #container-align .example > div:nth-of-type(2n+2) p {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }

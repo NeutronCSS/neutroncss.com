@@ -281,3 +281,8 @@ footer {
 		}
 	}
 }
+
+//Prisim.js style overwrite
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: none;
+}

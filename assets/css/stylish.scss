@@ -1,5 +1,8 @@
 @import "neutron/neutron";
 
+//MISC
+@import "/node_modules/prismjs/dist/prism-default/prism-default.css";
+
 // PARTIALS
 @import "variables";
 @import "animate";
@@ -11,6 +14,3 @@
 @import "docs";
 @import "faq";
 @import "code";
-
-//MISC
-@import "/node_modules/prismjs/dist/prism-default/prism-default.css";

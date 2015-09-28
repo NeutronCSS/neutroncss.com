@@ -105,7 +105,7 @@
 
 #container-align .example {
 	@include columns((1,2), $margin: 1px, $container-width: 75%, $container-align:center, $target: div) {
-		@include exampleBox;
+		@include exampleBox(false);
 		@include docsBox;
 	};
 	

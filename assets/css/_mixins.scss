@@ -1,5 +1,5 @@
 // MIXINS
-@mixin exampleBox {
+@mixin exampleBox($vertical-align: true) {
 	background: rgba($accent1,0.1);
 	height: 60px;
 	color: $accent1;
@@ -11,10 +11,14 @@
 	line-height: 60px;
 	
 	p {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-		transform-style: preserve-3d;		
+		@if $vertical-align == true {
+			// Disabled, not sure why it's here and it's causing layout issues.
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			transform-style: preserve-3d;
+		}
+			
 		font: {
 			family: "fira mono", monaco;
 			size: 0.7em;
