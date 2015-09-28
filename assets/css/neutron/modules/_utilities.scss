@@ -9,12 +9,10 @@
 		@include breakpoint($breakpoint) {
 			& {
 				display: none;
-				testing: test;
 			}
 		}
 	} @else {
 		display: none;
-		tst: test;
 	}
 }
 
