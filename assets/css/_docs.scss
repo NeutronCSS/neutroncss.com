@@ -7,7 +7,7 @@
 	& > header section {
 		text-align: left !important;
 		
-		@media #{$from-tablet} {
+		@include breakpoint(from-tablet) {
 			padding: 20px 0px 40px 0px;
 		}
 	}
@@ -113,7 +113,7 @@
 		@include hide();
 	}
 	
-	@media #{$from-desktop-sml} {
+	@include breakpoint(from-desktop-sml) {
 		@include container-align("right");
 		
 		.example-right {
@@ -126,10 +126,14 @@
 }
 
 #container-width .example {
-	@include columns((1,1), $margin: 1px, $container-width: 80%, $container-align:center, $target: div) {
+	@include columns((1,1), $margin: 1px, $container-width: 100%, $container-align:center, $target: div) {
 		@include exampleBox;
 		@include docsBox;
 	};
+	
+	@include breakpoint(from-desktop-sml) {
+		@include container-width(80%);
+	}
 }
 
 
@@ -182,37 +186,37 @@
 	
 	
 	& > div:nth-child(3) {
-		@media #{$is-mobile} {
+		@include breakpoint(is-mobile) {
 			background: $primary;
 		}
 	}
 
 	& > div:nth-child(4) {
-		@media #{$is-phablet} {
+		@include breakpoint(is-phablet) {
 			background: $primary;
 		}
 	}
 	
 	& > div:nth-child(5) {
-		@media #{$is-tablet} {
+		@include breakpoint(is-tablet) {
 			background: $primary;
 		}
 	}
 	
 	& > div:nth-child(6) {
-		@media #{$is-desktop-sml} {
+		@include breakpoint(is-desktop-sml) {
 			background: $primary;
 		}
 	}
 	
 	& > div:nth-child(7) {
-		@media #{$is-desktop-mid} {
+		@include breakpoint(is-desktop-mid) {
 			background: $primary;
 		}
 	}
 	
 	& > div:nth-child(8) {
-		@media #{$from-desktop-lrg} {
+		@include breakpoint(is-desktop-lrg) {
 			background: $primary;
 		}
 	}
@@ -253,7 +257,7 @@ dl {
 		}
 	}
 	
-	@media #{$from-tablet} {
+	@include breakpoint(from-tablet) {
 		@include columns((2));
 		
 		dd {

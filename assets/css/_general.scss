@@ -1,13 +1,20 @@
 // GENERAL SITE-WIDE STYLES
 
+html { font-size: 62.5%; }
+
 body {
+	line-height: 1.6;
+	font-weight: 400;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #E8E5C8;
+	
 	font: {
 		size: 16px;
 	}
 	background: $background;
 	max-width: 100%;
 	
-	@media #{$from-phablet} {
+	@include breakpoint(from-phablet) {
 		font: {
 			size: 20px;
 		}
@@ -15,6 +22,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.5rem;
 	font: {
 		family: "Dosis", helvetica, arial, sans-serif;
 		weight: 300;
@@ -22,12 +30,17 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.3em;
 	letter-spacing: -0.59px;
 	color: $primary;
+	
+	& a,
+	& a:hover { 
+		text-decoration: none;
+	}
 }
 
 h1 {
 	font-size: 2em;
 	
-	@media #{$from-tablet} {
+	@include breakpoint(from-tablet) {
 		font-size: 4em;
 	}
 	
@@ -55,12 +68,6 @@ h4 {
 	}
 }
 
-h1, h2, h3, h4, h5, h6 {
-	& a,
-	& a:hover { 
-		text-decoration: none;
-	}
-}
 
 p {
 	font: {
@@ -68,8 +75,18 @@ p {
 		family: "Open Sans", helvetica, arial, sans-serif;
 		weight: 300;
 	}
+    margin-top: 0;
 	line-height: 1.3em;
 	letter-spacing: -0.46px;
+}
+
+ol, ul {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+li {
+	margin-bottom: 1rem;
 }
 
 code {
@@ -81,12 +98,27 @@ code {
 	}
 	color: inherit;
 	padding: 0px;
+	margin: 0 .2rem;
+}
+
+input[type="email"], 
+input[type="number"], 
+input[type="search"], 
+input[type="text"], 
+input[type="tel"], 
+input[type="url"], 
+input[type="password"], 
+textarea {
+    height: 38px;
+    box-shadow: none;
+    box-sizing: border-box;
 }
 
 a {
 	text: {
 		decoration: none;
 	}
+	color: $primary;
 	font: {
 		size: 1em;
 		family: "Open Sans", helvetica, arial, sans-serif;
@@ -97,7 +129,6 @@ a {
 		text: {
 			decoration: underline;
 		}
-		color: $primary;
 	}
 }
 
@@ -132,7 +163,7 @@ a {
 		transition: 0.1s box-shadow ease;
 	}
 	
-	@media #{$from-tablet} {
+	@include breakpoint(from-tablet) {
 		display: inline;
 	}
 	
@@ -150,7 +181,7 @@ hr {
 	@include columns(1);
 	padding: 40px 20px;
 	
-	@media #{$from-tablet} {
+	@include breakpoint(from-tablet) {
 		padding: 30px 100px;
 	}
 }
@@ -186,7 +217,7 @@ header {
 		left: 20px;
 		position: relative;
 		
-		@media #{$from-tablet} {
+		@include breakpoint(from-tablet) {
 			left: 0px;
 			top: 0px;
 			margin-top: 40px;
@@ -198,7 +229,7 @@ header {
 		z-index: 2;
 		position: relative;
 		
-		@media #{$from-tablet} {
+		@include breakpoint(from-tablet) {
 			padding: 40px 100px;
 		}
 	}
@@ -216,7 +247,7 @@ header {
 	pointer-events: none;
 	background-size: 50px;
 	
-	@media #{$from-tablet} {
+	@include breakpoint(from-tablet) {
 		background-size: 200px;
 		opacity: 0.05;
 		animation: slide 50s linear infinite;
