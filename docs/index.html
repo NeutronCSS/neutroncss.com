@@ -365,50 +365,95 @@
 			<h2>Responsive Tools</h2>
 			<p>Lorem ipsum</p>
 			
-
-		<section id="media-query">
-			<h3>Media Query Helpers</h3>
-			<p>Lorem ipsum</p>
-			<p><b>CHRIS: I think this is where we should mention about <code>hide()</code></b></p>
-			
-			<div class="doc-example">
-				<p>Phone</p>
-				<p>Phablet</p>
-				<p>Tablet</p>
-				<p>Desktop Small</p>
-				<p>Desktop Medium</p>
-				<p>Desktop Large</p>
-			</div>
-			
-			<p>Resize your window to see the different breakpoints. These are only the default breakpoints, feel free to add your own as required.</p>
-
-			<section class="definition">
-				<h4>Parameters</h4>
-				<dl>
-					<dt>$order: ""</dt>
-					<dd>list</dd>
-					<dt>$columns: ""</dt>
-					<dd>integer|list</dd>
-					<dt>$margin: ""</dt>
-					<dd>[CSS margin]</dd>
-					<dt>$flush-margin: true</dt>
-					<dd>true|false</dd>
-					<dt>$target: "*"</dt>
-					<dd>[CSS selector]</dd>
-				</dl>
+	
+			<section id="media-query">
+				<h3>Media Query Helpers</h3>
+				<p>Lorem ipsum</p>
+				<p><b>CHRIS: I think this is where we should mention about <code>hide()</code></b></p>
 				
-				<h4>Example</h4>
-<pre class="language-scss"><code>section {
-  @include columns((1,2,1), $order: (2,1,3));
-  
-  @include breakpoint(from-desktop) {
-    @include order($order: (3,2,1), $columns: (1,2,1));
-  }
-}</code></pre>
+				<div class="doc-example">
+					<p>Phone</p>
+					<p>Phablet</p>
+					<p>Tablet</p>
+					<p>Desktop Small</p>
+					<p>Desktop Medium</p>
+					<p>Desktop Large</p>
+				</div>
 				
-				
+				<p>Resize your window to see the different breakpoints. These are only the default breakpoints, feel free to add your own as required.</p>
+	
+				<section class="definition">
+					<h4>Parameters</h4>
+					<dl>
+						<dt>$order: ""</dt>
+						<dd>list</dd>
+						<dt>$columns: ""</dt>
+						<dd>integer|list</dd>
+						<dt>$margin: ""</dt>
+						<dd>[CSS margin]</dd>
+						<dt>$flush-margin: true</dt>
+						<dd>true|false</dd>
+						<dt>$target: "*"</dt>
+						<dd>[CSS selector]</dd>
+					</dl>
+					
+					<h4>Example</h4>
+	<pre class="language-scss"><code>section {
+	@include columns((1,2,1), $order: (2,1,3));
+	
+	@include breakpoint(from-desktop) {
+		@include order($order: (3,2,1), $columns: (1,2,1));
+	}
+	}</code></pre>
+					
+					
+				</section>
 			</section>
-		</section>		
+								
+	
+			<section id="show-hide">
+				<h3><code>show()</code> and <code>hide()</code> Helpers</h3>
+				<p>To get your layout looking good responsively sometimes you need to hide or show elements at certain breakpoints. The <code>show()</code> and <code>hide()</code> mixins help make this easy. Simply include the breakpoints you want the show or hide effects to be applied to and Neutron takes care of the rest.</p>
+				
+				<div class="doc-example">
+					<p>Visible only on Phone sizes</p>
+					<p>Visible only on Phablet sizes</p>
+					<p>Visible only on Tablet sizes</p>
+					<p>Visible only on Desktop Small sizes</p>
+					<p>Visible only on Desktop Medium sizes</p>
+					<p>Visible only on Desktop Large sizes</p>
+				</div>
+				
+				<p>Resize your window to see the different breakpoints. These are only the default breakpoints, feel free to add your own as required.</p>
+	
+				<section class="definition">
+					<h4>Parameters</h4>
+					<dl>
+						<dt>$order: ""</dt>
+						<dd>list</dd>
+						<dt>$columns: ""</dt>
+						<dd>integer|list</dd>
+						<dt>$margin: ""</dt>
+						<dd>[CSS margin]</dd>
+						<dt>$flush-margin: true</dt>
+						<dd>true|false</dd>
+						<dt>$target: "*"</dt>
+						<dd>[CSS selector]</dd>
+					</dl>
+					
+					<h4>Example</h4>
+	<pre class="language-scss"><code>section {
+	@include columns((1,2,1), $order: (2,1,3));
+	
+	@include breakpoint(from-desktop) {
+		@include order($order: (3,2,1), $columns: (1,2,1));
+	}
+	}</code></pre>
+					
+					
+				</section>
+			</section>
+					
 		</section>
 		
 		<section id="utility" class="definitionBlock">

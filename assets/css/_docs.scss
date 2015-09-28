@@ -110,7 +110,7 @@
 	};
 	
 	.example-right {
-		@include hide();
+		@include hide-on();
 	}
 	
 	@include breakpoint(from-desktop) {
@@ -120,7 +120,7 @@
 			@include show();
 		}
 		.example-center {
-			@include hide();
+			@include hide-on();
 		}
 	}
 }
@@ -222,9 +222,55 @@
 	}	
 }
 
+#show-hide .doc-example {
+	@include columns(1, $margin: 2px, $container-width: 100%) {
+		@include exampleBox;
+		@include docsBox;
+		text-align: center;
+		padding: 0px;
+	}
+	
+	p {
+		@include hide-on();
+	}
+	
+	@include breakpoint(from-phablet) {
+		@include container-width(75%);
+	}
+	
+	@include breakpoint(from-desktop) {
+		@include container-width(50%);
+	}
+	
+	& > p:nth-child(1) {
+		@include show(is-mobile);
+	}
+
+	& > p:nth-child(2) {
+		@include show(is-phablet);
+	}
+	
+	& > p:nth-child(3) {
+		@include show(is-tablet);
+	}
+	
+	& > p:nth-child(4) {
+		@include show(is-desktop-sml);
+	}
+	
+	& > p:nth-child(5) {
+		@include show(is-desktop-mid);
+	}
+	
+	& > p:nth-child(6) {
+		@include show(is-desktop-lrg);
+	}	
+}
+
 .doc-example + p {
 	margin-top: 1em;
 }
+
 
 
 .definitionBlock {
