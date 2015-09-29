@@ -173,9 +173,9 @@
 				<section class="definition">
 					<h4>Example</h4>
 <pre class="language-scss"><code>section {
-  @include columns(1);
-  @include column(1);
-  @include col(1);
+  @include columns(2);
+  @include column(2);
+  @include col(2);
 }</code></pre>
 				</section>
 			</section>
@@ -209,11 +209,9 @@
   @include breakpoint(from-desktop) {
     @include container-align("right");
   }
-}</code></pre>
-				
+}</code></pre>		
 			</section>
 		</section>
-		
 		
 		<section id="container-width" class="definitionBlock">
 			<h2>Container width</h2>
@@ -238,8 +236,7 @@
   @include breakpoint(from-desktop) {
     @include conatiner-width(80%);
   }
-}</code></pre>
-				
+}</code></pre>		
 			</section>
 		</section>
 		
@@ -275,13 +272,9 @@
     @include order($order: (3,2,1), $columns: (1,2,1));
   }
 }</code></pre>
-				
 			</section>
-		
 		</section>
-		
-		
-		
+
 		<section id="gutters" class="definitionBlock">
 			<h2>Gutters</h2>
 			<p>Lorem ipsum</p>
@@ -317,21 +310,17 @@
     @include order($order: (3,2,1), $columns: (1,2,1));
   }
 }</code></pre>
-				
 			</section>
-		
 		</section>
-		
-		
-		
+
 		<section id="flush-padding" class="definitionBlock">
 			<h2>Flush padding</h2>
 			<p>Lorem ipsum</p>
 			
 			<div class="doc-example">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore tenetur nobis nostrum sint suscipit numquam assumenda minus fugit pariatur, molestiae debitis, quaerat dicta voluptatibus iusto vero ad, aspernatur velit ullam.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dolores velit, quisquam tempora vero maiores itaque, natus rem laborum recusandae. Ea, repudiandae. Enim eaque iure beatae fuga, esse fugiat praesentium.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente labore distinctio neque, laborum, exercitationem itaque nam aspernatur laudantium provident necessitatibus, quia. Fuga officia qui fugiat, accusamus. Vero, dignissimos ab aliquid.</p>
+				<p>Lorem ipsum dolor sit amet, conse ctetur adip isicing elit. Inv entore ten etur nobis nostrum sint sus cipit numqu am assum enda minus fugit pari atur, mol estiae debitis, quaerat dicta volupt atibus iusto vero ad, asper natur velit ullam.</p>
+				<p>Lorem ipsum dolor sit amet, conse ctetur adip isicing elit. Inv entore ten etur nobis nostrum sint sus cipit numqu am assum enda minus fugit pari atur, mol estiae debitis, quaerat dicta volupt atibus iusto vero ad, asper natur velit ullam.</p>
+				<p>Lorem ipsum dolor sit amet, conse ctetur adip isicing elit. Inv entore ten etur nobis nostrum sint sus cipit numqu am assum enda minus fugit pari atur, mol estiae debitis, quaerat dicta volupt atibus iusto vero ad, asper natur velit ullam.</p>
 			</div>
 
 			<section class="definition">
@@ -362,12 +351,10 @@
 		
 		</section>		
 		
-		
 		<section class="definitionBlock">
-			<h2>Responsive Tools</h2>
+			<h2>Responsive Tools and Utility Mixins</h2>
 			<p>Lorem ipsum</p>
 			
-	
 			<section id="media-query">
 				<h3><code>breakpoint()</code></h3>
 				<p>Lorem ipsum
@@ -448,7 +435,7 @@
 	@include breakpoint(from-desktop) {
 		@include order($order: (3,2,1), $columns: (1,2,1));
 	}
-	}</code></pre>
+}</code></pre>
 				</section>
 			</section>
 	
@@ -464,9 +451,7 @@
 					<p>Visible only on Desktop Medium sizes</p>
 					<p>Visible only on Desktop Large sizes</p>
 				</div>
-				
-				<p>Resize your window to see the different breakpoints. These are only the default breakpoints, feel free to add your own as required.</p>
-	
+
 				<section class="definition">
 					<h4>Parameters</h4>
 					<dl>
@@ -482,52 +467,33 @@
 						<dd>[CSS selector]</dd>
 					</dl>
 					
-					<h4>Example</h4>
-	<pre class="language-scss"><code>section {
-	@include columns((1,2,1), $order: (2,1,3));
-	
-	@include breakpoint(from-desktop) {
-		@include order($order: (3,2,1), $columns: (1,2,1));
-	}
-	}</code></pre>
+					<h4>Example 1</h4>
+	<pre class="language-scss"><code>aside {
+	@include hide(mobile);
+}</code></pre>	
 					
-					
+					<h4>Example 2</h4>
+	<pre class="language-scss"><code>aside {
+	@include hide;
+	@include show(desktop);
+}</code></pre>	
 				</section>
 			</section>
-					
-		</section>
-		
-		<section id="utility" class="definitionBlock">
-			<h2>Utility Mixins</h2>
-			<p>Lorem ipsum</p>
-
-			<section class="definition">
-				<h4>Parameters</h4>
-				<dl>
-					<dt>$order: ""</dt>
-					<dd>list</dd>
-					<dt>$columns: ""</dt>
-					<dd>integer|list</dd>
-					<dt>$margin: ""</dt>
-					<dd>[CSS margin]</dd>
-					<dt>$flush-margin: true</dt>
-					<dd>true|false</dd>
-					<dt>$target: "*"</dt>
-					<dd>[CSS selector]</dd>
-				</dl>
-				
-				<h4>Example</h4>
+			
+			<section id="utility">
+				<h3><code>clearfix</code></h3>
+				<p>Lorem ipsum</p>
+	
+				<section class="definition">
+					<h4>Example</h4>
 <pre class="language-scss"><code>section {
-  @include columns((1,2,1), $order: (2,1,3));
-  
-  @include breakpoint(from-desktop) {
-    @include order($order: (3,2,1), $columns: (1,2,1));
-  }
+	padding: 16px;
+	@include clearfix;
 }</code></pre>
-			</section>
-		</section>		
-		
-		
+				</section>
+			</section>					
+		</section>
+
 		<footer>
 			<ul>
 				<li><a href="https://github.com/NeutronCSS/neutroncss/archive/master.zip">Download</a>
@@ -541,7 +507,6 @@
 		<script src="/assets/built/app.js"></script>
 		<script>
 			Prism.highlightAll();
-			//neutron.docs.evenColumns("#flush-padding .doc-example");
 		</script>
 	</body>
 </html>
