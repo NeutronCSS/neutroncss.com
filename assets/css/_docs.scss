@@ -168,12 +168,12 @@
 	}
 	
 	$color-breakpoints: (
-		is-mobile,
-		is-phablet,
-		is-tablet,
-		is-desktop-sml,
-		is-desktop-mid,
-		is-desktop-lrg
+		mobile,
+		phablet,
+		tablet,
+		desktop-sml,
+		desktop-mid,
+		desktop-lrg
 	);
 	
 	$i: 0;
@@ -209,27 +209,27 @@
 	}
 	
 	& > p:nth-child(1) {
-		@include show(is-mobile);
+		@include show(mobile);
 	}
 
 	& > p:nth-child(2) {
-		@include show(is-phablet);
+		@include show(phablet);
 	}
 	
 	& > p:nth-child(3) {
-		@include show(is-tablet);
+		@include show(tablet);
 	}
 	
 	& > p:nth-child(4) {
-		@include show(is-desktop-sml);
+		@include show(desktop-sml);
 	}
 	
 	& > p:nth-child(5) {
-		@include show(is-desktop-mid);
+		@include show(desktop-mid);
 	}
 	
 	& > p:nth-child(6) {
-		@include show(is-desktop-lrg);
+		@include show(desktop-lrg);
 	}	
 }
 

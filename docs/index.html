@@ -369,8 +369,57 @@
 			
 	
 			<section id="media-query">
-				<h3>Media Query Helpers</h3>
-				<p>Lorem ipsum</p>
+				<h3><code>breakpoint()</code></h3>
+				<p>Lorem ipsum
+					lets you easily apply styles to a specific breakpoint
+					can target specific device or target a device and all larger devices
+					neutron supports a number of breakpoints out of the box
+					
+				</p>
+				
+				<section class="definition">
+					<h4>Breakpoint Definitions</h4>
+					<dl>
+						<dt>mobile</dt>
+						<dl>max width: 479px</dl>
+						
+						<dt>phablet</dt>
+						<dl>min-width: 480px and max-width: 767px</dl>
+						
+						<dt>from-phablet</dt>
+						<dl>min-width: 480px</dl>
+						
+						<dt>tablet</dt>
+						<dl>min-width: 768px and max-width: 1023px</dl>
+						
+						<dt>from-tablet</dt>
+						<dl>min-width: 768px</dl>
+						
+						<dt>desktop-sml</dt>
+						<dl>min-width: 769px and max-width: 1199px</dl>
+						
+						<dt>from-desktop-sml</dt>
+						<dl>min-width: 769px</dl>
+						
+						<dt>desktop-mid</dt>
+						<dl>min-width: 1200px and max-width: 1799px</dl>
+						
+						<dt>from-desktop-mid</dt>
+						<dl>min-width: 1200px</dl>
+						
+						<dt>desktop-lrg</dt>
+						<dl>min-width: 1800px</dl>
+						
+						<dt>from-desktop-lrg</dt>
+						<dl>min-width: 1800px</dl>
+						
+						<dt>desktop</dt>
+						<dl>min-width: 769px</dl>
+						
+						<dt>from-desktop</dt>
+						<dl>min-width: 769px</dl>
+					</dl>
+				</section>
 				
 				<div class="doc-example">
 					<p>Phone</p>
@@ -386,16 +435,10 @@
 				<section class="definition">
 					<h4>Parameters</h4>
 					<dl>
-						<dt>$order: ""</dt>
-						<dd>list</dd>
-						<dt>$columns: ""</dt>
-						<dd>integer|list</dd>
-						<dt>$margin: ""</dt>
-						<dd>[CSS margin]</dd>
-						<dt>$flush-margin: true</dt>
-						<dd>true|false</dd>
-						<dt>$target: "*"</dt>
-						<dd>[CSS selector]</dd>
+						<dt>$breakpoint: ""</dt>
+						<dd>[Breakpoint]</dd>
+						<dt>$additional-queries: ""</dt>
+						<dd>[CSS Media Query]</dd>
 					</dl>
 					
 					<h4>Example</h4>
@@ -410,7 +453,7 @@
 			</section>
 	
 			<section id="show-hide">
-				<h3><code>show()</code> and <code>hide()</code> Helpers</h3>
+				<h3><code>show()</code> and <code>hide()</code></h3>
 				<p>To get your layout looking good responsively sometimes you need to hide or show elements at certain breakpoints. The <code>show()</code> and <code>hide()</code> mixins help make this easy. Simply include the breakpoints you want the show or hide effects to be applied to and Neutron takes care of the rest.</p>
 				
 				<div class="doc-example">
