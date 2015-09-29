@@ -34,6 +34,43 @@
 	background: rgba($primary, 0.4);
 }
 
+@mixin example($type: box, $theme: light, $align: left) {
+	
+	font: {
+		family: "fira mono", monaco;
+		size: 0.7em;
+	}
+	
+	// TYPES
+	@if $type == box {
+		height: 60px;
+		line-height: 60px;
+		vertical-align: middle;
+	}
+	
+	@if $type == column {
+		line-height: 1.6em;
+	}
+	
+	// THEMES
+	@if $theme == light {
+		background: rgba($primary, 0.4);
+	}
+	
+	@if $theme == dark {
+		background: rgba($accent1,0.1);
+	}
+	
+	// ALIGN
+	@if $align == right {
+		text-align: right;
+		padding: {
+			right: 20px;
+		}
+	}
+
+}
+
 @mixin lightTheme {
 	background: #FFFFFE;
 	

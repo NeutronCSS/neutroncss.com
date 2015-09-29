@@ -146,80 +146,46 @@
 
 #gutters {
 	@include columns((2), $margin: 5px, $target: div) {
-		@include exampleBox;
-		@include docsBox;
+		@include example;
 	}
 }
 
-#flush-padding {
-	@include columns((3), $margin: 5px, $target: div, $flush-padding: true) {
-		@include exampleBox;
-		@include docsBox;
+#flush-padding .doc-example {
+	@include columns((3), $margin: 5px, $flush-padding: true) {
 		height: auto;
 		padding: 20px;
 		text-align: center;
-		
-		p {
-			top: 0px;
-			transform: translateY(0%);
-			margin: 0px;
-		}
-	}
-	
-	& > div:nth-child(3) {
-		text-align: left;
-	}
-	
-	& > div:nth-child(5) {
-		text-align: right;
+		text-align: justify;
+		@include example(column);
 	}
 }
 
-
 #media-query .doc-example {
 	@include columns((2), $margin: 2px) {
-		@include exampleBox;
-		@include docsBox;
+		@include example;
 		text-align: center;
 		padding: 0px;
 	}
 	
+	$color-breakpoints: (
+		is-mobile,
+		is-phablet,
+		is-tablet,
+		is-desktop-sml,
+		is-desktop-mid,
+		is-desktop-lrg
+	);
 	
-	& > p:nth-child(1) {
-		@include breakpoint(is-mobile) {
-			background: $primary;
+	$i: 0;
+	@each $break in $color-breakpoints {
+		$i: $i + 1;
+		
+		& > p:nth-child(#{$i}) {
+			@include breakpoint($break) {
+				background: $primary;
+			}
 		}
 	}
-
-	& > p:nth-child(2) {
-		@include breakpoint(is-phablet) {
-			background: $primary;
-		}
-	}
-	
-	& > p:nth-child(3) {
-		@include breakpoint(is-tablet) {
-			background: $primary;
-		}
-	}
-	
-	& > p:nth-child(4) {
-		@include breakpoint(is-desktop-sml) {
-			background: $primary;
-		}
-	}
-	
-	& > p:nth-child(5) {
-		@include breakpoint(is-desktop-mid) {
-			background: $primary;
-		}
-	}
-	
-	& > p:nth-child(6) {
-		@include breakpoint(is-desktop-lrg) {
-			background: $primary;
-		}
-	}	
 }
 
 #show-hide .doc-example {
