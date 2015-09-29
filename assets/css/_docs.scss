@@ -110,17 +110,17 @@
 	};
 	
 	.example-right {
-		@include hide-on();
+		@include hide();
 	}
 	
 	@include breakpoint(from-desktop) {
 		@include container-align("right");
 		
 		.example-right {
-			@include show-on();
+			@include show();
 		}
 		.example-center {
-			@include hide-on();
+			@include hide();
 		}
 	}
 }
@@ -231,7 +231,7 @@
 	}
 	
 	p {
-		@include hide-on();
+		@include hide();
 	}
 	
 	@include breakpoint(from-phablet) {
@@ -243,27 +243,27 @@
 	}
 	
 	& > p:nth-child(1) {
-		@include show-on(is-mobile);
+		@include show(is-mobile);
 	}
 
 	& > p:nth-child(2) {
-		@include show-on(is-phablet);
+		@include show(is-phablet);
 	}
 	
 	& > p:nth-child(3) {
-		@include show-on(is-tablet);
+		@include show(is-tablet);
 	}
 	
 	& > p:nth-child(4) {
-		@include show-on(is-desktop-sml);
+		@include show(is-desktop-sml);
 	}
 	
 	& > p:nth-child(5) {
-		@include show-on(is-desktop-mid);
+		@include show(is-desktop-mid);
 	}
 	
 	& > p:nth-child(6) {
-		@include show-on(is-desktop-lrg);
+		@include show(is-desktop-lrg);
 	}	
 }
 

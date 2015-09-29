@@ -4968,10 +4968,20 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+#container-align .example .example-right {
+  display: none;
+}
 @media (min-width: 1024px) {
   #container-align .example {
     float: none;
     margin-right: 0;
+  }
+  #container-align .example .example-right {
+    display: block;
+    display: initial;
+  }
+  #container-align .example .example-center {
+    display: none;
   }
 }
 
@@ -5441,6 +5451,9 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+#show-hide .doc-example p {
+  display: none;
 }
 @media (min-width: 480px) {
   #show-hide .doc-example {
