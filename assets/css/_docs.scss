@@ -158,6 +158,8 @@
 		text-align: justify;
 		@include example(column);
 	}
+	
+	display:flex;
 }
 
 #media-query .doc-example {
@@ -186,6 +188,14 @@
 			}
 		}
 	}
+}
+
+#media-query > .definition dd span:before {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
 }
 
 #show-hide .doc-example {

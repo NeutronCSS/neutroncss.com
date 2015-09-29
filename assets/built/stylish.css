@@ -3359,8 +3359,8 @@ ol, ul {
   margin-top: 0;
 }
 
-li {
-  margin-bottom: 1rem;
+li, dt, dd {
+  margin-bottom: 1em;
 }
 
 code {
@@ -5187,6 +5187,9 @@ footer li {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 #flush-padding .doc-example:after {
   content: "";
@@ -5309,6 +5312,14 @@ footer li {
   #media-query .doc-example > p:nth-child(6) {
     background: #ACDFA4;
   }
+}
+
+#media-query > .definition dd span:before {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 #show-hide .doc-example {
