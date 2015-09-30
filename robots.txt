@@ -1,2 +1,5 @@
+User-agent: *
+Disallow: /node_modules/
+Disallow: /README.md
 
 Sitemap: http://neutroncss.com/sitemap.xml
