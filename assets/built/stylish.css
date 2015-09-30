@@ -1,8 +1,6 @@
 /*---------------------------------
            NeutronCSS
 ---------------------------------*/
-@import url(normalize.css);
-@import url(prism-default.css);
 html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
