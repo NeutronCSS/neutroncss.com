@@ -5487,9 +5487,6 @@ dl dd {
     clear: none;
     margin-right: 0;
   }
-  dl dd {
-    margin-bottom: 0px;
-  }
 }
 
 dl + h4 {
