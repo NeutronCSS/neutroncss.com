@@ -3,7 +3,7 @@
 ##Prerequisites
 The following are required for `neutroncss.com` to build correctly:
 
-* Node.js (For Gulp/Bower)
+* Node.js (For Gulp)
 * Ruby (For SASS)
 * Gem (For SASS)
 * Sass
