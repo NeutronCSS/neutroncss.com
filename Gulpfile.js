@@ -54,7 +54,7 @@ gulp.task('browsersync', ['css', 'scripts'], function (cb) {
 });
 
 // Watch tasks
-gulp.task('watch', ['browsersync'], function() {
+gulp.task('watch', ['css', 'scripts','browsersync'], function() {
     gulp.watch(config.path.sass, ['css']).on('change', browserSync.reload);
     gulp.watch(config.path.js, ['scripts']).on('change', browserSync.reload);
     gulp.watch(config.path.root + '/**/*.html').on('change', browserSync.reload);
