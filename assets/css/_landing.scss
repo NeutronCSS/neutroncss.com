@@ -92,9 +92,14 @@
 
 
 #intro {
-	@include columns($container-width: 1000px, $target: span);
+	@include columns((1), $target: span);
+	padding: 0px 20px;
 	text: {
 		align: center;
+	}
+	
+	@include breakpoint(from-tablet) {
+		padding: 20px 100px;
 	}
 }
 
