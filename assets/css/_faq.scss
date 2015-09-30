@@ -4,6 +4,14 @@
 	& > section {
 		@extend %default-page-layout;
 		background: rgba(black,0.02);
+		
+		@include breakpoint(from-tablet) {
+			padding: {
+				left: 150px;
+				right: 150px;
+				top: 50px;
+			}
+		}
 	}
 	@include lightTheme;
 	
