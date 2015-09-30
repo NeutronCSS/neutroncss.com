@@ -7,15 +7,15 @@
 
 $_neutron: (
 	layout: (
-		column-padding: 		4px 8px,
-		container-max-width: 	1200px,
-		flush-margin: 			true,
-		flush-padding: 			false
+		column-padding: 4px 8px,
+		container-max-width: 1200px,
+		flush-margin: true,
+		flush-padding: false
 	),
 	query: (
-		mobile-max: 		479px,
-		phablet-max: 		767px,
-		tablet-max: 		1023px,
+		mobile-max: 	479px,
+		phablet-max: 	767px,
+		tablet-max: 	1023px,
 		desktop-sml-max:	1199px,
 		desktop-mid-max:	1799px
 	)
@@ -30,8 +30,7 @@ $_neutron: (
 
 // Modules
 // ============================================
-@import "modules/normalise";
-@import "modules/grid";
+@import "modules/floatbox";
 @import "modules/queries";
 @import "modules/utilities";
 
