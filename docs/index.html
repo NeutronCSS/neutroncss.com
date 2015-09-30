@@ -372,13 +372,7 @@
 
 			<section id="media-query">
 				<h3><code>breakpoint()</code></h3>
-				<p>Lorem ipsum
-					lets you easily create a media query that applies styles to a specific breakpoint or range of device sizes
-					can target specific device or target a device and all larger devices
-					neutron supports a number of breakpoints out of the box
-					if you need to be more specific with your media query you can simply pass breakpoint() additional media query arguments
-					includes an easy way of creating resolution dependent media queries
-				</p>
+				<p>The <code>breakpoint()</code> mixin helps you create media queries that apply styles to a specific breakpoint or range of device sizes, or specific device resolutions. To get it working all you need to do is supply <code>breakpoint()</code> with a breakpoint, pixel ratio, or a valid media query string, and it will take care of the rest.</p>
 				
 				<section class="definition">
 					<h4>Breakpoint Definitions</h4>
@@ -422,6 +416,9 @@
 						<dt>from-desktop</dt>
 						<dd>min-width: 769px</dd>
 					</dl>
+					
+					
+					
 				</section>
 				
 				<div class="doc-example">
@@ -440,6 +437,8 @@
 					<dl>
 						<dt>$breakpoint: ""</dt>
 						<dd>[Breakpoint]</dd>
+						<dt>$resolution: ""</dt>
+						<dd>[Pixel Ratio]</dd>
 						<dt>$additional-queries: ""</dt>
 						<dd>[CSS Media Query]</dd>
 					</dl>
