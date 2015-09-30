@@ -9,7 +9,7 @@ body {
 	color: #E8E5C8;
 	
 	font: {
-		size: 16px;
+		size: 18px;
 	}
 	background: $background;
 	max-width: 100%;
@@ -196,16 +196,18 @@ header {
 	ul {
 		float: right;
 		list-style: none;
-			position: relative;
-			top: 10px;
-			left: -20px;
-		
+		position: relative;
+		top: 10px;
+		margin: {
+			bottom: 0px;
+		}
 	}
 	
 	li {
 		float: left;
 		margin: {
 			left: 40px;
+			bottom: 0px;
 		}
 		font: {
 			size: 0.8em;
@@ -214,7 +216,6 @@ header {
 	
 	h1 {
 		top: 40px;
-		left: 20px;
 		position: relative;
 		
 		@include breakpoint(from-tablet) {

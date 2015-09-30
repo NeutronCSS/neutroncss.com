@@ -2899,7 +2899,7 @@ body {
   font-weight: 400;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #E8E5C8;
-  font-size: 16px;
+  font-size: 18px;
   background: #29383A;
   max-width: 100%;
 }
@@ -3071,16 +3071,16 @@ header ul {
   list-style: none;
   position: relative;
   top: 10px;
-  left: -20px;
+  margin-bottom: 0px;
 }
 header li {
   float: left;
   margin-left: 40px;
+  margin-bottom: 0px;
   font-size: 0.8em;
 }
 header h1 {
   top: 40px;
-  left: 20px;
   position: relative;
 }
 @media (min-width: 768px) {
@@ -3161,6 +3161,7 @@ footer li {
 
 #introLogo {
   margin-bottom: 20px;
+  margin-top: 40px;
   width: 100px;
   height: 100px;
   background: url(../img/logo.svg) no-repeat;
@@ -3175,7 +3176,6 @@ footer li {
 }
 @media (min-width: 768px) {
   #introLogo {
-    margin-top: 0px;
     margin-bottom: 20px;
     width: 250px;
     height: 250px;
