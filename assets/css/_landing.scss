@@ -136,6 +136,7 @@
 	appearance: none;
 	text-align: center;
 	padding: 0;
+	color: $accent1 !important;
 }
 
 #compare {
@@ -221,10 +222,15 @@
 		span:last-child {
 			@include columns(1, $target: div);
 			
-		@include breakpoint(from-tablet) {
+		@include breakpoint(from-desktop-sml) {
 				@include columns(2, $target: div, $margin: 0px -5px);
 			}
 		}
+	}
+	
+	#otherFrameworks {
+		@include hide(mobile);
+		@include hide(phablet);
 	}
 }
 
@@ -308,7 +314,7 @@
 		}
 	}
 	
-	h4 {
+	h3 {
 		margin-top: 40px;
 	}
 }
