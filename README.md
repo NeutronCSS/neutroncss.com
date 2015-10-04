@@ -4,8 +4,7 @@
 The following are required for `neutroncss.com` to build correctly:
 
 * Node.js (For Gulp)
-* Ruby (For Sass)
-* Gem (For Sass)
+* Ruby & Gem (For Sass)
 * Sass
 * Python 2.7.3 (For browserSync)
 
