@@ -56,7 +56,7 @@
 			<p>Neutron does more than just let you build your layout quickly, it lets you maintain your work or change direction entirely with much less effort than other frameworks require. This flexibility lets you iterate faster and easier, your code can now keep up with the design changes that happen through the life of a project.</p>
 			
 			<p class="indent0">
-				@include columns(<input type="text" pattern="\d{1,2}" id="column-input" data-default="5" value="5">);
+				@include columns(<input autofocus type="text" pattern="\d{1,2}" id="column-input" data-default="5" value="5">);
 				<span class="comment">// Try changing the column layout yourself!</span>
 			</p>
 			
@@ -120,9 +120,10 @@
 			</span>
 			
 			<span class="codeblock">
-				<h3 class="active">Neutron</h3>
-				<hr />
-				<div>
+				<h3 data-tabs="neutron.tab.html.active">Neutron</h3>
+				<h3 data-tabs="neutron.tab.styles">Styles</h3>
+				<hr class="hrtabs" />
+				<div data-tabs="neutron.page.html">
 					<p class="indent0">&lt;section></p>
 						<p class="indent1">&lt;div></p>
 							<p class="indent2">&lt;h1>Hello&lt;/h1></p>
@@ -132,7 +133,7 @@
 						<p class="indent1">&lt;/div></p>
 					<p class="indent0">&lt;/section></p>
 				</div>
-				<div>
+				<div data-tabs="neutron.page.styles">
 					<p class="indent0">section {</p>
 						<p class="indent1">columns(<i>1</i>)</p>
 						<p class="indent1">@media {#<i>$from-tablet</i>} {</p>
@@ -180,6 +181,7 @@
 		<script src="/assets/built/app.js"></script>
 		<script>
 			neutron.tab.init("frameworks");
+			neutron.tab.init("neutron");
 			neutron.column.init();
 		</script>
 	</body>

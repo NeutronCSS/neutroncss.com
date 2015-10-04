@@ -3483,54 +3483,6 @@ footer li {
   margin-left: 0;
   margin-right: 0;
 }
-#compare .topRight {
-  width: 50%;
-  height: 30px;
-  position: absolute;
-  right: 0px;
-  top: -30px;
-}
-#compare .topRight img {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-}
-#compare .topLeft {
-  width: 50%;
-  height: 30px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-#compare .topLeft img {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-}
-#compare .bottomLeft {
-  width: 50%;
-  height: 30px;
-  position: absolute;
-  left: 0px;
-  bottom: -30px;
-}
-#compare .bottomLeft img {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-}
-#compare .bottomRight {
-  width: 50%;
-  height: 30px;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-}
-#compare .bottomRight img {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-}
 #compare .hrtabs {
   margin-top: 47px;
   margin-bottom: 30px;
@@ -3539,6 +3491,9 @@ footer li {
 #compare .codeblock div {
   -webkit-animation: fadeInUp;
   animation: fadeInUp;
+}
+#compare div[data-tabs] {
+  min-height: 310px;
 }
 @media (min-width: 768px) {
   #compare {
@@ -3620,6 +3575,7 @@ footer li {
   cursor: pointer;
   float: left;
   display: block;
+  opacity: 0.6;
 }
 .landing-page h3[data-tabs$=".active"], .landing-page h3.active {
   opacity: 1;

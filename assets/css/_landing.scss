@@ -143,61 +143,61 @@
 	background: #1D2D2F;
 	position: relative;
 	
-	.topRight {
-		width: 50%;
-		height: 30px;
-		position: absolute;
-		right: 0px;
-		top: -30px;
+	// .topRight {
+	// 	width: 50%;
+	// 	height: 30px;
+	// 	position: absolute;
+	// 	right: 0px;
+	// 	top: -30px;
 		
-		img {
-			position: absolute;
-			bottom: 0px;
-			width: 100%;
-		}
-	}
+	// 	img {
+	// 		position: absolute;
+	// 		bottom: 0px;
+	// 		width: 100%;
+	// 	}
+	// }
 	
-	.topLeft {
-		width: 50%;
-		height: 30px;
-		position: absolute;
-		left: 0px;
-		top: 0px;
+	// .topLeft {
+	// 	width: 50%;
+	// 	height: 30px;
+	// 	position: absolute;
+	// 	left: 0px;
+	// 	top: 0px;
 		
-		img {
-			position: absolute;
-			top: 0px;
-			width: 100%;
-		}
-	}
+	// 	img {
+	// 		position: absolute;
+	// 		top: 0px;
+	// 		width: 100%;
+	// 	}
+	// }
 	
-	.bottomLeft {
-		width: 50%;
-		height: 30px;
-		position: absolute;
-		left: 0px;
-		bottom: -30px;
+	// .bottomLeft {
+	// 	width: 50%;
+	// 	height: 30px;
+	// 	position: absolute;
+	// 	left: 0px;
+	// 	bottom: -30px;
 		
-		img {
-			position: absolute;
-			top: 0px;
-			width: 100%;
-		}
-	}
+	// 	img {
+	// 		position: absolute;
+	// 		top: 0px;
+	// 		width: 100%;
+	// 	}
+	// }
 	
-	.bottomRight {
-		width: 50%;
-		height: 30px;
-		position: absolute;
-		right: 0px;
-		bottom: 0px;
+	// .bottomRight {
+	// 	width: 50%;
+	// 	height: 30px;
+	// 	position: absolute;
+	// 	right: 0px;
+	// 	bottom: 0px;
 		
-		img {
-			position: absolute;
-			bottom: 0px;
-			width: 100%;
-		}
-	}
+	// 	img {
+	// 		position: absolute;
+	// 		bottom: 0px;
+	// 		width: 100%;
+	// 	}
+	// }
 		
 	.hrtabs {
 		margin: {
@@ -209,6 +209,10 @@
 	
 	.codeblock div {
 		animation: fadeInUp
+	}
+	
+	div[data-tabs] {
+		min-height: 310px;
 	}
 		
 	@include breakpoint(from-tablet) {
@@ -237,6 +241,7 @@
 		cursor: pointer;
 		float: left;
 		display: block;
+		opacity: 0.6;
 	}
 	
 	&[data-tabs$=".active"],
