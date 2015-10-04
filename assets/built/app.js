@@ -10,10 +10,10 @@
 // =====================
 
 // Download button
-var downloadLinks = document.querySelectorAll('[data-downloaded]');
+var downloadLinks = document.querySelectorAll('[data-anal-downloaded]');
 
 function addDownloadToDatalayer() {
-	var downloadType = this.getAttribute('data-downloaded');
+	var downloadType = this.getAttribute('data-anal-downloaded');
 	
 	dataLayer.push({
 		'event': 'downloaded-neutron',
