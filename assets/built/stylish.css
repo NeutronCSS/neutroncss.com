@@ -3075,7 +3075,7 @@ header ul {
 }
 header li {
   float: left;
-  margin-left: 40px;
+  margin-left: 20px;
   margin-bottom: 0px;
   font-size: 0.8em;
 }
@@ -3304,6 +3304,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #flexibility > span:nth-of-type(5n+1) p {
+    display: none;
+  }
+}
 #flexibility > span:nth-of-type(5n+2) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
@@ -3326,6 +3331,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #flexibility > span:nth-of-type(5n+2) p {
+    display: none;
+  }
 }
 #flexibility > span:nth-of-type(5n+3) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
@@ -3350,6 +3360,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #flexibility > span:nth-of-type(5n+3) p {
+    display: none;
+  }
+}
 #flexibility > span:nth-of-type(5n+4) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
@@ -3372,6 +3387,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #flexibility > span:nth-of-type(5n+4) p {
+    display: none;
+  }
 }
 #flexibility > span:nth-of-type(5n+5) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
@@ -3396,6 +3416,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #flexibility > span:nth-of-type(5n+5) p {
+    display: none;
+  }
 }
 #flexibility .indent0, #flexibility dl > *:nth-child(1n+1) {
   -webkit-animation: fadeIn;
@@ -3618,6 +3643,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #powerful .example1 > span:nth-of-type(5n+1) p {
+    display: none;
+  }
+}
 #powerful .example1 > span:nth-of-type(5n+2) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
@@ -3644,6 +3674,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #powerful .example1 > span:nth-of-type(5n+2) p {
+    display: none;
+  }
 }
 #powerful .example1 > span:nth-of-type(5n+3) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
@@ -3672,6 +3707,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #powerful .example1 > span:nth-of-type(5n+3) p {
+    display: none;
+  }
+}
 #powerful .example1 > span:nth-of-type(5n+4) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
@@ -3698,6 +3738,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #powerful .example1 > span:nth-of-type(5n+4) p {
+    display: none;
+  }
 }
 #powerful .example1 > span:nth-of-type(5n+5) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
@@ -3726,6 +3771,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #powerful .example1 > span:nth-of-type(5n+5) p {
+    display: none;
+  }
 }
 #powerful .example2 {
   max-width: 1200px;
@@ -3765,6 +3815,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #powerful .example2 > span:nth-of-type(5n+1) p {
+    display: none;
+  }
+}
 #powerful .example2 > span:nth-of-type(5n+2) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
@@ -3791,6 +3846,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #powerful .example2 > span:nth-of-type(5n+2) p {
+    display: none;
+  }
 }
 #powerful .example2 > span:nth-of-type(5n+3) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
@@ -3819,6 +3879,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #powerful .example2 > span:nth-of-type(5n+3) p {
+    display: none;
+  }
+}
 #powerful .example2 > span:nth-of-type(5n+4) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
@@ -3845,6 +3910,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #powerful .example2 > span:nth-of-type(5n+4) p {
+    display: none;
+  }
 }
 #powerful .example2 > span:nth-of-type(5n+5) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
@@ -3873,6 +3943,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #powerful .example2 > span:nth-of-type(5n+5) p {
+    display: none;
+  }
 }
 #powerful .example2 > span:nth-of-type(5n+5) {
   left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px)));
@@ -4132,6 +4207,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #ratios > div > div:nth-of-type(2n+1) p {
+    display: none;
+  }
+}
 #ratios > div > div:nth-of-type(2n+2) {
   width: calc(66.66667% - 1px - 1px + 0.5px + 0.5px);
   float: left;
@@ -4156,6 +4236,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #ratios > div > div:nth-of-type(2n+2) p {
+    display: none;
+  }
+}
 #ratios > div:nth-child(6) {
   max-width: 1200px;
   margin-left: auto;
@@ -4168,7 +4253,7 @@ footer li {
   clear: both;
 }
 #ratios > div:nth-child(6) > div:nth-of-type(3n+1) {
-  width: calc(47.61905% - 1px - 1px + 0.33333px + 0.33333px);
+  width: calc(25% - 1px - 1px + 0.33333px + 0.33333px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4192,8 +4277,13 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #ratios > div:nth-child(6) > div:nth-of-type(3n+1) p {
+    display: none;
+  }
+}
 #ratios > div:nth-child(6) > div:nth-of-type(3n+2) {
-  width: calc(4.7619% - 1px - 1px + 0.33333px + 0.33333px);
+  width: calc(8.33333% - 1px - 1px + 0.33333px + 0.33333px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4216,8 +4306,13 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #ratios > div:nth-child(6) > div:nth-of-type(3n+2) p {
+    display: none;
+  }
+}
 #ratios > div:nth-child(6) > div:nth-of-type(3n+3) {
-  width: calc(47.61905% - 1px - 1px + 0.33333px + 0.33333px);
+  width: calc(66.66667% - 1px - 1px + 0.33333px + 0.33333px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
   height: 60px;
@@ -4240,6 +4335,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #ratios > div:nth-child(6) > div:nth-of-type(3n+3) p {
+    display: none;
+  }
 }
 
 #bootstrap > div:nth-child(3) {
@@ -4423,6 +4523,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #bootstrap > div > div p {
+    display: none;
+  }
+}
 
 #uneven-columns {
   max-width: 1200px;
@@ -4458,6 +4563,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #uneven-columns > div:nth-of-type(5n+1) p {
+    display: none;
+  }
+}
 #uneven-columns > div:nth-of-type(5n+2) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
@@ -4480,6 +4590,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #uneven-columns > div:nth-of-type(5n+2) p {
+    display: none;
+  }
 }
 #uneven-columns > div:nth-of-type(5n+3) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
@@ -4504,6 +4619,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #uneven-columns > div:nth-of-type(5n+3) p {
+    display: none;
+  }
+}
 #uneven-columns > div:nth-of-type(5n+4) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
@@ -4526,6 +4646,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #uneven-columns > div:nth-of-type(5n+4) p {
+    display: none;
+  }
 }
 #uneven-columns > div:nth-of-type(5n+5) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
@@ -4550,6 +4675,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #uneven-columns > div:nth-of-type(5n+5) p {
+    display: none;
+  }
 }
 
 #nested-containers .example {
@@ -4615,6 +4745,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #nested-containers .example .article > div:nth-of-type(2n+1) p {
+    display: none;
+  }
+}
 #nested-containers .example .article > div:nth-of-type(2n+2) {
   width: calc(50% - 1px - 1px + 0.5px + 0.5px);
   float: left;
@@ -4638,6 +4773,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #nested-containers .example .article > div:nth-of-type(2n+2) p {
+    display: none;
+  }
 }
 #nested-containers .example aside {
   max-width: 1200px;
@@ -4674,6 +4814,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #nested-containers .example aside > div:nth-of-type(2n+1) p {
+    display: none;
+  }
+}
 #nested-containers .example aside > div:nth-of-type(2n+2) {
   width: calc(16.66667% - 1px - 1px + 0.5px + 0.5px);
   float: left;
@@ -4698,6 +4843,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #nested-containers .example aside > div:nth-of-type(2n+2) p {
+    display: none;
+  }
 }
 
 #container-align .example {
@@ -4731,6 +4881,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #container-align .example > div:nth-of-type(2n+1) p {
+    display: none;
+  }
+}
 #container-align .example > div:nth-of-type(2n+2) {
   width: calc(66.66667% - 1px - 1px + 0.5px + 0.5px);
   float: left;
@@ -4748,6 +4903,11 @@ footer li {
 #container-align .example > div:nth-of-type(2n+2) p {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #container-align .example > div:nth-of-type(2n+2) p {
+    display: none;
+  }
 }
 #container-align .example .example-right {
   display: none;
@@ -4803,6 +4963,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #container-width .example > div:nth-of-type(2n+1) p {
+    display: none;
+  }
+}
 #container-width .example > div:nth-of-type(2n+2) {
   width: calc(50% - 1px - 1px + 0.5px + 0.5px);
   float: left;
@@ -4826,6 +4991,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #container-width .example > div:nth-of-type(2n+2) p {
+    display: none;
+  }
 }
 @media (min-width: 1024px) {
   #container-width .example {
@@ -4867,6 +5037,11 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
+@media (max-width: 479px) {
+  #order > div:nth-of-type(3n+1) p {
+    display: none;
+  }
+}
 #order > div:nth-of-type(3n+2) {
   width: calc(66.66667% - 1px - 1px + 0.33333px + 0.33333px);
   float: left;
@@ -4889,6 +5064,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #order > div:nth-of-type(3n+2) p {
+    display: none;
+  }
 }
 #order > div:nth-of-type(3n+3) {
   width: calc(16.66667% - 1px - 1px + 0.33333px + 0.33333px);
@@ -4913,6 +5093,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #order > div:nth-of-type(3n+3) p {
+    display: none;
+  }
 }
 #order > div:nth-of-type(3n+2) {
   left: calc(0px - ((0px + (16.66667% + 0.66667px) + (66.66667% + 0.66667px))) + (0px + (66.66667% + 0.66667px)));
@@ -5169,6 +5354,11 @@ footer li {
   transform-style: preserve-3d;
   font-family: "fira mono", monaco;
   font-size: 0.7em;
+}
+@media (max-width: 479px) {
+  #show-hide .doc-example > *:nth-child(1n+1) p {
+    display: none;
+  }
 }
 #show-hide .doc-example p {
   display: none;

@@ -16,6 +16,8 @@
 			transform: translateY(-50%);
 			transform-style: preserve-3d;
 		}
+		
+		@include hide(mobile);
 			
 		font: {
 			family: "fira mono", monaco;
