@@ -1,9 +1,9 @@
 // LANDING PAGE
 
-
 #introLogo {
 	margin: {
 		bottom: 20px;
+		top: 40px;
 	}
 	width: 100px;
 	height: 100px;
@@ -18,7 +18,6 @@
 	
 	@include breakpoint(from-tablet) {
 		margin: {
-			top: 0px;
 			bottom: 20px;
 		}
 		width: 250px;
@@ -92,9 +91,14 @@
 
 
 #intro {
-	@include columns($container-width: 1000px, $target: span);
+	@include columns((1), $target: span);
+	padding: 0px 20px;
 	text: {
 		align: center;
+	}
+	
+	@include breakpoint(from-tablet) {
+		padding: 20px 100px;
 	}
 }
 
@@ -132,6 +136,7 @@
 	appearance: none;
 	text-align: center;
 	padding: 0;
+	color: $accent1 !important;
 }
 
 #compare {
@@ -139,61 +144,61 @@
 	background: #1D2D2F;
 	position: relative;
 	
-	.topRight {
-		width: 50%;
-		height: 30px;
-		position: absolute;
-		right: 0px;
-		top: -30px;
+	// .topRight {
+	// 	width: 50%;
+	// 	height: 30px;
+	// 	position: absolute;
+	// 	right: 0px;
+	// 	top: -30px;
 		
-		img {
-			position: absolute;
-			bottom: 0px;
-			width: 100%;
-		}
-	}
+	// 	img {
+	// 		position: absolute;
+	// 		bottom: 0px;
+	// 		width: 100%;
+	// 	}
+	// }
 	
-	.topLeft {
-		width: 50%;
-		height: 30px;
-		position: absolute;
-		left: 0px;
-		top: 0px;
+	// .topLeft {
+	// 	width: 50%;
+	// 	height: 30px;
+	// 	position: absolute;
+	// 	left: 0px;
+	// 	top: 0px;
 		
-		img {
-			position: absolute;
-			top: 0px;
-			width: 100%;
-		}
-	}
+	// 	img {
+	// 		position: absolute;
+	// 		top: 0px;
+	// 		width: 100%;
+	// 	}
+	// }
 	
-	.bottomLeft {
-		width: 50%;
-		height: 30px;
-		position: absolute;
-		left: 0px;
-		bottom: -30px;
+	// .bottomLeft {
+	// 	width: 50%;
+	// 	height: 30px;
+	// 	position: absolute;
+	// 	left: 0px;
+	// 	bottom: -30px;
 		
-		img {
-			position: absolute;
-			top: 0px;
-			width: 100%;
-		}
-	}
+	// 	img {
+	// 		position: absolute;
+	// 		top: 0px;
+	// 		width: 100%;
+	// 	}
+	// }
 	
-	.bottomRight {
-		width: 50%;
-		height: 30px;
-		position: absolute;
-		right: 0px;
-		bottom: 0px;
+	// .bottomRight {
+	// 	width: 50%;
+	// 	height: 30px;
+	// 	position: absolute;
+	// 	right: 0px;
+	// 	bottom: 0px;
 		
-		img {
-			position: absolute;
-			bottom: 0px;
-			width: 100%;
-		}
-	}
+	// 	img {
+	// 		position: absolute;
+	// 		bottom: 0px;
+	// 		width: 100%;
+	// 	}
+	// }
 		
 	.hrtabs {
 		margin: {
@@ -206,17 +211,33 @@
 	.codeblock div {
 		animation: fadeInUp
 	}
+	
+	div[data-tabs] {
+		min-height: 310px;
+	}
 		
 	@include breakpoint(from-tablet) {
 		@include columns(2, $margin: 40px 10px, $target: ".codeblock");
 		
 		span:last-child {
 			@include columns(1, $target: div);
-			
-		@include breakpoint(from-tablet) {
-				@include columns(2, $target: div, $margin: 0px -5px);
-			}
 		}
+	}
+	
+	@include breakpoint(tablet) {
+		h3 {
+			font-size: 1.1em;
+			margin-right: 20px;
+		}
+		
+		h3[data-tabs*="frameworks.tab.foundation"] {
+			margin: 0px;
+		}
+	}
+	
+	#otherFrameworks {
+		@include hide(mobile);
+		@include hide(phablet);
 	}
 }
 
@@ -233,6 +254,7 @@
 		cursor: pointer;
 		float: left;
 		display: block;
+		opacity: 0.6;
 	}
 	
 	&[data-tabs$=".active"],
@@ -246,15 +268,29 @@
 
 
 #powerful {
-	@include columns(5, $order:(5,4,1,3,2), $margin: 1px, $target: span) {
-		@include darkExampleBox;
-		height: 60px;
-		text-align: center;
-		padding: 0px;
-		font: {
-			size: 2em;
-		}
-	};
+	.example1 {
+		@include columns((5), $margin: 1px, $target: span) {
+			@include darkExampleBox;
+			height: 60px;
+			text-align: center;
+			padding: 0px;
+			font: {
+				size: 2em;
+			}
+		};
+	}
+	
+	.example2 {
+		@include columns(5, $order:(5,4,1,3,2), $margin: 1px, $target: span) {
+			@include darkExampleBox;
+			height: 60px;
+			text-align: center;
+			padding: 0px;
+			font: {
+				size: 2em;
+			}
+		};
+	}
 	background: rgba(black, 0.02);
 	overflow: hidden;
 	
@@ -266,12 +302,27 @@
 	}
 	
 	@include breakpoint(from-tablet) {
-		@include columns(5, $order:(5,4,1,3,2), $margin: 1px, $target: span) {
-			height: 120px;
-			font: {
-				size: 4.05em;
-			}
-		};
+		.example1 {
+			@include columns((5), $margin: 1px, $target: span) {
+				height: 120px;
+				font: {
+					size: 4.05em;
+				}
+			};
+		}
+		
+		.example2 {
+			@include columns(5, $order:(5,4,1,3,2), $margin: 1px, $target: span) {
+				height: 120px;
+				font: {
+					size: 4.05em;
+				}
+			};
+		}
+	}
+	
+	h3 {
+		margin-top: 40px;
 	}
 }
 

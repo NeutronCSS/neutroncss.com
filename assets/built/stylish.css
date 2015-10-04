@@ -2899,7 +2899,7 @@ body {
   font-weight: 400;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #E8E5C8;
-  font-size: 16px;
+  font-size: 18px;
   background: #29383A;
   max-width: 100%;
 }
@@ -3035,18 +3035,18 @@ hr {
   border-bottom: 0px;
 }
 
-.definitionBlock, .faq-page > section, .faq-page > nav, .faq-page > header {
+.definitionBlock, .faq-page > section {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px 20px;
 }
-.definitionBlock:after, .faq-page > section:after, .faq-page > nav:after, .faq-page > header:after {
+.definitionBlock:after, .faq-page > section:after {
   content: "";
   display: table;
   clear: both;
 }
-.definitionBlock > *:nth-child(1n+1), .faq-page > section > *:nth-child(1n+1), .faq-page > nav > *:nth-child(1n+1), .faq-page > header > *:nth-child(1n+1) {
+.definitionBlock > *:nth-child(1n+1), .faq-page > section > *:nth-child(1n+1) {
   width: calc(100%);
   float: left;
   clear: left;
@@ -3054,14 +3054,14 @@ hr {
   margin-right: 0;
 }
 @media (min-width: 768px) {
-  .definitionBlock, .faq-page > section, .faq-page > nav, .faq-page > header {
+  .definitionBlock, .faq-page > section {
     padding: 30px 100px;
   }
 }
 
 header {
   background: #1D2C2F;
-  background-image: linear-gradient(-30deg, rgba(77, 241, 255, 0.1) 0%, rgba(255, 206, 85, 0.1) 100%);
+  background-image: linear-gradient(-30deg, rgba(77, 241, 255, 0.15) 0%, rgba(255, 206, 85, 0.15) 100%);
   z-index: 1;
   position: relative;
   min-height: 140px;
@@ -3071,16 +3071,16 @@ header ul {
   list-style: none;
   position: relative;
   top: 10px;
-  left: -20px;
+  margin-bottom: 0px;
 }
 header li {
   float: left;
   margin-left: 40px;
+  margin-bottom: 0px;
   font-size: 0.8em;
 }
 header h1 {
   top: 40px;
-  left: 20px;
   position: relative;
 }
 @media (min-width: 768px) {
@@ -3161,6 +3161,7 @@ footer li {
 
 #introLogo {
   margin-bottom: 20px;
+  margin-top: 40px;
   width: 100px;
   height: 100px;
   background: url(../img/logo.svg) no-repeat;
@@ -3175,7 +3176,6 @@ footer li {
 }
 @media (min-width: 768px) {
   #introLogo {
-    margin-top: 0px;
     margin-bottom: 20px;
     width: 250px;
     height: 250px;
@@ -3244,15 +3244,28 @@ footer li {
 }
 
 #intro {
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0px 20px;
   text-align: center;
 }
 #intro:after {
   content: "";
   display: table;
   clear: both;
+}
+#intro > span:nth-of-type(1n+1) {
+  width: calc(100%);
+  float: left;
+  clear: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  #intro {
+    padding: 20px 100px;
+  }
 }
 
 #flexibility {
@@ -3449,6 +3462,7 @@ footer li {
   appearance: none;
   text-align: center;
   padding: 0;
+  color: #75ECE1 !important;
 }
 
 #compare {
@@ -3470,54 +3484,6 @@ footer li {
   margin-left: 0;
   margin-right: 0;
 }
-#compare .topRight {
-  width: 50%;
-  height: 30px;
-  position: absolute;
-  right: 0px;
-  top: -30px;
-}
-#compare .topRight img {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-}
-#compare .topLeft {
-  width: 50%;
-  height: 30px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-#compare .topLeft img {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-}
-#compare .bottomLeft {
-  width: 50%;
-  height: 30px;
-  position: absolute;
-  left: 0px;
-  bottom: -30px;
-}
-#compare .bottomLeft img {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-}
-#compare .bottomRight {
-  width: 50%;
-  height: 30px;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-}
-#compare .bottomRight img {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-}
 #compare .hrtabs {
   margin-top: 47px;
   margin-bottom: 30px;
@@ -3526,6 +3492,9 @@ footer li {
 #compare .codeblock div {
   -webkit-animation: fadeInUp;
   animation: fadeInUp;
+}
+#compare div[data-tabs] {
+  min-height: 310px;
 }
 @media (min-width: 768px) {
   #compare {
@@ -3570,30 +3539,23 @@ footer li {
     margin-right: 0;
   }
 }
-@media (min-width: 768px) and (min-width: 768px) {
-  #compare span:last-child {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+@media (min-width: 768px) and (max-width: 1023px) {
+  #compare h3 {
+    font-size: 1.1em;
+    margin-right: 20px;
   }
-  #compare span:last-child:after {
-    content: "";
-    display: table;
-    clear: both;
+  #compare h3[data-tabs*="frameworks.tab.foundation"] {
+    margin: 0px;
   }
-  #compare span:last-child > div:nth-of-type(2n+1) {
-    width: calc(50% - -5px - -5px + -2.5px + -2.5px);
-    float: left;
-    margin: 0px -5px;
-    clear: left;
-    margin-left: 0;
+}
+@media (max-width: 479px) {
+  #compare #otherFrameworks {
+    display: none;
   }
-  #compare span:last-child > div:nth-of-type(2n+2) {
-    width: calc(50% - -5px - -5px + -2.5px + -2.5px);
-    float: left;
-    margin: 0px -5px;
-    clear: none;
-    margin-right: 0;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #compare #otherFrameworks {
+    display: none;
   }
 }
 
@@ -3607,6 +3569,7 @@ footer li {
   cursor: pointer;
   float: left;
   display: block;
+  opacity: 0.6;
 }
 .landing-page h3[data-tabs$=".active"], .landing-page h3.active {
   opacity: 1;
@@ -3614,18 +3577,20 @@ footer li {
 }
 
 #powerful {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   background: rgba(0, 0, 0, 0.02);
   overflow: hidden;
 }
-#powerful:after {
+#powerful .example1 {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#powerful .example1:after {
   content: "";
   display: table;
   clear: both;
 }
-#powerful > span:nth-of-type(5n+1) {
+#powerful .example1 > span:nth-of-type(5n+1) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
@@ -3643,7 +3608,7 @@ footer li {
   clear: left;
   margin-left: 0;
 }
-#powerful > span:nth-of-type(5n+1) p {
+#powerful .example1 > span:nth-of-type(5n+1) p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3653,7 +3618,7 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
-#powerful > span:nth-of-type(5n+2) {
+#powerful .example1 > span:nth-of-type(5n+2) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
@@ -3670,7 +3635,7 @@ footer li {
   margin: 1px;
   clear: none;
 }
-#powerful > span:nth-of-type(5n+2) p {
+#powerful .example1 > span:nth-of-type(5n+2) p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3680,7 +3645,7 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
-#powerful > span:nth-of-type(5n+3) {
+#powerful .example1 > span:nth-of-type(5n+3) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
@@ -3697,7 +3662,7 @@ footer li {
   margin: 1px;
   clear: none;
 }
-#powerful > span:nth-of-type(5n+3) p {
+#powerful .example1 > span:nth-of-type(5n+3) p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3707,7 +3672,7 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
-#powerful > span:nth-of-type(5n+4) {
+#powerful .example1 > span:nth-of-type(5n+4) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
@@ -3724,7 +3689,7 @@ footer li {
   margin: 1px;
   clear: none;
 }
-#powerful > span:nth-of-type(5n+4) p {
+#powerful .example1 > span:nth-of-type(5n+4) p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3734,7 +3699,7 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
-#powerful > span:nth-of-type(5n+5) {
+#powerful .example1 > span:nth-of-type(5n+5) {
   width: calc(20% - 1px - 1px + 0.2px + 0.2px);
   float: left;
   background: rgba(117, 236, 225, 0.1);
@@ -3752,7 +3717,7 @@ footer li {
   clear: none;
   margin-right: 0;
 }
-#powerful > span:nth-of-type(5n+5) p {
+#powerful .example1 > span:nth-of-type(5n+5) p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3762,23 +3727,170 @@ footer li {
   font-family: "fira mono", monaco;
   font-size: 0.7em;
 }
-#powerful > span:nth-of-type(5n+5) {
+#powerful .example2 {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#powerful .example2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#powerful .example2 > span:nth-of-type(5n+1) {
+  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+  float: left;
+  background: rgba(117, 236, 225, 0.1);
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 20px;
+  color: #75ECE1;
+  height: 60px;
+  text-align: center;
+  padding: 0px;
+  font-size: 2em;
+  margin: 1px;
+  clear: left;
+  margin-left: 0;
+}
+#powerful .example2 > span:nth-of-type(5n+1) p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  font-family: "fira mono", monaco;
+  font-size: 0.7em;
+}
+#powerful .example2 > span:nth-of-type(5n+2) {
+  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+  float: left;
+  background: rgba(117, 236, 225, 0.1);
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 20px;
+  color: #75ECE1;
+  height: 60px;
+  text-align: center;
+  padding: 0px;
+  font-size: 2em;
+  margin: 1px;
+  clear: none;
+}
+#powerful .example2 > span:nth-of-type(5n+2) p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  font-family: "fira mono", monaco;
+  font-size: 0.7em;
+}
+#powerful .example2 > span:nth-of-type(5n+3) {
+  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+  float: left;
+  background: rgba(117, 236, 225, 0.1);
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 20px;
+  color: #75ECE1;
+  height: 60px;
+  text-align: center;
+  padding: 0px;
+  font-size: 2em;
+  margin: 1px;
+  clear: none;
+}
+#powerful .example2 > span:nth-of-type(5n+3) p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  font-family: "fira mono", monaco;
+  font-size: 0.7em;
+}
+#powerful .example2 > span:nth-of-type(5n+4) {
+  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+  float: left;
+  background: rgba(117, 236, 225, 0.1);
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 20px;
+  color: #75ECE1;
+  height: 60px;
+  text-align: center;
+  padding: 0px;
+  font-size: 2em;
+  margin: 1px;
+  clear: none;
+}
+#powerful .example2 > span:nth-of-type(5n+4) p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  font-family: "fira mono", monaco;
+  font-size: 0.7em;
+}
+#powerful .example2 > span:nth-of-type(5n+5) {
+  width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+  float: left;
+  background: rgba(117, 236, 225, 0.1);
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 20px;
+  color: #75ECE1;
+  height: 60px;
+  text-align: center;
+  padding: 0px;
+  font-size: 2em;
+  margin: 1px;
+  clear: none;
+  margin-right: 0;
+}
+#powerful .example2 > span:nth-of-type(5n+5) p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  font-family: "fira mono", monaco;
+  font-size: 0.7em;
+}
+#powerful .example2 > span:nth-of-type(5n+5) {
   left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px)));
   position: relative;
 }
-#powerful > span:nth-of-type(5n+4) {
+#powerful .example2 > span:nth-of-type(5n+4) {
   left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px)));
   position: relative;
 }
-#powerful > span:nth-of-type(5n+1) {
+#powerful .example2 > span:nth-of-type(5n+1) {
   left: calc(0px - ((0px + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px)));
   position: relative;
 }
-#powerful > span:nth-of-type(5n+3) {
+#powerful .example2 > span:nth-of-type(5n+3) {
   left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px)));
   position: relative;
 }
-#powerful > span:nth-of-type(5n+2) {
+#powerful .example2 > span:nth-of-type(5n+2) {
   left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px)));
   position: relative;
 }
@@ -3789,17 +3901,17 @@ footer li {
   top: 10px;
 }
 @media (min-width: 768px) {
-  #powerful {
+  #powerful .example1 {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
-  #powerful:after {
+  #powerful .example1:after {
     content: "";
     display: table;
     clear: both;
   }
-  #powerful > span:nth-of-type(5n+1) {
+  #powerful .example1 > span:nth-of-type(5n+1) {
     width: calc(20% - 1px - 1px + 0.2px + 0.2px);
     float: left;
     height: 120px;
@@ -3808,7 +3920,7 @@ footer li {
     clear: left;
     margin-left: 0;
   }
-  #powerful > span:nth-of-type(5n+2) {
+  #powerful .example1 > span:nth-of-type(5n+2) {
     width: calc(20% - 1px - 1px + 0.2px + 0.2px);
     float: left;
     height: 120px;
@@ -3816,7 +3928,7 @@ footer li {
     margin: 1px;
     clear: none;
   }
-  #powerful > span:nth-of-type(5n+3) {
+  #powerful .example1 > span:nth-of-type(5n+3) {
     width: calc(20% - 1px - 1px + 0.2px + 0.2px);
     float: left;
     height: 120px;
@@ -3824,7 +3936,7 @@ footer li {
     margin: 1px;
     clear: none;
   }
-  #powerful > span:nth-of-type(5n+4) {
+  #powerful .example1 > span:nth-of-type(5n+4) {
     width: calc(20% - 1px - 1px + 0.2px + 0.2px);
     float: left;
     height: 120px;
@@ -3832,7 +3944,7 @@ footer li {
     margin: 1px;
     clear: none;
   }
-  #powerful > span:nth-of-type(5n+5) {
+  #powerful .example1 > span:nth-of-type(5n+5) {
     width: calc(20% - 1px - 1px + 0.2px + 0.2px);
     float: left;
     height: 120px;
@@ -3841,26 +3953,81 @@ footer li {
     clear: none;
     margin-right: 0;
   }
-  #powerful > span:nth-of-type(5n+5) {
+  #powerful .example2 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #powerful .example2:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #powerful .example2 > span:nth-of-type(5n+1) {
+    width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+    float: left;
+    height: 120px;
+    font-size: 4.05em;
+    margin: 1px;
+    clear: left;
+    margin-left: 0;
+  }
+  #powerful .example2 > span:nth-of-type(5n+2) {
+    width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+    float: left;
+    height: 120px;
+    font-size: 4.05em;
+    margin: 1px;
+    clear: none;
+  }
+  #powerful .example2 > span:nth-of-type(5n+3) {
+    width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+    float: left;
+    height: 120px;
+    font-size: 4.05em;
+    margin: 1px;
+    clear: none;
+  }
+  #powerful .example2 > span:nth-of-type(5n+4) {
+    width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+    float: left;
+    height: 120px;
+    font-size: 4.05em;
+    margin: 1px;
+    clear: none;
+  }
+  #powerful .example2 > span:nth-of-type(5n+5) {
+    width: calc(20% - 1px - 1px + 0.2px + 0.2px);
+    float: left;
+    height: 120px;
+    font-size: 4.05em;
+    margin: 1px;
+    clear: none;
+    margin-right: 0;
+  }
+  #powerful .example2 > span:nth-of-type(5n+5) {
     left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px)));
     position: relative;
   }
-  #powerful > span:nth-of-type(5n+4) {
+  #powerful .example2 > span:nth-of-type(5n+4) {
     left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px)));
     position: relative;
   }
-  #powerful > span:nth-of-type(5n+1) {
+  #powerful .example2 > span:nth-of-type(5n+1) {
     left: calc(0px - ((0px + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px)));
     position: relative;
   }
-  #powerful > span:nth-of-type(5n+3) {
+  #powerful .example2 > span:nth-of-type(5n+3) {
     left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px)));
     position: relative;
   }
-  #powerful > span:nth-of-type(5n+2) {
+  #powerful .example2 > span:nth-of-type(5n+2) {
     left: calc(0px - ((0px + (20% + 0.4px) + (20% + 0.4px))) + (0px + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px) + (20% + 0.4px)));
     position: relative;
   }
+}
+#powerful h3 {
+  margin-top: 40px;
 }
 
 .infoBlock#compare,
@@ -5107,6 +5274,16 @@ dl + h4 {
 .faq-page {
   background: #FFFFFE;
 }
+.faq-page > section {
+  background: rgba(0, 0, 0, 0.02);
+}
+@media (min-width: 768px) {
+  .faq-page > section {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+  }
+}
 .faq-page p, .faq-page h2, .faq-page h3, .faq-page h4, .faq-page h5 {
   color: #364D54;
 }
@@ -5121,6 +5298,14 @@ dl + h4 {
 }
 .faq-page a {
   color: #73BE68;
+}
+.faq-page > header section {
+  text-align: left !important;
+}
+@media (min-width: 768px) {
+  .faq-page > header section {
+    padding: 20px 0px 40px 0px;
+  }
 }
 .faq-page h2 {
   font-size: 1.4em;

@@ -12,27 +12,42 @@
 		<link rel="shortcut icon" href="/assets/img/pinned.svg" type="image/x-icon" />
 		<link rel="mask-icon" href="/assets/img/pinned.svg" color="#29383A">
 		<meta name="theme-color" content="#29383A">
+		<link rel="icon" type="image/png" href="/favicon.png" />
 		
-		<meta name="description" content="Neutron is a SASS framework that empowers you to create flexible, clear, and semantic website layouts. Neutron uses the power of SASS to enable you to create layouts that are fast and easy to iterate with, powerful to use, all while remaining simple to understand.">
+		<meta name="description" content="Neutron is a SASS framework that empowers you to create flexible, clear, and semantic website layouts. Using Neutron you can create layouts that are fast and easy to iterate with, powerful to use, all while remaining simple to understand.">
 		<meta name="keywords" content="neutron,neutroncss,css,SASS,SCSS,framework,web,design,html,development,bootstrap,foundation,susy">
 		
 		<meta property="og:site_name" content="Neutron">
 		<meta property="og:title" content="Overview" />
-		<!--<meta property="og:image" content="link_to_image">-->
-		<meta property="og:description" content="Neutron is a SASS framework that empowers you to create flexible, clear, and semantic website layouts. Neutron uses the power of SASS to enable you to create layouts that are fast and easy to iterate with, powerful to use, all while remaining simple to understand.">
+		<meta property="og:image" content="/opengraph.png">
+		<meta property="og:description" content="Neutron is a SASS framework that empowers you to create flexible, clear, and semantic website layouts. Using Neutron you can create layouts that are fast and easy to iterate with, powerful to use, all while remaining simple to understand.">
 		<meta property="og:url" content="http://neutroncss.com/" />
 		<meta property="og:type" content="website" />
 		
 		<link rel="canonical" href="http://neutroncss.com/" />
 	</head>
 	<body class="landing-page">
+		<script>
+			dataLayer = [{
+				'pageCategory': 'overview'
+			}];
+		</script>
+		<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NSZGQZ"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NSZGQZ');</script>
+		<!-- End Google Tag Manager -->
 		<header>
 			<section id="intro">
 				<div id="introLogo"></div>
 				<p class="copyIntro">A SASS framework that empowers you to create flexible, clear, and semantic website layouts.</p>
-				<a href="#" class="btn download-link">Download Version 0.9.0</a>
+				<a href="https://github.com/NeutronCSS/neutroncss/archive/master.zip" data-anal-downloaded="intro" class="btn">Download Version 0.9.0</a>
 				<br />
-				<a href="/docs" class="docsLink">or read the documentation</a>
+				<a data-anal-docs="intro" href="/docs" class="docsLink">or read the documentation</a>
 			</section>
 			<div class="pattern"></div>
 		</header>
@@ -41,7 +56,7 @@
 			<p>Neutron does more than just let you build your layout quickly, it lets you maintain your work or change direction entirely with much less effort than other frameworks require. This flexibility lets you iterate faster and easier, your code can now keep up with the design changes that happen through the life of a project.</p>
 			
 			<p class="indent0">
-				@include columns(<input type="text" pattern="\d{1,2}" id="column-input" data-default="5" value="5">);
+				@include columns(<input autofocus type="text" pattern="\d{1,2}" id="column-input" data-default="5" value="5">);
 				<span class="comment">// Try changing the column layout yourself!</span>
 			</p>
 			
@@ -63,7 +78,7 @@
 
 			<h2>Clear, clean, and semantic</h2>
 			<p>Neutron removes the need to litter your HTML with messy and confusing classes, leaving you with clear and clean code. Want to change the number of columns? No need to change classes scattered throughout your HTML, the number of columns is determined in your CSS right where it belongs.</p>
-			<span class="codeblock">
+			<span class="codeblock" id="otherFrameworks">
 				<h3 data-tabs="frameworks.tab.bootstrap.active">Bootstrap</h3>
 				<h3 data-tabs="frameworks.tab.skeleton">Skeleton</h3>
 				<h3 data-tabs="frameworks.tab.foundation">Foundation</h3>
@@ -105,9 +120,10 @@
 			</span>
 			
 			<span class="codeblock">
-				<h3 class="active">Neutron</h3>
-				<hr />
-				<div>
+				<h3 data-tabs="neutron.tab.html.active">Neutron</h3>
+				<h3 data-tabs="neutron.tab.styles">SASS</h3>
+				<hr class="hrtabs" />
+				<div data-tabs="neutron.page.html">
 					<p class="indent0">&lt;section></p>
 						<p class="indent1">&lt;div></p>
 							<p class="indent2">&lt;h1>Hello&lt;/h1></p>
@@ -117,10 +133,10 @@
 						<p class="indent1">&lt;/div></p>
 					<p class="indent0">&lt;/section></p>
 				</div>
-				<div>
+				<div data-tabs="neutron.page.styles">
 					<p class="indent0">section {</p>
 						<p class="indent1">columns(<i>1</i>)</p>
-						<p class="indent1">@media {#<i>$from-tablet</i>} {</p>
+						<p class="indent1">@include breakpoint(<i>from-tablet</i>) {</p>
 							<p class="indent2">columns(<i>2</i>)</p>
 						<p class="indent1">}</p>
 					<p class="indent0">}</p>
@@ -131,17 +147,29 @@
 		<section id="powerful" class="infoBlock">
 			<h2>Powerful features, simple syntax</h2>
 			<p>Rethinking Neutron to work the way you think helped us make Neutron more powerful, not just easier to use. Instead of pushing or pulling elements to fit into your design, you can simply use <code>order()</code> and make your design match the way you imagined it. Because Neutron makes no unnecessary assumptions about how you work, we were able to add essential features like real flush margins that other frameworks have to fake or simulate or not support at all.</p>
-			<span><p>1</p></span>
-			<span><p>2</p></span>
-			<span><p>3</p></span>
-			<span><p>4</p></span>
-			<span><p>5</p></span>
+			<h3>HTML as it sits in the DOM</h3>
+			<div class="example1">
+				<span><p>1</p></span>
+				<span><p>2</p></span>
+				<span><p>3</p></span>
+				<span><p>4</p></span>
+				<span><p>5</p></span>
+			</div>
+			<p class="indent0">@include columns(<i>5</i>);</p>
+			
+			<h3>With <code>order()</code> applied</h3>
+			<div class="example2">
+				<span><p>1</p></span>
+				<span><p>2</p></span>
+				<span><p>3</p></span>
+				<span><p>4</p></span>
+				<span><p>5</p></span>
+			</div>
 			<p class="indent0">@include columns(<i>5</i>, $order:(<i>5,4,1,3,2</i>));</p>
 		</section>
-		
 		<footer>
 			<ul>
-				<li><a class="download-link" href="https://github.com/NeutronCSS/neutroncss/archive/master.zip">Download</a>
+				<li><a data-anal-downloaded="footer" href="https://github.com/NeutronCSS/neutroncss/archive/master.zip">Download</a>
 				<li><a href="https://github.com/NeutronCSS/neutroncss">Github</a>
 				<li><a href="/docs/">Docs</a>
 				<li><a href="/faq/">FAQ</a>
@@ -152,6 +180,7 @@
 		<script src="/assets/built/app.js"></script>
 		<script>
 			neutron.tab.init("frameworks");
+			neutron.tab.init("neutron");
 			neutron.column.init();
 		</script>
 	</body>
