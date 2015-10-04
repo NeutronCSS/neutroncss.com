@@ -221,10 +221,17 @@
 		
 		span:last-child {
 			@include columns(1, $target: div);
-			
-		@include breakpoint(from-desktop-sml) {
-				@include columns(2, $target: div, $margin: 0px -5px);
-			}
+		}
+	}
+	
+	@include breakpoint(tablet) {
+		h3 {
+			font-size: 1.1em;
+			margin-right: 20px;
+		}
+		
+		h3[data-tabs*="frameworks.tab.foundation"] {
+			margin: 0px;
 		}
 	}
 	
