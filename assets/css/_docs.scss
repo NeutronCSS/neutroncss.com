@@ -26,7 +26,7 @@
 	}
 	
 	& > div:nth-child(6) {
-		@include columns((10,1,10), $margin: 1px, $target: div) {
+		@include columns((3,1,8), $margin: 1px, $target: div) {
 			@include exampleBox;
 			@include docsBox;
 			border: 1px soilid red;
