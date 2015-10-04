@@ -10,16 +10,20 @@
 // =====================
 
 // Download button
-var downloadLinks = document.querySelectorAll('[data-analytics=download]');
+var downloadLinks = document.querySelectorAll('[data-downloaded]');
 
 function addDownloadToDatalayer() {
+	var downloadType = this.getAttribute('data-downloaded');
+	
 	dataLayer.push({
-		'event': 'downloaded-neutron'
+		'event': 'downloaded-neutron',
+		'downloaded-neutron-type': downloadType
 	});
 }
 
 for (var i = 0; i < downloadLinks.length; ++i) {
 	var link = downloadLinks[i];
+
 	link.addEventListener('click', addDownloadToDatalayer, false);
 }	
 
