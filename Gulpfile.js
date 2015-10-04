@@ -18,7 +18,7 @@ var config = {
 	}
 }
 
-// SASS Compilation
+// Sass Compilation
 gulp.task('css', function(cb) {
     sass(config.path.sass, {style: 'expanded'})
 	.pipe(autoprefixer({

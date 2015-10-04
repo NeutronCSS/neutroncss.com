@@ -1,5 +1,5 @@
 # Neutron
-A SASS framework that empowers you to create flexible, clear, and semantic website layouts.
+A Sass framework that empowers you to create flexible, clear, and semantic website layouts.
 
 ##Why use Neutron?
 Neutron is built from the beginning to be clear, concise, and--primarily--a flexible system for creating website layouts.
