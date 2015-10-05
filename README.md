@@ -13,8 +13,3 @@ After cloning the project, follow the below steps to begin development:
 
 1. `npm install`: Installs all required npm packages.
 3. `gulp`: Compiles all styles, scripts, and begins watching directories for any changes to Sass or JS files and sets up browsersync static server.
-
-##Domains
-neutroncss.com: actual website.
-webhook.neutron.com: url path for webhooks.
-develop.neutroncss.com: stage server
