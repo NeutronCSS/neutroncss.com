@@ -1,12 +1,27 @@
 // FAQ PAGE
 // ----------------------------------
 .faq-page {
-	& > section,
-	& > nav,
-	& > header {
+	& > section {
 		@extend %default-page-layout;
+		background: rgba(black,0.02);
+		
+		@include breakpoint(from-tablet) {
+			padding: {
+				left: 150px;
+				right: 150px;
+				top: 50px;
+			}
+		}
 	}
 	@include lightTheme;
+	
+	& > header section {
+		text-align: left !important;
+		
+		@include breakpoint(from-tablet) {
+			padding: 20px 0px 40px 0px;
+		}
+	}
 	
 	h2 {
 		font-size: 1.4em;
