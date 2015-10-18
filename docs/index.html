@@ -183,9 +183,11 @@ div {
 <pre class="language-scss"><code>section {
   @include columns((1,3,1), $target: "div") {
     @include columns((1,4), $target: div);
+	
     .article {
       @include columns(2, $target: div);
     }
+	
     aside {
      @include columns((5,1), $target: div);
     }
