@@ -1,0 +1,65 @@
+// ABOUT PAGE
+
+
+.about-page {
+	h1 {
+		margin: {
+			bottom: 40px;
+			display: block;
+		}
+	}
+	
+	header {
+		a {
+			margin: 0px 10px;
+			
+			@include breakpoint(from-phablet) {
+				margin: 0px 20px;
+			}
+		}
+	}
+	
+	.infoBlock {
+		@include columns(1, $target: div, $margin: 20px 0px);
+		text-align: center;
+		padding: {
+			top: 40px;
+		}
+		background: rgba(black, 0.02);
+		
+		@include breakpoint(from-phablet) {
+			@include columns(2, $target: div);
+		}
+		
+		h2 {
+			margin: {
+				bottom: 50px;
+			}
+		}
+		
+		h3 {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.avatar {
+	width: 200px;
+	border-radius: 50%;
+	
+	@include breakpoint(from-phablet) {
+		width: 200px;
+	}
+	
+	@include breakpoint(from-desktop) {
+		width: 300px;
+	}
+	
+	
+	
+	&:hover {
+		cursor: hand;
+	}
+}
