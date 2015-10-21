@@ -56,10 +56,9 @@
 	@include breakpoint(from-desktop) {
 		width: 300px;
 	}
-	
-	
-	
+
 	&:hover {
 		cursor: hand;
 	}
 }
+
