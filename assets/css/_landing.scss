@@ -7,9 +7,6 @@
 	}
 	width: 100px;
 	height: 100px;
-	background: url(../img/logo.svg) no-repeat;
-	background-size: contain;
-	display: inline-block;
 	
 	@include breakpoint(from-phablet) {
 		width: 150px;

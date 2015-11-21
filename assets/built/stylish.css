@@ -3164,9 +3164,6 @@ footer li {
   margin-top: 40px;
   width: 100px;
   height: 100px;
-  background: url(../img/logo.svg) no-repeat;
-  background-size: contain;
-  display: inline-block;
 }
 @media (min-width: 480px) {
   #introLogo {
