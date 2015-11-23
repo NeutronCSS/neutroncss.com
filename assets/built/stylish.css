@@ -3069,48 +3069,45 @@ nav .collapsible {
   position: absolute;
   right: 20px;
   top: 20px;
-  width: auto;
-  height: 30px;
+  width: 30px;
+  height: 23px;
 }
 nav .collapsible span {
   width: 30px;
   height: 5px;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: .2s ease-in-out;
+  cursor: pointer;
   border-radius: 5px;
   background: #ACDFA4;
   display: block;
-  transition: 0.5s -webkit-transform ease;
-  transition: 0.5s transform ease;
-  transition: 0.5s opacity ease;
-  transition: 0.5s top ease;
 }
 nav .collapsible span:nth-child(1) {
   top: 0px;
 }
-nav .collapsible span:nth-child(2) {
+nav .collapsible span:nth-child(2), nav .collapsible span:nth-child(3) {
   top: 9px;
-  position: absolute;
 }
-nav .collapsible span:nth-child(3) {
+nav .collapsible span:nth-child(4) {
   top: 18px;
-  position: absolute;
-}
-nav .collapsible.collapse-open span {
-  transition: 0.5s -webkit-transform ease;
-  transition: 0.5s transform ease;
-  transition: 0.5s opacity ease;
 }
 nav .collapsible.collapse-open span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 0px;
+  top: 9px;
+  opacity: 0;
 }
 nav .collapsible.collapse-open span:nth-child(2) {
-  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 nav .collapsible.collapse-open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 0px;
+}
+nav .collapsible.collapse-open span:nth-child(4) {
+  top: 9px;
+  opacity: 0;
 }
 nav .collapsible:hover {
   cursor: pointer;

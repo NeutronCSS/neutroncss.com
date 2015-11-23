@@ -196,52 +196,55 @@ nav {
 		position: absolute;
 		right: 20px;
 		top: 20px;
-		width: auto;
-		height: 30px;
+		width: 30px;
+		height: 23px;
 		
 		span {
 			width: 30px;
 			height: 5px;
+			position: absolute;
+			transform: rotate(0deg);
+			transition: .2s ease-in-out;
+			cursor: pointer;
 			border-radius: 5px;
 			background: $primary;
 			display: block;
-			transition: 0.5s transform ease;
-			transition: 0.5s opacity ease;
-			transition: 0.5s top ease;
 		}
-		
+
 		span:nth-child(1) {
-			top: 0px;
+		  top: 0px;
 		}
 		
-		span:nth-child(2) {
-			top: 9px;
-			position: absolute;
+		span:nth-child(2), span:nth-child(3) {
+		  top: 9px;
 		}
 		
-		span:nth-child(3) {
-			top: 18px;
-			position: absolute;
+		span:nth-child(4) {
+		  top: 18px;
 		}
+		
 		
 		&.collapse-open {
-			span {
-				transition: 0.5s transform ease;
-				transition: 0.5s opacity ease;
-			}
-			
 			span:nth-child(1) {
-				transform: rotate(45deg);
-				top: 0px;
+			  top: 9px;
+			  //width: 0;
+			  //left: 50%;
+			  opacity: 0;
 			}
 			
 			span:nth-child(2) {
-				opacity: 0;
+			  transform: rotate(45deg);
 			}
 			
 			span:nth-child(3) {
-				transform: rotate(-45deg);
-				top: 0px;
+			  transform: rotate(-45deg);
+			}
+			
+			span:nth-child(4) {
+			  top: 9px;
+			  //width: 0%;
+			  //left: 50%;
+			  opacity: 0;
 			}
 		}
 		
