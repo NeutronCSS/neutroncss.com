@@ -5712,9 +5712,6 @@ dl + h4 {
     margin-right: 0;
   }
 }
-.about-page .infoBlock h2 {
-  margin-bottom: 50px;
-}
 .about-page .infoBlock h3:hover {
   text-decoration: underline;
 }
@@ -5731,6 +5728,9 @@ dl + h4 {
 @media (min-width: 1024px) {
   .avatar {
     width: 300px;
+  }
+  .avatar p {
+    margin-bottom: 500px;
   }
 }
 .avatar:hover {

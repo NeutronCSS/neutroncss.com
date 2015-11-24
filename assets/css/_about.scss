@@ -20,13 +20,7 @@
 		@include breakpoint(from-phablet) {
 			@include columns(2, $target: div);
 		}
-		
-		h2 {
-			margin: {
-				bottom: 50px;
-			}
-		}
-		
+				
 		h3 {
 			&:hover {
 				text-decoration: underline;
@@ -45,6 +39,10 @@
 	
 	@include breakpoint(from-desktop) {
 		width: 300px;
+		
+		p {
+			margin-bottom: 500px;
+		}
 	}
 
 	&:hover {
