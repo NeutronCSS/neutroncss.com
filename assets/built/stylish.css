@@ -3136,6 +3136,7 @@ nav li a {
   font-family: "Dosis", helvetica, arial, sans-serif;
   font-size: 1.4em;
   padding-left: 45px;
+  width: 100%;
 }
 nav li.active a {
   color: #E8E5C8;
