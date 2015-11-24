@@ -194,6 +194,12 @@ nav {
 	overflow: visible !important;
 	z-index: 20;
 	
+	img {
+		margin: {
+			top: 4px;
+		}
+	}
+	
 	.collapsible {
 		position: absolute;
 		right: 20px;
@@ -297,6 +303,12 @@ nav {
 	
 	@include breakpoint(from-tablet) {
 		height: 60px;
+		
+		img {
+			margin: {
+				top: 0px;
+			}
+		}
 		
 		.collapsible {
 			display: none;

@@ -3067,6 +3067,9 @@ nav {
   overflow: visible !important;
   z-index: 20;
 }
+nav img {
+  margin-top: 4px;
+}
 nav .collapsible {
   position: absolute;
   right: 20px;
@@ -3150,6 +3153,9 @@ nav .btn {
 @media (min-width: 768px) {
   nav {
     height: 60px;
+  }
+  nav img {
+    margin-top: 0px;
   }
   nav .collapsible {
     display: none;
