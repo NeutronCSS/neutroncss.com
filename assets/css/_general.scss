@@ -191,6 +191,7 @@ nav {
 	width: 100%;
 	min-height: 60px;
 	padding: 11px;
+	overflow: visible !important;
 	
 	.collapsible {
 		position: absolute;
@@ -289,9 +290,7 @@ nav {
 	.btn {
 		width: 100%;
 		text-align: center;
-		margin: {
-			top: 20px;
-		}
+		padding: 10px;
 	}
 	
 	@include breakpoint(from-tablet) {
@@ -307,6 +306,7 @@ nav {
 				bottom: 0px;
 			}
 			display: block !important;
+			overflow: visible !important;
 		}
 		
 		li {

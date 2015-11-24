@@ -3064,6 +3064,7 @@ nav {
   width: 100%;
   min-height: 60px;
   padding: 11px;
+  overflow: visible !important;
 }
 nav .collapsible {
   position: absolute;
@@ -3142,7 +3143,7 @@ nav li.active a {
 nav .btn {
   width: 100%;
   text-align: center;
-  margin-top: 20px;
+  padding: 10px;
 }
 @media (min-width: 768px) {
   nav {
@@ -3155,6 +3156,7 @@ nav .btn {
     float: right;
     margin-bottom: 0px;
     display: block !important;
+    overflow: visible !important;
   }
   nav li {
     float: left;
@@ -5664,14 +5666,6 @@ dl + h4 {
 .about-page h1 {
   margin-bottom: 40px;
   margin-display: block;
-}
-.about-page header a {
-  margin: 0px 10px;
-}
-@media (min-width: 480px) {
-  .about-page header a {
-    margin: 0px 20px;
-  }
 }
 .about-page .infoBlock {
   max-width: 1200px;

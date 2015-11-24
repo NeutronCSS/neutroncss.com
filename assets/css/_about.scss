@@ -9,16 +9,6 @@
 		}
 	}
 	
-	header {
-		a {
-			margin: 0px 10px;
-			
-			@include breakpoint(from-phablet) {
-				margin: 0px 20px;
-			}
-		}
-	}
-	
 	.infoBlock {
 		@include columns(1, $target: div, $margin: 20px 0px);
 		text-align: center;
