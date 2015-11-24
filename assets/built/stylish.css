@@ -3060,11 +3060,12 @@ hr {
 }
 
 nav {
-  background: #1D2C2F;
+  background: rgba(29, 44, 47, 0.9);
   width: 100%;
   min-height: 60px;
   padding: 11px;
   overflow: visible !important;
+  z-index: 20;
 }
 nav .collapsible {
   position: absolute;
