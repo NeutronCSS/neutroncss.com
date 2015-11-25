@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>Neutron - Documentation</title>
@@ -26,6 +26,18 @@
 			
 		<link rel="canonical" href="http://neutroncss.com/docs/" />
 
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script src="/assets/js/jquery.collapsible.js"></script>
+		
+		<script>
+			$(document).ready(function () {
+			    //collapsible management
+			    $('.collapsible').collapsible({
+			        speed: 'fast'
+			    });
+			});
+		</script>
 	</head>
 	<body class="docs-page">
 		<script>
@@ -43,13 +55,23 @@
 		})(window,document,'script','dataLayer','GTM-NSZGQZ');</script>
 		<!-- End Google Tag Manager -->
 		<header>
-			<section id="intro">
+			<nav>
+				<a href="/"><img src="/assets/img/logoText.svg" /></a>
+				<div class="collapsible">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 				<ul>
-					<li><a href="/">Learn More</a></li>
+					<li class="active"><a href="/docs">Documentation</a></li>
 					<li><a href="/faq">FAQ</a></li>
-					<li><a data-anal-downloaded="header" href="https://github.com/NeutronCSS/neutroncss/archive/master.zip">Download</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a data-anal-downloaded="header" href="https://github.com/NeutronCSS/neutroncss/archive/master.zip" class="btn">Download</a></li>
 				</ul>
-				<h1>Neutron Docs</h1>
+			</nav>
+			<section id="intro">
+				<h1>Documentation</h1>
 			</section>
 			<div class="pattern"></div>
 		</header>
@@ -552,8 +574,8 @@ div {
 			<ul>
 				<li><a data-anal-downloaded="footer" href="https://github.com/NeutronCSS/neutroncss/archive/master.zip">Download</a>
 				<li><a href="https://github.com/NeutronCSS/neutroncss">Github</a>
-				<li><a href="/docs/">Docs</a>
 				<li><a href="/faq/">FAQ</a>
+				<li><a href="/about/">About</a>
 				<li><a href="https://twitter.com/NeutronCSS">Twitter</a>
 			</ul>
 		</footer>
