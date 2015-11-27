@@ -1,0 +1,110 @@
+// CHANGELOG PAGE
+
+
+.changelog-page {
+	@include lightTheme;
+	
+	section {
+		@extend %default-page-layout;
+		background: rgba(black,0.02);
+		position: relative;
+		
+		@include breakpoint(from-tablet) {
+			padding: {
+				left: 180px;
+				right: 150px;
+				top: 50px;
+			}
+		}
+		
+		&::before {
+			content: "";
+			width: 1px;
+			height: 100%;
+			position: absolute;
+			left: 130px;
+			top: 0px;
+			background: rgba(#3D4B4E,0.2);
+		}
+		
+	
+		.btn {
+			width: auto;
+			color: white;
+			box-shadow: inset 0px -2px 0px rgba(black, 0.2);
+		}
+	}
+	
+	h3 {
+		opacity: 0.2;
+		font: {
+			family: "Open Sans", helvetica, arial, sans-serif;
+			size: 0.7em;
+		}
+		margin: {
+			bottom: 30px;
+		}
+	}
+	
+	ul {
+		padding: {
+			left: 40px;
+		}
+	}
+	
+	li {
+		color: #364D54;
+		font: {
+			family: "Open Sans", helvetica, arial, sans-serif;
+			size: 1em;
+			weight: 300;
+		}
+	}
+	
+	p {
+		font: {
+			size: 1em;
+		}
+	}
+}
+
+.version {
+	width: 65px !important;
+	height: 40px;
+	color: white !important;
+	border-radius: 3px;
+	display: inline-block;
+	text-align: center;
+	padding-top: 7px;
+	position: absolute;
+	left: 100px;
+	margin-top: 4px;
+}
+
+.minor {
+	.version {
+		background: #73BE68;
+	}
+	
+	h2 {
+		color: #73BE68;
+	}
+	
+	.btn {
+		background: #73BE68;
+	}
+}
+.major {
+	.version {
+		background: #2BBFB1;
+		font-weight: 700;
+	}
+	
+	h2 {
+		color: #2BBFB1;
+	}
+	
+	.btn {
+		background: #2BBFB1;
+	}
+}

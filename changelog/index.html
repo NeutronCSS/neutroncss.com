@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Neutron - Frequently Asked Questions</title>
+		<title>Neutron - Changelog</title>
 		<link rel="stylesheet" href="/assets/built/normalize.css">
 		<link rel="stylesheet" href="/assets/built/prism-default.css">
 		<link rel="stylesheet" href="/assets/built/stylish.css">
@@ -38,7 +38,7 @@
 			});
 		</script>
 	</head>
-	<body class="faq-page">
+	<body class="changelog-page">
 		<script>
 			dataLayer = [{
 				'pageCategory': 'faq'
@@ -64,40 +64,68 @@
 				</div>
 				<ul>
 					<li><a href="/docs">Documentation</a></li>
-					<li class="active"><a href="/faq">FAQ</a></li>
+					<li><a href="/faq">FAQ</a></li>
 					<li><a href="/about">About</a></li>
 					<li><a data-anal-downloaded="header" href="https://github.com/NeutronCSS/neutroncss/archive/master.zip" class="btn">Download</a></li>
 				</ul>
 			</nav>
 			<section id="intro">
-				<h1>Frequently Asked Questions</h1>
+				<h1>Changelog</h1>
 			</section>
 			<div class="pattern"></div>
 		</header>
 
-		<section>
-			<h2 id="nav-browser">What browsers does Neutron support?</h2>
-			<p>Neutron works with all modern browsers. This includes Internet Explorer 9 and later. Generally, if the browser supports the <code>:nth-child</code> and <code>:nth-of-type</code> pseudo-selectors, and the <code>calc()</code> property, Neutron should work fine on that browser.</p>
+		<section class="minor current">
+			<p class="version">1.0.2</p>
+			<h2>Free kittens</h2>
+			<h3>Released on 20 October 2015</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis auctor quam. Nam sed pulvinar magna, nec finibus lectus. Quisque non malesuada leo. Duis arcu ex, convallis ut est id, porttitor ultrices neque. Morbi tempus orci at libero pellentesque elementum. Pellentesque molestie tincidunt purus non condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean bibendum consectetur sapien, ut gravida nisl ornare sit amet.</p>
+			<a href="https://github.com/NeutronCSS/neutroncss/archive/master.zip" class="btn">Download latest release</a>
 		</section>
 		
-		<section>
-			<h2 id="nav-sass">What version of Sass does Neutron need?</h2>
-			<p>Neutron was developed and tested using version <code>3.4.18</code> of Sass. Neutron uses many recent features of Sass so it is recommended to use the lastest version of sass possible.</p>
+		<section class="minor">
+			<p class="version">1.0.1</p>
+			<h2>Free kittens</h2>
+			<h3>Released on 20 October 2015</h3>
+			<ul>
+				<li>Updating version number in bower package.</li>
+			</ul>
 		</section>
 		
-		<section>
-			<h2 id="nav-max-cols">What is the maximum number of columns I can have?</h2>
-			<p>Neutron has no hard-coded limits to the number of columns you can have, however in some extreme situations, your layout might not display correctly. When trying to fit many columns in a small container, you can begin to encounter subpixel rounding errors. This can lead to columns not filling their container if a browser decided to round down to the nearest pixel for all the columns. This issue usually only occurs when dealing with a large number of columns only a few pixels wide.</p>
+		<section class="major">
+			<p class="version">1.0</p>
+			<h2>Free kittens</h2>
+			<h3>Released on 20 October 2015</h3>
+			<ul>
+				<li>Slices that contain transparency will show a checkered grid on the Slice preview</li>
+				<li>Ability to disable OS X Auto Save in Sketch’s Preferences</li>
+				<li>Holding Option will allow you to switch between Lock and Hide icons in the Layer List</li>
+				<li>Improved Undo and Redo reliability</li>
+				<li>Updating the rotate value in the Inspector now rotates clockwise</li>
+				<li>Improved Background Blur rendering</li>
+				<li>Ability to drag SVGs from the browser into Sketch</li>
+				<li>The tilde key (~) now zooms document to 100% when held</li>
+				<li>Can now measure distances between any layer inside groups with Command and Option</li>
+				<li>When Pixel Fitting preference is on, we’ll always snap to full pixel values</li>
+				<li>Preference pane to manage Plugins inside Sketch</li>
+				<li>A whole host of other bug fixes, enhancements, and general improvements</li>
+				<li>Common Colors have moved to the Color Preview box, now with usage information</li>
+				<li>Resize layers from the Right, Middle or Bottom edge from the Inspector</li>
+				<li>Layers can now be sized to a % of its parent container or Artboard</li>
+				<li>Symbols can how have independent opacity, blending, and shadow options</li>
+				<li>Better curve smoothing in the Pencil Tool</li>
+				<li>Updated Artboard Presets to include the latest iOS and Apple Watch screen sizes</li>
+			</ul>
 		</section>
 		
-		<section>
-			<h2 id="nav-target">Can I use <code>$target</code> to target any kind of element?</h2>
-			<p>The <code>$target</code> feature for the <code>columns()</code> mixin uses the CSS pseudo selectors <code>:nth-child</code> and <code>:nth-of-type</code>. Due to limitations with these selectors, generally you should only target element types, classes, or element and class combinations that target only one type of element (eg. <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;span&gt;</code>). If you target a class that is applied to different types of elements, unexpected behavior and layout can occur.</p>
-		</section>
-		
-		<section>
-			<h2 id="nav-contribute">How can I contribute to Neutron?</h2>
-			<p><a href="https://github.com/NeutronCSS/neutroncss">Neutron is open source</a> and we'd gladly accept pull requests for bug fixes or minor improvements to Neutron. For larger feature additions, acceptance will be decided on a case by case basis for their suitability for Neutron and the direction we want to take it.</p>
+		<section class="minor">
+			<p class="version">0.9.2</p>
+			<h2>Free kittens</h2>
+			<h3>Released on 20 October 2015</h3>
+			<ul>
+				<li>Corrected issue with Sass interpreting media query strings</li>
+				<li>Split $additional-queries into a media type and feature string</li>
+			</ul>
 		</section>
 		
 		<footer>

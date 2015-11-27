@@ -3035,18 +3035,18 @@ hr {
   border-bottom: 0px;
 }
 
-.definitionBlock, .faq-page > section {
+.definitionBlock, .faq-page > section, .changelog-page section {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px 20px;
 }
-.definitionBlock:after, .faq-page > section:after {
+.definitionBlock:after, .faq-page > section:after, .changelog-page section:after {
   content: "";
   display: table;
   clear: both;
 }
-.definitionBlock > *:nth-child(1n+1), .faq-page > section > *:nth-child(1n+1) {
+.definitionBlock > *:nth-child(1n+1), .faq-page > section > *:nth-child(1n+1), .changelog-page section > *:nth-child(1n+1) {
   width: calc(100%);
   float: left;
   clear: left;
@@ -3054,7 +3054,7 @@ hr {
   margin-right: 0;
 }
 @media (min-width: 768px) {
-  .definitionBlock, .faq-page > section {
+  .definitionBlock, .faq-page > section, .changelog-page section {
     padding: 30px 100px;
   }
 }
@@ -5880,4 +5880,100 @@ dl + h4 {
 
 .hljs {
   background-color: none !important;
+}
+
+.changelog-page {
+  background: #FFFFFE;
+}
+.changelog-page p, .changelog-page h2, .changelog-page h3, .changelog-page h4, .changelog-page h5 {
+  color: #364D54;
+}
+.changelog-page h2, .changelog-page h3 {
+  font-weight: 500;
+}
+.changelog-page h3 code {
+  font-size: 0.7em;
+}
+.changelog-page p {
+  font-size: 0.8em;
+}
+.changelog-page section a, .changelog-page footer a {
+  color: #73BE68;
+}
+.changelog-page section {
+  background: rgba(0, 0, 0, 0.02);
+  position: relative;
+}
+@media (min-width: 768px) {
+  .changelog-page section {
+    padding-left: 180px;
+    padding-right: 150px;
+    padding-top: 50px;
+  }
+}
+.changelog-page section::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 130px;
+  top: 0px;
+  background: rgba(61, 75, 78, 0.2);
+}
+.changelog-page section .btn {
+  width: auto;
+  color: white;
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.2);
+}
+.changelog-page h3 {
+  opacity: 0.2;
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  font-size: 0.7em;
+  margin-bottom: 30px;
+}
+.changelog-page ul {
+  padding-left: 40px;
+}
+.changelog-page li {
+  color: #364D54;
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+}
+.changelog-page p {
+  font-size: 1em;
+}
+
+.version {
+  width: 65px !important;
+  height: 40px;
+  color: white !important;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 7px;
+  position: absolute;
+  left: 100px;
+  margin-top: 4px;
+}
+
+.minor .version {
+  background: #73BE68;
+}
+.minor h2 {
+  color: #73BE68;
+}
+.minor .btn {
+  background: #73BE68;
+}
+
+.major .version {
+  background: #2BBFB1;
+  font-weight: 700;
+}
+.major h2 {
+  color: #2BBFB1;
+}
+.major .btn {
+  background: #2BBFB1;
 }
