@@ -9,12 +9,9 @@
 		background: rgba(black,0.02);
 		position: relative;
 		
-		@include breakpoint(from-tablet) {
-			padding: {
-				left: 180px;
-				right: 150px;
-				top: 50px;
-			}
+		padding: {
+			left: 60px;
+			right: 20px;
 		}
 		
 		&::before {
@@ -22,7 +19,7 @@
 			width: 1px;
 			height: 100%;
 			position: absolute;
-			left: 130px;
+			left: 42px;
 			top: 0px;
 			background: rgba(#3D4B4E,0.2);
 		}
@@ -32,6 +29,48 @@
 			width: auto;
 			color: white;
 			box-shadow: inset 0px -2px 0px rgba(black, 0.2);
+			
+			&:hover {
+				box-shadow: inset 0px -2px 0px rgba(black, 0.2), 0px 6px 10px rgba(black,0.1);
+			}
+			
+			@include breakpoint(mobile) {
+				span {
+					@include hide;
+				}
+			}
+		}
+		
+		@include breakpoint(from-tablet) {
+			padding: {
+				left: 100px;
+				right: 40px;
+				top: 50px;
+			}
+			
+			&::before {
+				left: 50px;
+			}
+		}
+		
+		@include breakpoint(from-desktop-sml) {
+			padding: {
+				left: 180px;
+				right: 150px;
+				top: 50px;
+			}
+			
+			&::before {
+				left: 130px;
+			}
+		}
+	}
+	
+	h2 {
+		@include breakpoint(mobile) {
+			padding: {
+				left: 30px;
+			}
 		}
 	}
 	
@@ -44,11 +83,18 @@
 		margin: {
 			bottom: 30px;
 		}
+		
+		
+		@include breakpoint(mobile) {
+			padding: {
+				left: 30px;
+			}
+		}
 	}
 	
 	ul {
 		padding: {
-			left: 40px;
+			left: 30px;
 		}
 	}
 	
@@ -56,8 +102,14 @@
 		color: #364D54;
 		font: {
 			family: "Open Sans", helvetica, arial, sans-serif;
-			size: 1em;
+			size: 0.8em;
 			weight: 300;
+		}
+		
+		@include breakpoint(from-tablet) {
+			font: {
+				size: 1em;
+			}
 		}
 	}
 	
@@ -77,8 +129,16 @@
 	text-align: center;
 	padding-top: 7px;
 	position: absolute;
-	left: 100px;
+	left: 10px;
 	margin-top: 4px;
+	
+	@include breakpoint(from-tablet) {
+		left: 17px;
+	}
+	
+	@include breakpoint(from-desktop-sml) {
+		left: 100px;
+	}
 }
 
 .minor {

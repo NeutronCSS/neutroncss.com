@@ -5903,20 +5903,15 @@ dl + h4 {
 .changelog-page section {
   background: rgba(0, 0, 0, 0.02);
   position: relative;
-}
-@media (min-width: 768px) {
-  .changelog-page section {
-    padding-left: 180px;
-    padding-right: 150px;
-    padding-top: 50px;
-  }
+  padding-left: 60px;
+  padding-right: 20px;
 }
 .changelog-page section::before {
   content: "";
   width: 1px;
   height: 100%;
   position: absolute;
-  left: 130px;
+  left: 42px;
   top: 0px;
   background: rgba(61, 75, 78, 0.2);
 }
@@ -5925,20 +5920,63 @@ dl + h4 {
   color: white;
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.2);
 }
+.changelog-page section .btn:hover {
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.2), 0px 6px 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 479px) {
+  .changelog-page section .btn span {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .changelog-page section {
+    padding-left: 100px;
+    padding-right: 40px;
+    padding-top: 50px;
+  }
+  .changelog-page section::before {
+    left: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .changelog-page section {
+    padding-left: 180px;
+    padding-right: 150px;
+    padding-top: 50px;
+  }
+  .changelog-page section::before {
+    left: 130px;
+  }
+}
+@media (max-width: 479px) {
+  .changelog-page h2 {
+    padding-left: 30px;
+  }
+}
 .changelog-page h3 {
   opacity: 0.2;
   font-family: "Open Sans", helvetica, arial, sans-serif;
   font-size: 0.7em;
   margin-bottom: 30px;
 }
+@media (max-width: 479px) {
+  .changelog-page h3 {
+    padding-left: 30px;
+  }
+}
 .changelog-page ul {
-  padding-left: 40px;
+  padding-left: 30px;
 }
 .changelog-page li {
   color: #364D54;
   font-family: "Open Sans", helvetica, arial, sans-serif;
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 300;
+}
+@media (min-width: 768px) {
+  .changelog-page li {
+    font-size: 1em;
+  }
 }
 .changelog-page p {
   font-size: 1em;
@@ -5953,8 +5991,18 @@ dl + h4 {
   text-align: center;
   padding-top: 7px;
   position: absolute;
-  left: 100px;
+  left: 10px;
   margin-top: 4px;
+}
+@media (min-width: 768px) {
+  .version {
+    left: 17px;
+  }
+}
+@media (min-width: 1024px) {
+  .version {
+    left: 100px;
+  }
 }
 
 .minor .version {
