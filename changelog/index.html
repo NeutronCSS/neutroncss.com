@@ -75,56 +75,72 @@
 			<div class="pattern"></div>
 		</header>
 
-		<section class="minor current">
-			<p class="version">1.0.2</p>
-			<h2>Free kittens</h2>
-			<h3>Released on 20 October 2015</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis auctor quam. Nam sed pulvinar magna, nec finibus lectus. Quisque non malesuada leo. Duis arcu ex, convallis ut est id, porttitor ultrices neque. Morbi tempus orci at libero pellentesque elementum. Pellentesque molestie tincidunt purus non condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean bibendum consectetur sapien, ut gravida nisl ornare sit amet.</p>
+		<section class="major current">
+			<p class="version">1.0</p>
+			<h2>Flexbox Support</h2>
+			<h3>Released on 18 December 2015</h3>
+			<h4>Added support for Flexbox</h4>
+			<p>Added equivalent mixins to support creating layouts with flexbox.</p>
+			<ul>
+				<li><code>flex-columns()</code>: Uses almost identical parameters as floatbox's <code>columns()</code>.</li>
+				<li><code>flex-order()</code>: Identical syntax to floatbox but uses the native flexbox order property.</li>
+			</ul>
+			<h4>Ability to override default configuration</h4>
+			<p>You can now change the default body width without needing to edit Neutron's files directly. Simply set any of the below variables before including Neutron in your project.</p>
+			<p>Check the <a href="/docs#defaults">documentation</a> for details.</p>
+<pre class="language-scss"><code>// General Settings
+$neutron-column-padding: 4px 8px;
+$neutron-container-max-width: 960px;
+$neutron-flush-margin: true;
+$neutron-flush-padding: false;
+
+// Breakpoint Settings
+$neutron-mobile-max: 479px;
+$neutron-phablet-max: 767px;
+$neutron-tablet-max: 1023px;
+$neutron-desktop-sml-max: 1199px;
+$neutron-desktop-mid-max: 1799px;
+			</code></pre>
+
+			<h4>Breakpoint improvements</h4>
+			<p>Custom breakpoints can now be created using any valid CSS media query criteria. Syntax of custom breakpoints has changed, see documentation for details.</p>
+			
+			<h4>Breaking Changes</h4>
+			<ul>
+				<li><code>container-align()</code> is now <code>align-container()</code> to match similar flexbox syntax.</li>
+				<li>The <code>$container-align</code> property for <code>columns()</code> is now <code>$align-container</code></li>
+				<li>Syntax for custom breakpoints has changed. Check the <a href="/docs#media-query">documentation</a> for details.</li>
+			</ul>
+			
 			<a href="https://github.com/NeutronCSS/neutroncss/archive/master.zip" class="btn">Download <span>latest release</span></a>
 		</section>
 		
 		<section class="minor">
-			<p class="version">1.0.1</p>
-			<h2>Free kittens</h2>
+			<p class="version">0.9.2</p>
+			<h2>Added Neutron to bower</h2>
 			<h3>Released on 20 October 2015</h3>
 			<ul>
-				<li>Updating version number in bower package.</li>
+				<li>Added Neutron to the bower package manager.</li>
+				<li>Install using bower with the following command: <code>bower install neutroncss</code>.</li>
+			</ul>
+		</section>
+				
+		<section class="minor">
+			<p class="version">0.9.1</p>
+			<h2>Bugfix for breakpoint()</h2>
+			<h3>Released on 19 October 2015</h3>
+			<ul>
+				<li>Corrected issue with Sass interpreting media query strings.</li>
+				<li>Split <code>$additional-queries</code> into a media type and feature string</li>
 			</ul>
 		</section>
 		
 		<section class="major">
-			<p class="version">1.0</p>
-			<h2>Free kittens</h2>
-			<h3>Released on 20 October 2015</h3>
+			<p class="version">0.9.0</p>
+			<h2>Initial Release</h2>
+			<h3>Released on 8th October 2015</h3>
 			<ul>
-				<li>Slices that contain transparency will show a checkered grid on the Slice preview</li>
-				<li>Ability to disable OS X Auto Save in Sketch’s Preferences</li>
-				<li>Holding Option will allow you to switch between Lock and Hide icons in the Layer List</li>
-				<li>Improved Undo and Redo reliability</li>
-				<li>Updating the rotate value in the Inspector now rotates clockwise</li>
-				<li>Improved Background Blur rendering</li>
-				<li>Ability to drag SVGs from the browser into Sketch</li>
-				<li>The tilde key (~) now zooms document to 100% when held</li>
-				<li>Can now measure distances between any layer inside groups with Command and Option</li>
-				<li>When Pixel Fitting preference is on, we’ll always snap to full pixel values</li>
-				<li>Preference pane to manage Plugins inside Sketch</li>
-				<li>A whole host of other bug fixes, enhancements, and general improvements</li>
-				<li>Common Colors have moved to the Color Preview box, now with usage information</li>
-				<li>Resize layers from the Right, Middle or Bottom edge from the Inspector</li>
-				<li>Layers can now be sized to a % of its parent container or Artboard</li>
-				<li>Symbols can how have independent opacity, blending, and shadow options</li>
-				<li>Better curve smoothing in the Pencil Tool</li>
-				<li>Updated Artboard Presets to include the latest iOS and Apple Watch screen sizes</li>
-			</ul>
-		</section>
-		
-		<section class="minor">
-			<p class="version">0.9.2</p>
-			<h2>Free kittens</h2>
-			<h3>Released on 20 October 2015</h3>
-			<ul>
-				<li>Corrected issue with Sass interpreting media query strings</li>
-				<li>Split $additional-queries into a media type and feature string</li>
+				<li>Launch of Neutron.</li>
 			</ul>
 		</section>
 		
