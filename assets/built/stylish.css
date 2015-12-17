@@ -5624,11 +5624,11 @@ dl + h4 {
   margin-top: 40px;
 }
 
-.definition dl dt:after, .definition dl dd:after {
-  content: ",";
-}
-.definition dl dt:last-of-type:after, .definition dl dd:last-of-type:after {
-  content: none;
+.flag {
+  font-size: 0.8em;
+  padding-left: 1em;
+  color: #2BBFB1;
+  font-weight: bold;
 }
 
 .faq-page {

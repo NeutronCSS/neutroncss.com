@@ -338,15 +338,10 @@ dl + h4 {
 	}
 }
 
-.definition dl {
-	dt, dd {
-		&:after {
-			content: ",";
-		}
-	}
-	dt, dd {
-		&:last-of-type:after {
-			content: none;
-		}
-	}
+.flag {
+	font-size: 0.8em;
+	padding-left: 1em;
+	color: #2BBFB1;
+	font-weight: bold;
 }
+
