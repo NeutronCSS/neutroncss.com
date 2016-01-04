@@ -574,6 +574,34 @@ div {
 				</section>
 			</section>
 	
+			<section id="custom-media-query">
+				<h3><code>add-breakpoint()</code></h3>
+				<p>The <code>breakpoint()</code> mixin helps you create media queries that apply styles to a specific breakpoint or range of device sizes, or specific device resolutions. To get it working all you need to do is supply <code>breakpoint()</code> with a breakpoint, pixel ratio, or a valid media type or feature argument, and it will take care of the rest.</p>
+				
+				<section class="definition">
+					<h4>Add Breakpoint Definition</h4>
+					<dl>
+						<dt>$label</dt>
+						<dd>[Text]</dd>
+						
+						<dt>$media</dt>
+						<dd>[CSS Media Query]</dd>
+					</dl>
+					
+					<h4>Add Breakpoint Example</h4>
+					<pre class="language-scss"><code>
+$neutron_breakpoints: addBreakpoint(short-viewport, "(max-height: 500px) and (orientation: landscape)");
+section {
+	@include columns((1,2,1), $order: (2,1,3));
+	
+	@include breakpoint(short-viewport) {
+		@include order($order: (3,2,1), $columns: (1,2,1));
+	}
+}</code></pre>
+
+				</section>
+			</section>
+	
 			<section id="show-hide">
 				<h3><code>show()</code> and <code>hide()</code></h3>
 				<p>To get your layout looking good responsively sometimes you need to hide or show elements at certain breakpoints. The <code>show()</code> and <code>hide()</code> mixins help make this easy. Simply include the breakpoints you want the show or hide effects to be applied to and Neutron takes care of the rest.</p>
@@ -660,7 +688,6 @@ $neutron-flush-padding: false;
 
 				</section>
 			</section>
-			
 		</section>
 
 		<footer>
