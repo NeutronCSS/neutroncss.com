@@ -621,6 +621,48 @@ div {
 			</section>					
 		</section>
 
+
+		<section class="definitionBlock">
+			<h2>Overriding Default Settings</h2>
+			<p>Sometimes the default configuration isn't what you need for your project. Neutron gives you the ability change the default settings of Neutron without needing to modify the framework files.</p>
+
+			<section id="default-settings">
+				<h3>Default Settings</h3>
+				<p>The below are the settings available to override when using Neutron. Overriding the setting is simply a matter of assigning your own preferred value to one of the listed variables after including <code>_neutron.scss</code>.</p>
+
+				<section class="definition">
+					<h4>Default Neutron Settings</h4>
+					<pre class="language-scss"><code>
+// General Settings
+$neutron-column-padding: 4px 8px;
+$neutron-container-max-width: 960px;
+$neutron-flush-margin: true;
+$neutron-flush-padding: false;
+
+// Breakpoint Settings
+$neutron-mobile-max: 479px;
+$neutron-phablet-max: 767px;
+$neutron-tablet-max: 1023px;
+$neutron-desktop-sml-max: 1199px;
+$neutron-desktop-mid-max: 1799px;
+</code></pre>					
+
+					<h4>Overriding Settings</h4>
+					<pre class="language-scss"><code>
+@import "neutron/neutron";
+
+// Overriding Settings
+$neutron-column-padding: 12px;
+$neutron-container-max-width: 1080px;
+$neutron-flush-margin: false;
+$neutron-flush-padding: false;
+</code></pre>					
+
+				</section>
+			</section>
+			
+		</section>
+
 		<footer>
 			<ul>
 				<li><a data-anal-downloaded="footer" href="https://github.com/NeutronCSS/neutroncss/archive/master.zip">Download</a></li>
