@@ -258,57 +258,7 @@ div {
 
 
 		</section>
-		
-		<section id="flexbox" class="definitionBlock">
-			<h2>Flexbox</h2>
-			<p>Flexbox is a more flexible and more powerful layout system that has been gaining more and more browser support over time. Now you can use the benefits and features of syntax while keeping the simple and easy syntax of Neutron.</p>
-			<p>Neutron's flexbox module uses almost identical syntax to the original floatbox module that uses floats and clears to layout your elements.</p>
-			
-			<h3><code>flex-columns()</code></h3>
-			<p><code>flex-columns()</code> is the flexbox equivalent to <code>columns()</code>. All arguments behave identically except for the new property <code>$rows</code>. This property allows you to control the wrapping behaviour of a flex element enabling elements to wrap onto new rows.</p>
-			
-			<section class="definition">
-				<h4>Parameters</h4>
-				<dl>
-					<dt>$columns: ""</dt>
-					<dd>integer|list</dd>
-										
-					<dt>$container-width: 960px</dt>
-					<dd>[CSS width]</dd>
-					
-					<dt>$container-align: ""</dt>
-					<dd>left|right|center</dd>
-					
-					<dt>$margin: ""</dt>
-					<dd>[CSS margin]</dd>
-					
-					<dt>$flush-margin: true</dt>
-					<dd>true|false</dd>
-					
-					<dt>$flush-padding: false</dt>
-					<dd>false|true</dd>
 
-					<dt>$target: "*"</dt>
-					<dd>[CSS selector]</dd>
-					
-					<dt>$order: ""</dt>
-					<dd>integer|list</dd>
-
-					<dt>$rows: true</dt>
-					<dd class="flexbox">true|false <span class="flag">Flexbox only</span></dd>
-				</dl>
-				
-				<h4>Example</h4>
-<pre class="language-scss"><code>section {
-  @include flex-columns(4);
- }
- 
-div {
-  @include flex-columns((1,3,1));
-}</code></pre>
-			</section>
-		</section>
-				
 		<section id="container-align" class="definitionBlock">
 			<h2>Container alignment</h2>
 			<p>Sometimes you want to change the alignment of your container. When you do, you don't want to have to write out the same mixin all over again. <code>container-alignment()</code> lets you change just the alignment of your container without affecting the other settings you've already declared in <code>columns()</code>.</p>
@@ -399,6 +349,57 @@ div {
   }
 }</code></pre>
 			</section>
+		</section>
+        
+		<section id="flexbox" class="definitionBlock">
+			<h2>Flexbox</h2>
+			<p>Flexbox is a more flexible and more powerful layout system that has been gaining more and more browser support over time. Now you can use the benefits and features of syntax while keeping the simple and easy syntax of Neutron.</p>
+			<p>Neutron's flexbox module uses almost identical syntax to the original floatbox module that uses floats and clears to layout your elements.</p>
+			
+			<h3><code>flex-columns()</code></h3>
+			<p><code>flex-columns()</code> is the flexbox equivalent to <code>columns()</code>. All arguments behave identically except for the new property <code>$rows</code>. This property allows you to control the wrapping behaviour of a flex element enabling elements to wrap onto new rows.</p>
+			
+			<section class="definition">
+				<h4>Parameters</h4>
+				<dl>
+					<dt>$columns: ""</dt>
+					<dd>integer|list</dd>
+										
+					<dt>$container-width: 960px</dt>
+					<dd>[CSS width]</dd>
+					
+					<dt>$container-align: ""</dt>
+					<dd>left|right|center</dd>
+					
+					<dt>$margin: ""</dt>
+					<dd>[CSS margin]</dd>
+					
+					<dt>$flush-margin: true</dt>
+					<dd>true|false</dd>
+					
+					<dt>$flush-padding: false</dt>
+					<dd>false|true</dd>
+
+					<dt>$target: "*"</dt>
+					<dd>[CSS selector]</dd>
+					
+					<dt>$order: ""</dt>
+					<dd>integer|list</dd>
+
+					<dt>$rows: true</dt>
+					<dd>true|false</dd>
+				</dl>
+				
+				<h4>Example</h4>
+<pre class="language-scss"><code>section {
+  @include flex-columns(4);
+ }
+ 
+div {
+  @include flex-columns((1,3,1));
+}</code></pre>
+			</section>
+
 		</section>
 
 		<section id="gutters" class="definitionBlock">
@@ -589,7 +590,7 @@ div {
 				<section class="definition">
 					<h4>Parameters</h4>
 					<dl>
-						<dt>$breakpoint: ""</dt>
+						<dt>$breakpoint: null</dt>
 						<dd>[Neutron Breakpoint]</dd>
 					</dl>
 					
