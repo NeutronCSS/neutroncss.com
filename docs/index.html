@@ -409,7 +409,7 @@ div {
 				<p>The <code>breakpoint()</code> mixin helps you create media queries that apply styles to a specific breakpoint or range of device sizes, or specific device resolutions. To get it working all you need to do is supply <code>breakpoint()</code> with a breakpoint, pixel ratio, or a valid media type or feature argument, and it will take care of the rest.</p>
 				
 				<section class="definition">
-					<h4>Breakpoint Definitions</h4>
+					<h4>Basic Breakpoint Definitions</h4>
 					<dl>
 						<dt>mobile</dt>
 						<dd>max width: 479px</dd>
@@ -417,44 +417,63 @@ div {
 						<dt>phablet</dt>
 						<dd>min-width: 480px and max-width: 767px</dd>
 						
-						<dt>from-phablet</dt>
-						<dd>min-width: 480px</dd>
-						
 						<dt>tablet</dt>
 						<dd>min-width: 768px and max-width: 1023px</dd>
-						
-						<dt>from-tablet</dt>
-						<dd>min-width: 768px</dd>
 						
 						<dt>desktop-sml</dt>
 						<dd>min-width: 769px and max-width: 1199px</dd>
 						
-						<dt>from-desktop-sml</dt>
-						<dd>min-width: 769px</dd>
-						
 						<dt>desktop-mid</dt>
 						<dd>min-width: 1200px and max-width: 1799px</dd>
-						
-						<dt>from-desktop-mid</dt>
-						<dd>min-width: 1200px</dd>
 						
 						<dt>desktop-lrg</dt>
 						<dd>min-width: 1800px</dd>
 						
-						<dt>from-desktop-lrg</dt>
-						<dd>min-width: 1800px</dd>
-						
 						<dt>desktop</dt>
 						<dd>min-width: 769px</dd>
-						
+					</dl>
+				</section>
+				
+				<section class="definition">
+					<h4>Mobile First Breakpoint Definitions</h4>
+					<dl>
+						<dt>from-phablet</dt>
+						<dd>min-width: 480px</dd>
+
+						<dt>from-tablet</dt>
+						<dd>min-width: 768px</dd>
+
+						<dt>from-desktop-sml</dt>
+						<dd>min-width: 769px</dd>
+
+						<dt>from-desktop-mid</dt>
+						<dd>min-width: 1200px</dd>
+
+						<dt>from-desktop-lrg</dt>
+						<dd>min-width: 1800px</dd>
+
 						<dt>from-desktop</dt>
 						<dd>min-width: 769px</dd>
 					</dl>
-					
-					
-					
-				</section>
-				
+				</section>	
+								
+				<section class="definition">
+					<h4>Desktop First Breakpoint Definitions</h4>
+					<dl>
+						<dt>to-phablet</dt>
+						<dd>max-width: 767px</dd>
+
+						<dt>to-tablet</dt>
+						<dd>max-width: 1023px</dd>
+
+						<dt>to-desktop-sml</dt>
+						<dd>max-width: 1199px</dd>
+
+						<dt>to-desktop-mid</dt>
+						<dd>max-width: 1799px</dd>
+					</dl>
+				</section>	
+							
 				<div class="doc-example">
 					<p>Phone</p>
 					<p>Phablet</p>
